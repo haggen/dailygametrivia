@@ -7,6 +7,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "rome check .",
     "format": "rome format .",
     "start": "npm run start:${NODE_ENV:-development}",
@@ -22,6 +24,7 @@
     "rome": "^12.0.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
-    "vite-tsconfig-paths": "^4.0.8"
+    "vite-tsconfig-paths": "^4.0.8",
+    "vitest": "^0.29.8"
   }
 }
