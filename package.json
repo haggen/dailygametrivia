@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "dailygametrivia",
+  "version": "0.0.0",
+  "author": "Arthur <arthur@corenzan.com>",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "lint": "rome check .",
+    "format": "rome format .",
+    "start": "npm run start:${NODE_ENV:-development}",
+    "start:development": "vite",
+    "start:production": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.13.0",
+    "resetize": "^30.0.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
+    "rome": "^12.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "vite-tsconfig-paths": "^4.0.8"
+  }
+}
