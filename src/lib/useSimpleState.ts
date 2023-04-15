@@ -21,7 +21,7 @@ function createReducer<T extends Record<string, unknown>>(defaultValue: T) {
  * Simple state is an object based state with a patcher.
  */
 export function useSimpleState<T extends Record<string, unknown>>(
-  defaultValue: T
+  defaultValue: T,
 ) {
   return useReducer(...createReducer(defaultValue));
 }

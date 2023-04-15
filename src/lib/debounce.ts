@@ -3,17 +3,23 @@
  */
 export function debounce<P extends Array<unknown>, R>(
   fn: (...arg: P) => Promise<R>,
-  delay: number,
+  delay: number
 ) {
   let timeoutId: ReturnType<typeof setTimeout>;
+  let promise: Promise<R> | undefined;
+
   return (...arg: P): Promise<R> => {
     clearTimeout(timeoutId);
-    return new Promise((resolve, reject) => {
+    promise ??= new Promise((resolve, reject) => {
       timeoutId = setTimeout(() => {
         fn(...arg)
           .then(resolve)
-          .catch(reject);
+          .catch(reject)
+          .finally(() => {
+            promise = undefined;
+          });
       }, delay);
     });
+    return promise;
   };
 }
