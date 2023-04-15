@@ -1,12 +1,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Layout } from "src/components/Layout";
+import { Game } from "src/components/Game";
 
 const queryClient = new QueryClient();
 
 export function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout />
+      <Game />
     </QueryClientProvider>
   );
 }

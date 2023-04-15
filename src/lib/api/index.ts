@@ -6,7 +6,7 @@
 /**
  * Game type.
  */
-export type Game = {
+export type TGame = {
   id: number;
   name: string;
   first_release_date: number;
@@ -30,4 +30,5 @@ export async function post<T>(pathname: string, body: string) {
 /**
  * Default criteria when guessing games.
  */
-export const defaultCriteria = "category = (0, 2, 4) & aggregated_rating > 50";
+export const defaultCriteria =
+  "category = (0, 2, 4) & first_release_date != null & aggregated_rating > 50";

@@ -1,4 +1,4 @@
-import type { ComponentProps } from "react";
+import { ComponentProps } from "react";
 import { ClassList } from "src/lib/classList";
 
 import classes from "./style.module.css";

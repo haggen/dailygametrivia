@@ -1,27 +1,26 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+
 import { Button } from "src/components/Button";
 import { ComboBox, Option } from "src/components/ComboBox";
-import { Game, defaultCriteria, post } from "src/lib/api";
-import { debounce } from "src/lib/debounce";
+import { TGame, defaultCriteria, post } from "src/lib/api";
 
-type Props = { onGuess: (game: Game) => void };
+type Props = { onGuess: (game: TGame) => void };
 
 export function Guesser({ onGuess }: Props) {
-  const [guess, setGuess] = useState<Game>();
+  const [guess, setGuess] = useState<TGame>();
   const [query, setQuery] = useState("");
 
   const { data: options = [], isFetching } = useQuery(
-    ["/v4/games", query] as const,
-    ({ queryKey }) =>
-      post<Game>(
-        queryKey[0],
-        `
-          fields name, first_release_date;
-          search "${queryKey[1].replace('"', '\\"')}";
-          where ${defaultCriteria};
-        `
-      ),
+    [
+      "/v4/games",
+      `
+        fields name, first_release_date;
+        search "${query.replace('"', '\\"')}";
+        where ${defaultCriteria};
+      `,
+    ] as const,
+    ({ queryKey }) => post<TGame>(...queryKey),
     {
       enabled: query.length > 0,
       select: (data) =>
@@ -31,7 +30,7 @@ export function Guesser({ onGuess }: Props) {
               key: String(game.id),
               value: game,
               label: game.name,
-            } as Option<Game>)
+            } as Option<TGame>)
         ),
     }
   );
@@ -40,7 +39,7 @@ export function Guesser({ onGuess }: Props) {
     setQuery(value);
   };
 
-  const handleChange = (option: Option<Game>) => {
+  const handleChange = (option: Option<TGame>) => {
     setGuess(option.value);
   };
 

@@ -1,8 +1,8 @@
 const selectedGames: Record<number, number> = {
-  0: 2131,
-  1: 138951,
-  2: 1291,
-  3: 9509,
+  0: 117743,
+  1: 15587,
+  2: 1643,
+  3: 673,
 };
 
 const { length } = Object.keys(selectedGames);

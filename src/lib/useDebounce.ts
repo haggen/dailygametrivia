@@ -1,16 +1,16 @@
-import { useEffect, useRef } from "react";
 import debounce from "lodash.debounce";
+import { useEffect, useRef } from "react";
 
 /**
  * Get a debounced version of a function that is stable across renders.
  */
 export function useDebounce<P extends unknown[]>(
   callback: (...parameters: P) => void,
-  delay: number
+  delay: number,
 ) {
   const callbackRef = useRef(callback);
   const debounceRef = useRef(
-    debounce((...parameters: P) => callbackRef.current(...parameters), delay)
+    debounce((...parameters: P) => callbackRef.current(...parameters), delay),
   );
 
   useEffect(() => {

@@ -33,7 +33,7 @@ export function ComboBox<T>({
       mask: "",
       selectedIndex: -1,
       isExpanded: false,
-    }
+    },
   );
 
   const focusTrapRef = useFocusTrap<HTMLDivElement>((focused) => {
