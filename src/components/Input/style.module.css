@@ -1,0 +1,11 @@
+.input {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.125rem;
+  cursor: text;
+  display: inline flex;
+  gap: 0.25rem;
+  height: 2.5rem;
+  justify-content: center;
+  padding-inline: 0.5rem;
+}

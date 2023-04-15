@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { GuessForm } from "src/components/GuessForm";
+import { Guesser } from "src/components/Guesser";
 import { post } from "src/lib/api";
 import { getTodaysGameId } from "src/lib/todaysGame";
 
@@ -13,10 +13,14 @@ export function Layout() {
   `;
   const { data } = useQuery(["games", query], () => post("/v4/games", query));
 
+  const handleGuess = (guess) => {
+    console.log({ guess });
+  };
+
   return (
     <>
       {data?.[0].name}
-      <GuessForm />
+      <Guesser onGuess={handleGuess} />
     </>
   );
 }

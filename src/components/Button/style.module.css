@@ -1,0 +1,18 @@
+.button {
+  align-items: center;
+  color: #fff;
+  background-color: green;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  display: inline flex;
+  font-weight: bolder;
+  gap: 0.25rem;
+  height: 2.5rem;
+  justify-content: center;
+  padding-inline: 1rem;
+  /* padding-block-end: 0.125rem; */
+}
+
+.button[disabled] {
+  filter: saturate(0%);
+}

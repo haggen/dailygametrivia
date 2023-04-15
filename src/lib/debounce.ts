@@ -3,7 +3,7 @@
  */
 export function debounce<P extends Array<unknown>, R>(
   fn: (...arg: P) => Promise<R>,
-  delay: number
+  delay: number,
 ) {
   let timeoutId: ReturnType<typeof setTimeout>;
   return (...arg: P): Promise<R> => {
