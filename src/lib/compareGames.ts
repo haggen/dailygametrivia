@@ -1,15 +1,15 @@
-import { TGame } from "~/src/lib/api";
+import { Game } from "~/src/lib/api";
 
 export type Match = "exact" | "partial" | "mismatch" | "higher" | "lower";
 
-function compareName(a: TGame, b: TGame): Match {
+function compareName(a: Game, b: Game): Match {
   if (a.name === b.name) {
     return "exact";
   }
   return "mismatch";
 }
 
-function compareReleaseYear(a: TGame, b: TGame): Match {
+function compareReleaseYear(a: Game, b: Game): Match {
   const ya = new Date(a.first_release_date * 1000).getFullYear();
   const yb = new Date(b.first_release_date * 1000).getFullYear();
 
@@ -23,7 +23,7 @@ function compareReleaseYear(a: TGame, b: TGame): Match {
   return "mismatch";
 }
 
-function compareRelationships<T extends { id: number }>(a: T[], b: T[]): Match {
+function compareLists<T extends { id: number }>(a: T[], b: T[]): Match {
   const intersection = a.filter((a) => b.some((b) => a.id === b.id));
   if (intersection.length === a.length && intersection.length === b.length) {
     return "exact";
@@ -34,27 +34,34 @@ function compareRelationships<T extends { id: number }>(a: T[], b: T[]): Match {
   return "mismatch";
 }
 
-function comparePlatforms(a: TGame, b: TGame): Match {
-  return compareRelationships(a.platforms, b.platforms);
+function comparePlatforms(a: Game, b: Game): Match {
+  return compareLists(a.platforms, b.platforms);
 }
 
-function compareGenres(a: TGame, b: TGame): Match {
-  return compareRelationships(a.genres, b.genres);
+function compareGenres(a: Game, b: Game): Match {
+  return compareLists(a.genres, b.genres);
 }
 
-function comparePlayerPerspectives(a: TGame, b: TGame): Match {
-  return compareRelationships(a.player_perspectives, b.player_perspectives);
+function comparePlayerPerspectives(a: Game, b: Game): Match {
+  return compareLists(a.player_perspectives, b.player_perspectives);
 }
 
-function compareEngines(a: TGame, b: TGame): Match {
-  return compareRelationships(a.game_engines, b.game_engines);
+function compareEngines(a: Game, b: Game): Match {
+  return compareLists(a.game_engines, b.game_engines);
 }
 
-function compareModes(a: TGame, b: TGame): Match {
-  return compareRelationships(a.game_modes, b.game_modes);
+function compareModes(a: Game, b: Game): Match {
+  return compareLists(a.game_modes, b.game_modes);
 }
 
-function compareInvolvedCompanies(a: TGame, b: TGame): Match {
+function compareCollection(a: Game, b: Game): Match {
+  if (a.collection.id === b.collection.id) {
+    return "exact";
+  }
+  return "mismatch";
+}
+
+function compareInvolvedCompanies(a: Game, b: Game): Match {
   const intersection = a.involved_companies.filter((a) =>
     b.involved_companies.some((b) => a.company.id === b.company.id)
   );
@@ -70,7 +77,7 @@ function compareInvolvedCompanies(a: TGame, b: TGame): Match {
   return "mismatch";
 }
 
-export function compareGames(a: TGame, b: TGame) {
+export function compareGames(a: Game, b: Game) {
   return {
     id: a.id === b.id ? "exact" : "mismatch",
     name: compareName(a, b),
@@ -81,5 +88,6 @@ export function compareGames(a: TGame, b: TGame) {
     involved_companies: compareInvolvedCompanies(a, b),
     game_engines: compareEngines(a, b),
     game_modes: compareModes(a, b),
+    collection: compareCollection(a, b),
   } as const;
 }

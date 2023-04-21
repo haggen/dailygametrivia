@@ -7,7 +7,7 @@ html {
   --color-yellow: hsl(35, 89.8%, 50%);
   --color-shadow: hsla(0, 0%, 0%, 0.3);
   --color-light: hsla(0, 0%, 100%, 0.5);
-  --color-background: hsl(240, 10.5%, 14.9%);
+  --color-background: hsl(240, 11%, 15%);
   --color-background-bright: hsl(240, 10.2%, 24.9%);
   --color-background-red: hsl(346, 48.1%, 36.3%);
   --color-background-green: hsl(145, 45.2%, 26.5%);
@@ -25,13 +25,41 @@ html {
   color: var(--color-text);
 }
 
-html,
-body,
-#root {
-  height: 100%;
-}
-
 #root {
   display: flex;
   flex-direction: column;
+  min-height: 100dvh;
+  min-width: 22.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 0.5rem;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+}
+
+noscript {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+noscript h1 {
+  font-size: 3rem;
+}
+
+noscript p {
+  text-align: center;
 }

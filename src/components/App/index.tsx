@@ -4,43 +4,61 @@ import * as classes from "./style.module.css";
 
 import { Guess } from "~/src/components/Guess";
 import { Guesser } from "~/src/components/Guesser";
-import { TGame, defaultGameFields, fixMissingData, post } from "~/src/lib/api";
-import { getTodaysGameId } from "~/src/lib/todaysGame";
+import {
+  Game,
+  defaultGameCriteria,
+  defaultGameFields,
+  fixGameData,
+  post,
+} from "~/src/lib/api";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { compareGames } from "~/src/lib/compareGames";
 import { Button } from "~/src/components/Button";
 import { Lives } from "~/src/components/Lives";
 import { Score } from "~/src/components/Score";
+import { Toast } from "~/src/components/Toast";
+import { Icon } from "~/src/components/Icon";
 
-const maxLives = 10;
+const maxLives = 1;
+
+function drawTodaysGame<T>(games: T[]) {
+  const { length } = games;
+  const today = new Date();
+  const y = today.getFullYear();
+  const m = today.getMonth();
+  const d = today.getDate();
+  const seed = [y, m, d].join("");
+  return games[parseInt(seed, 10) % length];
+}
 
 export function App() {
   const [{ stage, score, currentLives, guesses }, dispatch] = useSimpleState({
     stage: "playing",
     score: 0,
     currentLives: maxLives,
-    guesses: [] as TGame[],
+    guesses: [] as Game[],
   });
-
-  const todaysGameId = getTodaysGameId();
 
   const { data: secretGame } = useQuery(
     [
       "/v4/games",
       {
         fields: defaultGameFields,
-        where: `id = ${todaysGameId}`,
+        where: defaultGameCriteria,
+        sort: "id",
+        limit: 500,
       },
     ] as const,
-    ({ queryKey }) => post<TGame>(...queryKey),
+    ({ queryKey }) => post<Game>(...queryKey),
     {
       select(data) {
-        return fixMissingData(data[0]);
+        const todaysGame = drawTodaysGame(data);
+        return fixGameData(todaysGame);
       },
     }
   );
 
-  const handleGuess = (guessedGame: TGame) => {
+  const handleGuess = (guessedGame: Game) => {
     if (!secretGame) {
       return;
     }
@@ -107,12 +125,22 @@ export function App() {
         {stage === "playing" ? (
           <Guesser onGuess={handleGuess} />
         ) : stage === "victory" ? (
-          <>
-            🎉 Congratulations! <Button onClick={handleRestart}>Restart</Button>
-          </>
+          <Toast
+            type="positive"
+            icon={<Icon name="popper" />}
+            title="Correct!"
+            message="You can play again tomorrow."
+            extra={<Button onClick={handleRestart}>Restart</Button>}
+          />
         ) : (
           <>
-            😵 Game over! <Button onClick={handleRestart}>Restart</Button>
+            <Toast
+              type="negative"
+              icon={<Icon name="dead" />}
+              title="Game over!"
+              message="You can try again tomorrow."
+              extra={<Button onClick={handleRestart}>Restart</Button>}
+            />
           </>
         )}
 

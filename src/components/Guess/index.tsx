@@ -1,6 +1,8 @@
+import Balancer from "react-wrap-balancer";
+
 import * as classes from "./style.module.css";
 
-import { TGame } from "~/src/lib/api";
+import { Game } from "~/src/lib/api";
 import { Icon } from "~/src/components/Icon";
 import { Match } from "~/src/lib/compareGames";
 
@@ -21,7 +23,7 @@ function getIcon(match: Match) {
   }
 }
 
-function format<T extends keyof TGame>(key: T, game: TGame) {
+function format<T extends keyof Game>(key: T, game: Game) {
   switch (key) {
     case "first_release_date":
       return <>{new Date(game.first_release_date * 1000).getFullYear()}</>;
@@ -45,6 +47,8 @@ function format<T extends keyof TGame>(key: T, game: TGame) {
       return <>{game.game_engines.map((engine) => engine.name).join(", ")}</>;
     case "game_modes":
       return <>{game.game_modes.map((mode) => mode.name).join(", ")}</>;
+    case "collection":
+      return <>{game.collection.name}</>;
     case "involved_companies":
       return (
         <>
@@ -63,6 +67,7 @@ function format<T extends keyof TGame>(key: T, game: TGame) {
 }
 
 const displayableComparisons = [
+  "collection",
   "first_release_date",
   "platforms",
   "genres",
@@ -73,14 +78,16 @@ const displayableComparisons = [
 ] as const;
 
 type Props = {
-  guess: TGame;
+  guess: Game;
   comparison: Record<string, Match>;
 };
 
 export function Guess({ guess, comparison }: Props) {
   return (
     <article className={classes.guess}>
-      <h1>{guess.name}</h1>
+      <h1>
+        <Balancer>{guess.name}</Balancer>
+      </h1>
       <ul>
         {displayableComparisons.map((key) => (
           <li key={key} className={classes[comparison[key]]}>

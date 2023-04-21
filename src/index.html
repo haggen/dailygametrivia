@@ -3,11 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Attempt to find out the secret game of the day based on attributes such as year of release, genre, player's perspective and more."
+    />
     <title>Daily Game Trivia</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="global.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <noscript>
+        <h1>🧩</h1>
+        <p style="max-width: 30ch">
+          The Game Daily Trivia requires JavaScript to be enabled.
+        </p>
+      </noscript>
+    </div>
     <script type="module" src="index.tsx"></script>
   </body>
 </html>

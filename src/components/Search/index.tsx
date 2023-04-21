@@ -4,6 +4,7 @@ import {
   MouseEvent,
   useEffect,
   useId,
+  useRef,
 } from "react";
 
 import * as classes from "./style.module.css";
@@ -63,6 +64,7 @@ export function Search<T>({
       ?.scrollIntoView({ block: "nearest", behavior: "auto" });
   }, [focusTrapRef, isFocused, selectedIndex]);
 
+  const inputRef = useRef<HTMLInputElement>(null);
   const listId = useId();
 
   const handlePreview = (index: number) => {
@@ -127,9 +129,10 @@ export function Search<T>({
       throw new Error("Option has no index");
     }
     handleCommit(Number(index));
+    inputRef.current?.focus();
   };
 
-  const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
+  const handleMouseEnter = (event: MouseEvent<HTMLElement>) => {
     const target = event.currentTarget.closest("[data-index]");
     if (!target) {
       return;
@@ -138,7 +141,8 @@ export function Search<T>({
     if (!index) {
       return;
     }
-    handlePreview(Number(index));
+    // handlePreview(Number(index));
+    patch({ selectedIndex: Number(index) });
   };
 
   const classList = new ClassList();
@@ -153,6 +157,7 @@ export function Search<T>({
     <div ref={focusTrapRef} className={classList.toString()}>
       <Input
         required
+        ref={inputRef}
         type="search"
         role="combobox"
         aria-expanded={isFocused}
@@ -168,7 +173,6 @@ export function Search<T>({
           aria-label="Games"
           tabIndex={0}
           onClick={handleClick}
-          onKeyDown={handleKeyDown}
         >
           {isLoading ? (
             <li>Loading…</li>
@@ -182,7 +186,7 @@ export function Search<T>({
                   role="option"
                   aria-selected={index === selectedIndex}
                   data-index={index}
-                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
                 >
                   {option.label}
                 </li>

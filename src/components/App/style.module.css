@@ -3,19 +3,22 @@
   background-color: var(--color-background);
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 0.75rem;
   position: sticky;
   top: 0;
 }
 
 .content {
   flex: 1 0 auto;
-  padding-block-end: 1.5rem;
+  padding-block: 0.75rem;
 }
 
 .footer {
+  align-items: stretch;
   background-color: var(--color-background);
   bottom: 0;
+  gap: 0.75rem;
+  padding-block: 0.75rem;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -23,15 +26,18 @@
 
 .copy {
   font-size: 0.75em;
-  padding-block: 0.75rem;
   text-align: center;
+}
+
+.copy a {
+  font-weight: bolder;
 }
 
 .guesses {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-inline: 1.5rem;
+  padding-inline: 0.75rem;
   width: 100%;
   height: 100%;
 }

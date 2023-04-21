@@ -6,17 +6,17 @@ import * as classes from "./style.module.css";
 import { Button } from "~/src/components/Button";
 import { Search, Option } from "~/src/components/Search";
 import {
-  TGame,
+  Game,
   defaultGameCriteria,
   defaultGameFields,
-  fixMissingData,
+  fixGameData,
   post,
 } from "~/src/lib/api";
 
-type Props = { onGuess: (game: TGame) => void };
+type Props = { onGuess: (game: Game) => void };
 
 export function Guesser({ onGuess }: Props) {
-  const [guess, setGuess] = useState<TGame>();
+  const [guess, setGuess] = useState<Game>();
   const [query, setQuery] = useState("");
 
   const { data: options = [], isFetching } = useQuery(
@@ -29,17 +29,17 @@ export function Guesser({ onGuess }: Props) {
         limit: 100,
       },
     ] as const,
-    ({ queryKey }) => post<TGame[]>(...queryKey),
+    ({ queryKey }) => post<Game[]>(...queryKey),
     {
       enabled: query.length > 0,
       select: (data) =>
-        data.map(fixMissingData).map(
+        data.map(fixGameData).map(
           (game) =>
             ({
               key: String(game.id),
               value: game,
               label: game.name,
-            } as Option<TGame>)
+            } as Option<Game>)
         ),
     }
   );
@@ -48,7 +48,7 @@ export function Guesser({ onGuess }: Props) {
     setQuery(value);
   };
 
-  const handleChange = (option: Option<TGame>) => {
+  const handleChange = (option: Option<Game>) => {
     setGuess(option.value);
   };
 
