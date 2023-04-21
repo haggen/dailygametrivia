@@ -1,7 +1,9 @@
 .input {
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-text);
   border-radius: 0.125rem;
+  box-shadow: var(--inner-shadow);
+  color: var(--color-background);
   cursor: text;
   display: inline flex;
   gap: 0.25rem;

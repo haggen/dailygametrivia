@@ -1,0 +1,61 @@
+.header {
+  align-items: align;
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.content {
+  flex: 1 0 auto;
+  padding-block-end: 1.5rem;
+}
+
+.footer {
+  background-color: var(--color-background);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+}
+
+.copy {
+  font-size: 0.75em;
+  padding-block: 0.75rem;
+  text-align: center;
+}
+
+.guesses {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.guesses > li {
+  align-items: start;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.number {
+  background-color: var(--color-text-dimmed);
+  border-radius: 0.125rem;
+  color: var(--color-background);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+  text-align: center;
+  flex: 0 0 2rem;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 2rem;
+}

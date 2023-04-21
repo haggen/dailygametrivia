@@ -1,18 +1,19 @@
 import { ElementType, forwardRef } from "react";
-import { ClassList } from "src/lib/classList";
-import { PolymorphicPropsWithRef, PolymorphicRef } from "src/lib/shared";
 
-import classes from "./style.module.css";
+import * as classes from "./style.module.css";
+
+import { ClassList } from "~/src/lib/classList";
+import { PolymorphicPropsWithRef, PolymorphicRef } from "~/src/lib/shared";
 
 type AcceptableElements = "button" | "a";
-type Props = {};
+type Props = object;
 
 /**
  * Button component.
  */
 function Button<E extends AcceptableElements = "button">(
   { as, ...props }: PolymorphicPropsWithRef<E, Props>,
-  ref: PolymorphicRef<E>,
+  ref: PolymorphicRef<E>
 ) {
   const Component = as ?? ("button" as ElementType);
   const classList = new ClassList();

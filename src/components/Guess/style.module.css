@@ -1,0 +1,36 @@
+.guess {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.guess h1 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.guess ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.guess li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.exact {
+  color: var(--color-green);
+}
+
+.partial {
+  color: var(--color-yellow);
+}
+
+.lower,
+.higher,
+.mismatch {
+  color: var(--color-red);
+}

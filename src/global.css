@@ -1,1 +1,37 @@
-@import "resetize";
+@import "npm:resetize";
+
+html {
+  --color-red: hsl(350, 70.2%, 50%);
+  --color-green: hsl(140, 59.8%, 40%);
+  --color-blue: hsl(200, 90.2%, 40%);
+  --color-yellow: hsl(35, 89.8%, 50%);
+  --color-shadow: hsla(0, 0%, 0%, 0.3);
+  --color-light: hsla(0, 0%, 100%, 0.5);
+  --color-background: hsl(240, 10.5%, 14.9%);
+  --color-background-bright: hsl(240, 10.2%, 24.9%);
+  --color-background-red: hsl(346, 48.1%, 36.3%);
+  --color-background-green: hsl(145, 45.2%, 26.5%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-text-placeholder: hsl(240, 5.1%, 50%);
+  --color-text-dimmed: hsl(240, 4.7%, 25.1%);
+  --color-match-mismatch: hsl(350, 70.2%, 50%);
+  --color-match-partial: hsl(35, 89.8%, 50%);
+  --color-match-exact: hsl(140, 59.8%, 40%);
+
+  --drop-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.3);
+  --inner-shadow: inset 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.3);
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}

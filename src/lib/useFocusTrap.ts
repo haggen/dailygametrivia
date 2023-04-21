@@ -4,14 +4,14 @@ import { useEffect, useRef } from "react";
  * Control whether focus is trapped within a referred element.
  */
 export function useFocusTrap<T extends HTMLElement>(
-  callback: (focused: boolean) => void,
+  callback: (focused: boolean) => void
 ) {
   const elementRef = useRef<T>(null);
 
   useEffect(() => {
-    const handleFocusIn = (event: FocusEvent) => {
+    const handleFocusIn = () => {
       if (!elementRef?.current) {
-        throw new Error("Focus trap reference missing");
+        return;
       }
       if (elementRef.current.contains(document.activeElement)) {
         callback(true);
@@ -19,10 +19,10 @@ export function useFocusTrap<T extends HTMLElement>(
     };
     document.addEventListener("focusin", handleFocusIn);
 
-    const handleFocusOut = (event: FocusEvent) => {
+    const handleFocusOut = () => {
       setTimeout(() => {
         if (!elementRef?.current) {
-          throw new Error("Focus trap reference missing");
+          return;
         }
         if (!elementRef.current.contains(document.activeElement)) {
           callback(false);
@@ -35,7 +35,7 @@ export function useFocusTrap<T extends HTMLElement>(
       document.removeEventListener("focusin", handleFocusIn);
       document.removeEventListener("focusout", handleFocusOut);
     };
-  }, []);
+  }, [callback]);
 
   return elementRef;
 }

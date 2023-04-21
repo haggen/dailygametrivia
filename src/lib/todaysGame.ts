@@ -1,9 +1,6 @@
-const selectedGames: Record<number, number> = {
-  0: 117743,
-  1: 15587,
-  2: 1643,
-  3: 673,
-};
+const selectedGames = [
+  31679, 9096, 673, 30634, 24493, 13688, 19592, 6748, 8232, 6009,
+] as const;
 
 const { length } = Object.keys(selectedGames);
 
@@ -12,5 +9,6 @@ export function getTodaysGameId() {
   const y = today.getFullYear();
   const m = today.getMonth();
   const d = today.getDate();
-  return selectedGames[(y * m * d) % length];
+  const seed = [y, m, d].join("");
+  return selectedGames[parseInt(seed, 10) % length];
 }

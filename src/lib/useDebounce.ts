@@ -6,11 +6,11 @@ import { useEffect, useRef } from "react";
  */
 export function useDebounce<P extends unknown[]>(
   callback: (...parameters: P) => void,
-  delay: number,
+  delay: number
 ) {
   const callbackRef = useRef(callback);
   const debounceRef = useRef(
-    debounce((...parameters: P) => callbackRef.current(...parameters), delay),
+    debounce((...parameters: P) => callbackRef.current(...parameters), delay)
   );
 
   useEffect(() => {

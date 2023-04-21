@@ -4,16 +4,14 @@
   "version": "0.0.0",
   "author": "Arthur <arthur@corenzan.com>",
   "license": "Apache-2.0",
-  "type": "module",
+  "source": "src/index.html",
   "scripts": {
-    "build": "vite build",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "lint": "rome check .",
-    "format": "rome format .",
-    "start": "npm run start:${NODE_ENV:-development}",
-    "start:development": "vite",
-    "start:production": "vite preview"
+    "build": "parcel build",
+    "lint": "eslint .",
+    "format": "prettier .",
+    "start:development": "parcel",
+    "start:production": "parcel serve",
+    "start": "npm run start:${NODE_ENV:-development}"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.28.0",
@@ -26,11 +24,16 @@
     "@types/lodash.debounce": "^4.0.7",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "rome": "^12.0.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0",
-    "vite-tsconfig-paths": "^4.0.8",
-    "vitest": "^0.29.8"
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.7",
+    "process": "^0.11.10",
+    "typescript": "^4.9.3"
   }
 }

@@ -1,7 +1,8 @@
 import { ComponentProps } from "react";
-import { ClassList } from "src/lib/classList";
 
-import classes from "./style.module.css";
+import * as classes from "./style.module.css";
+
+import { ClassList } from "~/src/lib/classList";
 
 type Props = ComponentProps<"input">;
 

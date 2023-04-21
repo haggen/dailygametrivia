@@ -1,7 +1,8 @@
 .button {
   align-items: center;
   color: #fff;
-  background-color: green;
+  background-color: var(--color-blue);
+  box-shadow: var(--drop-shadow);
   border-radius: 0.125rem;
   cursor: pointer;
   display: inline flex;

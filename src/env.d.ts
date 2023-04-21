@@ -1,5 +1,3 @@
-import "vite/client";
-
 /**
  * Stylesheet module.
  */

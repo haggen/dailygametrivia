@@ -1,9 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
-import { Button } from "src/components/Button";
-import { ComboBox, Option } from "src/components/ComboBox";
-import { TGame, defaultCriteria, post } from "src/lib/api";
+import * as classes from "./style.module.css";
+
+import { Button } from "~/src/components/Button";
+import { Search, Option } from "~/src/components/Search";
+import {
+  TGame,
+  defaultGameCriteria,
+  defaultGameFields,
+  fixMissingData,
+  post,
+} from "~/src/lib/api";
 
 type Props = { onGuess: (game: TGame) => void };
 
@@ -14,17 +22,18 @@ export function Guesser({ onGuess }: Props) {
   const { data: options = [], isFetching } = useQuery(
     [
       "/v4/games",
-      `
-        fields name, first_release_date;
-        search "${query.replace('"', '\\"')}";
-        where ${defaultCriteria};
-      `,
+      {
+        search: query,
+        fields: defaultGameFields,
+        where: defaultGameCriteria,
+        limit: 100,
+      },
     ] as const,
-    ({ queryKey }) => post<TGame>(...queryKey),
+    ({ queryKey }) => post<TGame[]>(...queryKey),
     {
       enabled: query.length > 0,
       select: (data) =>
-        data.map(
+        data.map(fixMissingData).map(
           (game) =>
             ({
               key: String(game.id),
@@ -43,24 +52,24 @@ export function Guesser({ onGuess }: Props) {
     setGuess(option.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
     if (guess) {
       onGuess(guess);
     }
   };
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
-      <ComboBox
-        query={query}
+    <form className={classes.form} onSubmit={handleSubmit}>
+      <Search
+        className={classes.input}
         options={options}
+        query={query}
         loading={isFetching}
         onSearch={handleSearch}
         onChange={handleChange}
       />
-      <Button type="submit" onClick={handleSubmit}>
-        Guess
-      </Button>
+      <Button type="submit">Guess</Button>
     </form>
   );
 }
