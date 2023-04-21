@@ -15,10 +15,6 @@
   background-color: var(--color-background-red);
 }
 
-.toast figure {
-  font-size: 2.5rem;
-}
-
 .toast div {
   align-items: center;
   display: flex;
@@ -26,6 +22,7 @@
 }
 
 .toast h1 {
+  box-shadow: var(--drop-shadow);
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 1.25;

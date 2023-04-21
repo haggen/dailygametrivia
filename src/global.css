@@ -25,6 +25,10 @@ html {
   color: var(--color-text);
 }
 
+body {
+  overflow: overlay;
+}
+
 #root {
   display: flex;
   flex-direction: column;

@@ -1,10 +1,8 @@
 .form {
   display: flex;
   gap: 0.25rem;
-  padding-inline: 0.5rem;
-  max-width: 30.5rem;
-  width: 100%;
   min-width: 0;
+  padding-inline: 0.5rem;
 }
 
 .input {

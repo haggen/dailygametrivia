@@ -17,9 +17,9 @@ import { Button } from "~/src/components/Button";
 import { Lives } from "~/src/components/Lives";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
-import { Icon } from "~/src/components/Icon";
+import { Help } from "~/src/components/Help";
 
-const maxLives = 1;
+const maxLives = 10;
 
 function drawTodaysGame<T>(games: T[]) {
   const { length } = games;
@@ -117,7 +117,7 @@ export function App() {
             ))}
           </ol>
         ) : (
-          <p>Take a guess to start the game.</p>
+          <Help />
         )}
       </main>
 
@@ -127,7 +127,7 @@ export function App() {
         ) : stage === "victory" ? (
           <Toast
             type="positive"
-            icon={<Icon name="popper" />}
+            icon="popper"
             title="Correct!"
             message="You can play again tomorrow."
             extra={<Button onClick={handleRestart}>Restart</Button>}
@@ -136,7 +136,7 @@ export function App() {
           <>
             <Toast
               type="negative"
-              icon={<Icon name="dead" />}
+              icon="dead"
               title="Game over!"
               message="You can try again tomorrow."
               extra={<Button onClick={handleRestart}>Restart</Button>}

@@ -3,10 +3,11 @@ import { ReactNode } from "react";
 import * as classes from "./style.module.css";
 
 import { ClassList } from "~/src/lib/classList";
+import { Icon } from "~/src/components/Icon";
 
 type Props = {
   type?: "default" | "positive" | "negative";
-  icon: ReactNode;
+  icon: string;
   title: string;
   message: string;
   extra?: ReactNode;
@@ -25,7 +26,9 @@ export function Toast({
 
   return (
     <div className={classList.toString()}>
-      <figure>{icon}</figure>
+      <figure>
+        <Icon name={icon} size="2.5rem" />
+      </figure>
       <div>
         <h1>{title}</h1>
         <p>{message}</p>

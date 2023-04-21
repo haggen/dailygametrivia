@@ -8,7 +8,7 @@ type Props = {
 
 export function Lives({ current, max }: Props) {
   return (
-    <Flex gap=".5rem" style={{ fontSize: "1.25rem" }}>
+    <Flex gap=".25rem" style={{ fontSize: "1.5rem" }}>
       {Array(max)
         .fill(null)
         .map((_, index) =>
