@@ -18,18 +18,9 @@ import { Lives } from "~/src/components/Lives";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
 import { Help } from "~/src/components/Help";
+import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
 
 const maxLives = 10;
-
-function drawTodaysGame<T>(games: T[]) {
-  const { length } = games;
-  const today = new Date();
-  const y = today.getFullYear();
-  const m = today.getMonth();
-  const d = today.getDate();
-  const seed = [y, m, d].join("");
-  return games[parseInt(seed, 10) % length];
-}
 
 export function App() {
   const [{ stage, score, currentLives, guesses }, dispatch] = useSimpleState({
@@ -39,30 +30,41 @@ export function App() {
     guesses: [] as Game[],
   });
 
-  const { data: secretGame } = useQuery(
+  const { data: gameOfTheDayOffset } = useQuery(
+    ["/v4/games/count", { where: defaultGameCriteria }] as const,
+    ({ queryKey }) => post<{ count: number }>(...queryKey),
+    {
+      select({ count }) {
+        return getGameOfTheDayOffset(count);
+      },
+    }
+  );
+
+  const { data: gameOfTheDay } = useQuery(
     [
       "/v4/games",
       {
         fields: defaultGameFields,
         where: defaultGameCriteria,
         sort: "id",
-        limit: 500,
+        offset: gameOfTheDayOffset,
+        limit: 1,
       },
     ] as const,
-    ({ queryKey }) => post<Game>(...queryKey),
+    ({ queryKey }) => post<Game[]>(...queryKey),
     {
-      select(data) {
-        const todaysGame = drawTodaysGame(data);
-        return fixGameData(todaysGame);
+      enabled: typeof gameOfTheDayOffset === "number",
+      select(game) {
+        return fixGameData(game[0]);
       },
     }
   );
 
   const handleGuess = (guessedGame: Game) => {
-    if (!secretGame) {
+    if (!gameOfTheDay) {
       return;
     }
-    const comparison = compareGames(secretGame, guessedGame);
+    const comparison = compareGames(gameOfTheDay, guessedGame);
 
     if (comparison.id === "exact") {
       dispatch({
@@ -92,7 +94,7 @@ export function App() {
     });
   };
 
-  if (!secretGame) {
+  if (!gameOfTheDay) {
     return <>Loading…</>;
   }
 
@@ -111,7 +113,7 @@ export function App() {
                 <span className={classes.number}>{guesses.length - index}</span>
                 <Guess
                   guess={guessedGame}
-                  comparison={compareGames(secretGame, guessedGame)}
+                  comparison={compareGames(gameOfTheDay, guessedGame)}
                 />
               </li>
             ))}
