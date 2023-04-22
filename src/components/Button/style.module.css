@@ -1,7 +1,7 @@
 .button {
   align-items: center;
   color: #fff;
-  background-color: var(--color-blue);
+  background-color: var(--color-text-placeholder);
   box-shadow: var(--drop-shadow);
   border-radius: 0.125rem;
   cursor: pointer;
@@ -10,7 +10,23 @@
   gap: 0.25rem;
   height: 3rem;
   justify-content: center;
-  padding-inline: 1rem;
+  padding-inline: 1.5rem;
+}
+
+.button.blue {
+  background-color: var(--color-blue);
+}
+
+.button.red {
+  background-color: var(--color-red);
+}
+
+.button.green {
+  background-color: var(--color-green);
+}
+
+.button.yellow {
+  background-color: var(--color-yellow);
 }
 
 .button[disabled] {

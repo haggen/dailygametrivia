@@ -51,7 +51,7 @@ body {
   border: 0.25rem solid transparent;
 }
 
-noscript {
+.banner {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -60,10 +60,10 @@ noscript {
   justify-content: center;
 }
 
-noscript h1 {
+.banner h1 {
   font-size: 3rem;
 }
 
-noscript p {
+.banner p {
   text-align: center;
 }

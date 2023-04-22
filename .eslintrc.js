@@ -23,6 +23,9 @@ module.exports = {
     // Warn about console leftovers.
     "no-console": "error",
 
+    // Unecessary.
+    "react/no-unescaped-entities": "off",
+
     // Wrong dependencies cause errors, so it should be an error.
     "react-hooks/exhaustive-deps": "error",
 

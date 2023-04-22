@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import * as classes from "./style.module.css";
 
 import { Button } from "~/src/components/Button";
-import { Search, Option } from "~/src/components/Search";
+import { SearchInput, Option } from "~/src/components/SearchInput";
 import {
   Game,
   defaultGameCriteria,
@@ -15,7 +15,7 @@ import {
 
 type Props = { onGuess: (game: Game) => void };
 
-export function Guesser({ onGuess }: Props) {
+export function Form({ onGuess }: Props) {
   const [guess, setGuess] = useState<Game>();
   const [query, setQuery] = useState("");
 
@@ -61,7 +61,7 @@ export function Guesser({ onGuess }: Props) {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      <Search
+      <SearchInput
         className={classes.input}
         options={options}
         query={query}

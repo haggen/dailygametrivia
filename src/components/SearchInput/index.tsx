@@ -30,7 +30,7 @@ type Props<T> = {
   onChange: (option: Option<T>) => void;
 };
 
-export function Search<T>({
+export function SearchInput<T>({
   className,
   options,
   query: lastQueryText,
@@ -50,7 +50,7 @@ export function Search<T>({
     patch({ isFocused: focused });
   });
 
-  const executeSearch = useDebounce(onSearch, 100);
+  const executeSearch = useDebounce(onSearch, 250);
 
   useEffect(() => {
     if (!focusTrapRef.current) {
@@ -61,7 +61,7 @@ export function Search<T>({
     }
     focusTrapRef.current
       .querySelector('li[aria-selected="true"]')
-      ?.scrollIntoView({ block: "nearest", behavior: "auto" });
+      ?.scrollIntoView({ block: "nearest" });
   }, [focusTrapRef, isFocused, selectedIndex]);
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -78,9 +78,9 @@ export function Search<T>({
     const option = options[index];
     if (option) {
       patch({
-        selectedIndex: index,
-        previewText: option.label,
         isFocused: false,
+        previewText: option.label,
+        selectedIndex: index,
       });
       onChange(option);
     }

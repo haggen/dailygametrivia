@@ -25,7 +25,7 @@ function getSeededOffset(seed: string, count: number) {
 /**
  * Get query offset.
  */
-export function getGameOfTheDayOffset(count: number) {
-  const seed = getSeed();
+export function getGameOfTheDayOffset(score: number, count: number) {
+  const seed = getSeed(score);
   return getSeededOffset(seed, count);
 }

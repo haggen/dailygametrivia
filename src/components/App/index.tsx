@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import * as classes from "./style.module.css";
 
 import { Guess } from "~/src/components/Guess";
-import { Guesser } from "~/src/components/Guesser";
+import { Form } from "~/src/components/Form";
 import {
   Game,
   defaultGameCriteria,
@@ -20,22 +20,24 @@ import { Toast } from "~/src/components/Toast";
 import { Help } from "~/src/components/Help";
 import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
 
-const maxLives = 10;
+const startingAttempts = 10;
 
 export function App() {
-  const [{ stage, score, currentLives, guesses }, dispatch] = useSimpleState({
-    stage: "playing",
-    score: 0,
-    currentLives: maxLives,
-    guesses: [] as Game[],
-  });
+  const [{ stage, level, score, attemptsLeft, history }, dispatch] =
+    useSimpleState({
+      stage: "playing",
+      level: 0,
+      score: 0,
+      attemptsLeft: startingAttempts,
+      history: [] as Game[],
+    });
 
   const { data: gameOfTheDayOffset } = useQuery(
     ["/v4/games/count", { where: defaultGameCriteria }] as const,
     ({ queryKey }) => post<{ count: number }>(...queryKey),
     {
       select({ count }) {
-        return getGameOfTheDayOffset(count);
+        return getGameOfTheDayOffset(level, count);
       },
     }
   );
@@ -60,79 +62,99 @@ export function App() {
     }
   );
 
-  const handleGuess = (guessedGame: Game) => {
-    if (!gameOfTheDay) {
-      return;
-    }
-    const comparison = compareGames(gameOfTheDay, guessedGame);
-
-    if (comparison.id === "exact") {
-      dispatch({
-        stage: "victory",
-        guesses: [...guesses, guessedGame],
-        score: score + 1,
-      });
-    } else if (currentLives === 1) {
-      dispatch({
-        stage: "gameover",
-        guesses: [...guesses, guessedGame],
-        currentLives: 0,
-      });
-    } else {
-      dispatch({
-        guesses: [...guesses, guessedGame],
-        currentLives: currentLives - 1,
-      });
-    }
-  };
-
-  const handleRestart = () => {
+  const handleVictory = (game: Game) => {
     dispatch({
-      stage: "playing",
-      currentLives: maxLives,
-      guesses: [],
+      stage: "victory",
+      score: score + 1,
+      history: [...history, game],
     });
   };
 
-  if (!gameOfTheDay) {
-    return <>Loading…</>;
-  }
+  const handleGameOver = (game: Game) => {
+    dispatch({
+      stage: "gameover",
+      history: [...history, game],
+      attemptsLeft: 0,
+    });
+  };
+
+  const handleGuess = (game: Game) => {
+    if (!gameOfTheDay) {
+      return;
+    }
+    const comparison = compareGames(gameOfTheDay, game);
+
+    if (comparison.id === "exact") {
+      handleVictory(game);
+    } else if (attemptsLeft === 1) {
+      handleGameOver(game);
+    } else {
+      dispatch({
+        history: [...history, game],
+        attemptsLeft: attemptsLeft - 1,
+      });
+    }
+  };
+
+  const handleNext = () => {
+    dispatch({
+      stage: "playing",
+      attemptsLeft: startingAttempts,
+      history: [],
+      level: score,
+    });
+  };
 
   return (
     <>
       <header className={classes.header}>
-        <Lives current={currentLives} max={maxLives} />
+        <Lives current={attemptsLeft} max={startingAttempts} />
         <Score score={score} />
       </header>
 
       <main className={classes.content}>
-        {guesses.length > 0 ? (
-          <ol className={classes.guesses}>
-            {[...guesses].reverse().map((guessedGame, index) => (
-              <li key={index}>
-                <span className={classes.number}>{guesses.length - index}</span>
-                <Guess
-                  guess={guessedGame}
-                  comparison={compareGames(gameOfTheDay, guessedGame)}
-                />
-              </li>
-            ))}
-          </ol>
+        {gameOfTheDay ? (
+          history.length > 0 ? (
+            <ol className={classes.history}>
+              {[...history].reverse().map((guessedGame, index) => (
+                <li key={index}>
+                  <span className={classes.number}>
+                    {history.length - index}
+                  </span>
+                  <Guess
+                    guess={guessedGame}
+                    comparison={compareGames(gameOfTheDay, guessedGame)}
+                  />
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <Help />
+          )
         ) : (
-          <Help />
+          <div className="banner">
+            <h1 aria-label="Loading">🧠</h1>
+            <p>Thinking of a game…</p>
+          </div>
         )}
       </main>
 
       <footer className={classes.footer}>
         {stage === "playing" ? (
-          <Guesser onGuess={handleGuess} />
+          gameOfTheDay ? (
+            <Form onGuess={handleGuess} />
+          ) : null
         ) : stage === "victory" ? (
           <Toast
             type="positive"
             icon="popper"
             title="Correct!"
-            message="You can play again tomorrow."
-            extra={<Button onClick={handleRestart}>Restart</Button>}
+            message="You may continue playing."
+            extra={
+              <Button color="green" onClick={handleNext}>
+                Next →
+              </Button>
+            }
           />
         ) : (
           <>
@@ -141,7 +163,6 @@ export function App() {
               icon="dead"
               title="Game over!"
               message="You can try again tomorrow."
-              extra={<Button onClick={handleRestart}>Restart</Button>}
             />
           </>
         )}

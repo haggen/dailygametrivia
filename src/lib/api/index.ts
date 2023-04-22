@@ -19,6 +19,9 @@ export type Game = {
   involved_companies: { id: number; company: { id: number; name: string } }[];
 };
 
+/**
+ * Request options.
+ */
 export type Options = {
   fields?: string;
   search?: string;
@@ -54,7 +57,7 @@ export async function post<T>(pathname: string, options: Options) {
 }
 
 /**
- * Fix missing data.
+ * Fix game data.
  */
 export function fixGameData(game: Semipartial<Game, "id" | "name">) {
   if (!game.game_engines) {
