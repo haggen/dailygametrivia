@@ -16,7 +16,7 @@
   overflow: scroll;
   overflow: overlay;
   position: absolute;
-  /* width: 100%; */
+  width: 100%;
   z-index: 10;
 }
 
@@ -25,9 +25,12 @@
   background-color: var(--color-background-bright);
   display: flex;
   height: 3rem;
+  padding-inline: 0.75rem;
+}
+
+.control li span {
   min-width: 0;
   overflow: hidden;
-  padding-inline: 0.5rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

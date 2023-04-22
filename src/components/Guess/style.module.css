@@ -5,10 +5,10 @@
 }
 
 .guess h1 {
-  box-shadow: var(--drop-shadow);
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 1.25;
+  text-shadow: var(--drop-shadow);
 }
 
 .guess ul {

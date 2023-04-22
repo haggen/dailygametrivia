@@ -188,7 +188,7 @@ export function Search<T>({
                   data-index={index}
                   onMouseEnter={handleMouseEnter}
                 >
-                  {option.label}
+                  <span>{option.label}</span>
                 </li>
               ))
             ) : (
