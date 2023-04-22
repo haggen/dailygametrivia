@@ -20,15 +20,31 @@ import { Toast } from "~/src/components/Toast";
 import { Help } from "~/src/components/Help";
 
 const maxLives = 10;
+const firstTenPrimeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
 
-function drawTodaysGame<T>(games: T[]) {
-  const { length } = games;
+function getSeed() {
   const today = new Date();
   const y = today.getFullYear();
   const m = today.getMonth();
   const d = today.getDate();
-  const seed = [y, m, d].join("");
-  return games[parseInt(seed, 10) % length];
+  return parseInt([y, m, d].join(""), 10);
+}
+
+function getRandomIndex(seed: number, listCount: number) {
+  // convert each number from seed to a correspondent prime number
+  const seedPrimeNumbers = seed
+    .toString()
+    .split("")
+    .map((n) => firstTenPrimeNumbers[parseInt(n, 10)]);
+  // multiply all the correspondent prime numbers
+  const seedPrimeProduct = seedPrimeNumbers.reduce((a, b) => a * b);
+  // get the modulo of the product by the list count
+  return seedPrimeProduct % listCount;
+}
+
+function getGameQueryOffset(gameListLength: number) {
+  const seed = getSeed();
+  return getRandomIndex(seed, gameListLength);
 }
 
 export function App() {
@@ -39,6 +55,16 @@ export function App() {
     guesses: [] as Game[],
   });
 
+  const { data: gameQueryOffset } = useQuery(
+    ["/v4/games/count", { where: defaultGameCriteria }] as const,
+    ({ queryKey }) => post<{ count: number }>(...queryKey),
+    {
+      select({ count: gameListLength }) {
+        return getGameQueryOffset(gameListLength);
+      },
+    }
+  );
+
   const { data: secretGame } = useQuery(
     [
       "/v4/games",
@@ -46,14 +72,15 @@ export function App() {
         fields: defaultGameFields,
         where: defaultGameCriteria,
         sort: "id",
-        limit: 500,
+        offset: gameQueryOffset,
+        limit: 1,
       },
     ] as const,
-    ({ queryKey }) => post<Game>(...queryKey),
+    ({ queryKey }) => post<Game[]>(...queryKey),
     {
-      select(data) {
-        const todaysGame = drawTodaysGame(data);
-        return fixGameData(todaysGame);
+      enabled: typeof gameQueryOffset === "number",
+      select(game) {
+        return fixGameData(game[0]);
       },
     }
   );

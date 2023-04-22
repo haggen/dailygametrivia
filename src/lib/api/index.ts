@@ -43,17 +43,14 @@ function serialize(options: Options) {
 /**
  * Post to IGDB.
  */
-export async function post<T extends { id: number; name: string }>(
-  pathname: string,
-  options: Options
-) {
+export async function post<T>(pathname: string, options: Options) {
   const url = new URL("https://d3cui0qbfwctuu.cloudfront.net");
   url.pathname = pathname;
   const response = await fetch(url, {
     method: "POST",
     body: serialize(options),
   });
-  return (await response.json()) as Promise<Semipartial<T, "id" | "name">[]>;
+  return (await response.json()) as Promise<T>;
 }
 
 /**
