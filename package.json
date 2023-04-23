@@ -5,13 +5,12 @@
   "author": "Arthur <arthur@corenzan.com>",
   "license": "Apache-2.0",
   "source": "src/index.html",
+  "browserslist": "> 1%, last 2 versions, not dead",
   "scripts": {
-    "build": "parcel build",
     "lint": "eslint .",
     "format": "prettier .",
-    "start:development": "parcel",
-    "start:production": "parcel serve",
-    "start": "npm run start:${NODE_ENV:-development}"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.3",

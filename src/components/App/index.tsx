@@ -1,9 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
 
 import * as classes from "./style.module.css";
 
-import { Guess } from "~/src/components/Guess";
-import { Form } from "~/src/components/Form";
 import {
   Game,
   defaultGameCriteria,
@@ -12,25 +11,67 @@ import {
   post,
 } from "~/src/lib/api";
 import { useSimpleState } from "~/src/lib/useSimpleState";
+import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
 import { compareGames } from "~/src/lib/compareGames";
-import { Button } from "~/src/components/Button";
+import { Guess } from "~/src/components/Guess";
+import { Help } from "~/src/components/Help";
+import { Form } from "~/src/components/Form";
 import { Lives } from "~/src/components/Lives";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
-import { Help } from "~/src/components/Help";
-import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
+import { Button } from "~/src/components/Button";
+import {
+  getStorageKeyOfTheDay,
+  loadState,
+  saveState,
+} from "~/src/lib/storedState";
+
+type State = {
+  stage: "playing" | "victory" | "gameover";
+  level: number;
+  score: number;
+  history: Game[];
+  attemptsLeft: number;
+};
 
 const startingAttempts = 10;
 
-export function App() {
-  const [{ stage, level, score, attemptsLeft, history }, dispatch] =
-    useSimpleState({
+function getInitialState(key: string) {
+  const state = loadState<State>(key);
+
+  return (
+    state ?? {
       stage: "playing",
       level: 0,
       score: 0,
+      history: [],
       attemptsLeft: startingAttempts,
-      history: [] as Game[],
+    }
+  );
+}
+
+export function App() {
+  const storageKeyOfTheDay = getStorageKeyOfTheDay();
+
+  const [{ stage, level, score, history, attemptsLeft }, dispatch] =
+    useSimpleState<State>(getInitialState(storageKeyOfTheDay));
+
+  useEffect(() => {
+    saveState(storageKeyOfTheDay, {
+      stage,
+      level,
+      score,
+      history,
+      attemptsLeft,
     });
+  }, [attemptsLeft, history, level, score, stage, storageKeyOfTheDay]);
+
+  const bestScore = loadState<number>("bestScore") ?? 0;
+  useEffect(() => {
+    if (score > bestScore) {
+      saveState("bestScore", score);
+    }
+  }, [bestScore, score]);
 
   const { data: gameOfTheDayOffset } = useQuery(
     ["/v4/games/count", { where: defaultGameCriteria }] as const,
@@ -99,9 +140,9 @@ export function App() {
   const handleNext = () => {
     dispatch({
       stage: "playing",
-      attemptsLeft: startingAttempts,
-      history: [],
       level: score,
+      history: [],
+      attemptsLeft: startingAttempts,
     });
   };
 

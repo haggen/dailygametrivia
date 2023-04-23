@@ -4,7 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#22222a",
-  "description": "Attempt to find out the secret game of the day based on attributes such as year of release, genre, player's perspective and more.",
+  "description": "Attempt to find out the secret game of the day based on hints such as year of release, genre, player's perspective and more.",
   "icons": [
     { "src": "icon-192.png", "type": "image/png", "sizes": "192x192" },
     { "src": "icon-512.png", "type": "image/png", "sizes": "512x512" }

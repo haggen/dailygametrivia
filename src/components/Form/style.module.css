@@ -2,7 +2,6 @@
   display: flex;
   gap: 0.25rem;
   margin-inline: auto;
-  max-width: 40rem;
   padding-inline: 0.5rem;
   width: 100%;
 }

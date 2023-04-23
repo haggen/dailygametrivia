@@ -8,16 +8,18 @@ import { Button } from "~/src/components/Button";
 const pages = [
   <>You have 10 attempts to find out the secret game of the day.</>,
   <>
-    For each guess we'll compare attributes such as year of release, genre,
+    With each guess we'll compare attributes such as year of release, genres,
     player's perspective, game modes and more.
   </>,
   <>
-    To each attribute we'll give a rating of either{" "}
+    To each attribute we'll give a hint of either{" "}
     <strong style={{ color: "var(--color-green)" }}>exact</strong>,{" "}
     <strong style={{ color: "var(--color-yellow)" }}>partial</strong> or{" "}
     <strong style={{ color: "var(--color-red)" }}>mismatch</strong>.
   </>,
-  <>Take a first guess to start and good luck!</>,
+  <>If you win you'll get to keep playing with a new game to figure out.</>,
+  <>But if you lose you'll have to wait for tomorrow's game.</>,
+  <>Take your first guess to start and good luck!</>,
 ];
 
 type Props = {
