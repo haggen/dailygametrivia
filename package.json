@@ -9,6 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier .",
+    "prepare": "cp scripts/pre-commit .git/hooks/pre-commit",
+    "prestart": "test -d node_modules || npm ci",
     "start": "parcel",
     "build": "parcel build"
   },

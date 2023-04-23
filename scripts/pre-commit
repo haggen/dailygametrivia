@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -ue
+
+npm run lint -- --fix --quiet
+npm run format -- --write --loglevel silent
