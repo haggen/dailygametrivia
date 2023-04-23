@@ -25,6 +25,18 @@ html {
   color: var(--color-text);
 }
 
+@media (min-width: 1024.1px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1600.1px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 body {
   overflow: overlay;
 }
