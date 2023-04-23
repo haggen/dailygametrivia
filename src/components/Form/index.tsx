@@ -63,6 +63,7 @@ export function Form({ onGuess }: Props) {
     <form className={classes.form} onSubmit={handleSubmit}>
       <SearchInput
         className={classes.input}
+        label="Search video games"
         options={options}
         query={query}
         loading={isFetching}

@@ -23,6 +23,7 @@ export type Option<T = unknown> = {
 
 type Props<T> = {
   options: Option<T>[];
+  label?: string;
   query: string;
   loading?: boolean;
   className?: string;
@@ -32,6 +33,7 @@ type Props<T> = {
 
 export function SearchInput<T>({
   className,
+  label,
   options,
   query: lastQueryText,
   loading: isLoading,
@@ -160,6 +162,7 @@ export function SearchInput<T>({
         ref={inputRef}
         type="search"
         role="combobox"
+        aria-label={label}
         aria-expanded={isFocused}
         aria-autocomplete="list"
         value={previewText ?? queryText}
