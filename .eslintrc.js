@@ -61,9 +61,6 @@ module.exports = {
       },
       plugins: ["@typescript-eslint"],
       rules: {
-        // If enabled it whines about CSS module imported classes.
-        "@typescript-eslint/no-unsafe-assignment": "off",
-
         // Allow implicit return types.
         "@typescript-eslint/explicit-function-return-type": "off",
 
