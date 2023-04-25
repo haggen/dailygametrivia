@@ -31,45 +31,6 @@ export type Options = {
 };
 
 /**
- * Serialize request options.
- */
-function serialize(options: Options) {
-  const copy = { ...options };
-  if (copy.search) {
-    copy.search = `"${copy.search}"`;
-  }
-  return Object.keys(copy)
-    .map((key) => `${key} ${copy[key as keyof Options]};`)
-    .join("\n");
-}
-
-/**
- * Post to IGDB.
- */
-export async function post<T>(pathname: string, options: Options) {
-  const url = new URL("https://d3cui0qbfwctuu.cloudfront.net");
-  url.pathname = pathname;
-  const response = await fetch(url, {
-    method: "POST",
-    body: serialize(options),
-  });
-  return (await response.json()) as Promise<T>;
-}
-
-/**
- * Fix game data.
- */
-export function fixGameData(game: Semipartial<Game, "id" | "name">) {
-  if (!game.game_engines) {
-    game.game_engines = [{ id: 0, name: "Unknown Engine" }];
-  }
-  if (!game.collection) {
-    game.collection = { id: game.id, name: game.name };
-  }
-  return game as Game;
-}
-
-/**
  * Selected platforms.
  */
 const selectedPlatformIds = [
@@ -112,3 +73,42 @@ export const defaultGameCriteria = `category = (${selectedCategories}) & platfor
  */
 export const defaultGameFields =
   "name, first_release_date, genres.name, player_perspectives.name, involved_companies.company.name, platforms.name, platforms.abbreviation, game_engines.name, game_modes.name, franchise.name, collection.name";
+
+/**
+ * Serialize request options.
+ */
+function serialize(options: Options) {
+  const copy = { ...options };
+  if (copy.search) {
+    copy.search = `"${copy.search}"`;
+  }
+  return Object.keys(copy)
+    .map((key) => `${key} ${copy[key as keyof Options]};`)
+    .join("\n");
+}
+
+/**
+ * Post to IGDB.
+ */
+export async function post<T>(pathname: string, options: Options) {
+  const url = new URL("https://d3cui0qbfwctuu.cloudfront.net");
+  url.pathname = pathname;
+  const response = await fetch(url, {
+    method: "POST",
+    body: serialize(options),
+  });
+  return (await response.json()) as Promise<T>;
+}
+
+/**
+ * Fix game data.
+ */
+export function fixGameData(game: Semipartial<Game, "id" | "name">) {
+  if (!game.game_engines) {
+    game.game_engines = [{ id: 0, name: "Unknown Engine" }];
+  }
+  if (!game.collection) {
+    game.collection = { id: game.id, name: game.name };
+  }
+  return game as Game;
+}
