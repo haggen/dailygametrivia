@@ -8,7 +8,7 @@
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 1.25;
-  text-shadow: var(--drop-shadow);
+  text-shadow: var(--outset-shade);
 }
 
 .guess ul {

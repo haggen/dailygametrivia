@@ -1,53 +1,39 @@
 @import "npm:resetize";
 
 html {
-  --color-red: hsl(350, 70.2%, 50%);
-  --color-green: hsl(140, 59.8%, 40%);
-  --color-blue: hsl(200, 90.2%, 40%);
-  --color-yellow: hsl(35, 89.8%, 50%);
-  --color-shadow: hsla(0, 0%, 0%, 0.3);
-  --color-light: hsla(0, 0%, 100%, 0.5);
-  --color-background: hsl(240, 11%, 15%);
-  --color-background-bright: hsl(240, 10.2%, 24.9%);
-  --color-background-red: hsl(346, 48.1%, 36.3%);
-  --color-background-green: hsl(145, 45.2%, 26.5%);
+  --color-red: hsl(0, 85.6%, 59%);
+  --color-green: hsl(131, 52.8%, 46%);
+  --color-blue: hsl(208, 76.9%, 47%);
+  --color-yellow: hsl(29, 100%, 58%);
+  --color-shade: rgba(0, 0, 0, 0.3);
+  --color-light: rgba(255, 255, 255, 0.5);
+  --color-background: hsl(0, 0%, 15%);
+  --color-background-bright: hsl(0, 0%, 25%);
+  --color-background-gray: hsl(0, 0%, 35%);
+  --color-background-red: hsl(0, 50%, 35%);
+  --color-background-green: hsl(131, 44%, 28%);
+  --color-background-yellow: hsl(29, 61%, 34%);
   --color-text: hsl(0, 0%, 100%);
-  --color-text-placeholder: hsl(240, 5.1%, 50%);
-  --color-text-dimmed: hsl(240, 4.7%, 25.1%);
-  --color-match-mismatch: hsl(350, 70.2%, 50%);
-  --color-match-partial: hsl(35, 89.8%, 50%);
-  --color-match-exact: hsl(140, 59.8%, 40%);
+  --color-text-dimmed: hsl(0, 0%, 60%);
 
-  --drop-shadow: 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.3);
-  --inner-shadow: inset 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.3);
+  --outset-light: inset 0.125rem 0.125rem rgba(255, 255, 255, 0.3);
+  --outset-shade: 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
+  --inset: inset 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
 
   background-color: var(--color-background);
   color: var(--color-text);
 }
 
-@media (min-width: 1024.1px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1600.1px) {
-  html {
-    font-size: 22px;
-  }
-}
-
 body {
+  /* This is deprecated but still the only way to make scrollbars appear over the content. */
   overflow: overlay;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  margin-inline: auto;
-  max-width: 60rem;
-  min-height: 100dvh;
-  min-width: 22.5rem;
+a,
+input,
+button {
+  /* Make click instant on mobile. */
+  touch-action: manipulation;
 }
 
 ::-webkit-scrollbar {
@@ -59,25 +45,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
+  background-clip: content-box;
   background-color: hsla(0, 0%, 100%, 0.3);
   border-radius: 0.5rem;
-  background-clip: content-box;
   border: 0.25rem solid transparent;
 }
 
-.banner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-  gap: 1.5rem;
-  justify-content: center;
+*:focus {
+  outline: none;
 }
 
-.banner h1 {
-  font-size: 3rem;
-}
-
-.banner p {
-  text-align: center;
+#root {
+  display: grid;
+  grid-template: auto 1fr auto / auto;
+  min-height: 100dvh;
+  min-width: 22.5rem;
 }

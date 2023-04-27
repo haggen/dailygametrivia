@@ -55,6 +55,7 @@ export function Form({ onGuess }: Props) {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     if (guess) {
+      setQuery("");
       onGuess(guess);
     }
   };

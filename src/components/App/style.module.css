@@ -2,9 +2,7 @@
   align-items: center;
   background-color: var(--color-background);
   display: flex;
-  height: 4.5rem;
-  justify-content: space-between;
-  left: 0;
+  height: 4rem;
   padding-inline: 1rem;
   position: sticky;
   top: 0;
@@ -12,7 +10,6 @@
 
 .content {
   display: flex;
-  flex: 1 0 auto;
   justify-content: center;
   padding-block-end: 1rem;
 }
@@ -22,43 +19,16 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  left: 0;
-  padding-block-end: 1rem;
   position: sticky;
 }
 
 .copy {
-  font-size: 0.875em;
+  padding-block: 0.5rem;
+  color: var(--color-text-dimmed);
+  font-size: 0.75rem;
   text-align: center;
 }
 
 .copy a {
   font-weight: bolder;
-}
-
-.history {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  padding-inline: 1rem;
-  width: 100%;
-  height: 100%;
-}
-
-.history > li {
-  align-items: start;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.number {
-  background-color: var(--color-text-dimmed);
-  border-radius: 0.125rem;
-  color: var(--color-background);
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 2rem;
-  text-align: center;
-  flex: 0 0 2rem;
 }

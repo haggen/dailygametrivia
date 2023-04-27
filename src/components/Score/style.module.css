@@ -1,4 +1,13 @@
 .score {
+  align-items: center;
+  display: flex;
   font-size: 1.25rem;
   font-weight: 900;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.score figure {
+  display: flex;
+  gap: 0.25rem;
 }

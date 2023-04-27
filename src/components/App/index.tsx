@@ -13,10 +13,8 @@ import {
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
 import { compareGames } from "~/src/lib/compareGames";
-import { Guess } from "~/src/components/Guess";
 import { Help } from "~/src/components/Help";
 import { Form } from "~/src/components/Form";
-import { Lives } from "~/src/components/Lives";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
 import { Button } from "~/src/components/Button";
@@ -25,16 +23,16 @@ import {
   loadState,
   saveState,
 } from "~/src/lib/storedState";
+import { History } from "~/src/components/History";
 
 type State = {
   stage: "playing" | "victory" | "gameover";
+  remainingAttempts: number;
   level: number;
-  score: number;
   history: Game[];
-  attemptsLeft: number;
 };
 
-const startingAttempts = 10;
+const initialAttempts = 10;
 
 function getInitialState(key: string) {
   const state = loadState<State>(key);
@@ -42,36 +40,51 @@ function getInitialState(key: string) {
   return (
     state ?? {
       stage: "playing",
-      level: 0,
-      score: 0,
+      level: 1,
       history: [],
-      attemptsLeft: startingAttempts,
+      remainingAttempts: initialAttempts,
     }
+  );
+}
+
+function Copy() {
+  return (
+    <p className={classes.copy}>
+      Made by{" "}
+      <a href="https://twitter.com/haggen" target="_blank" rel="noreferrer">
+        me
+      </a>
+      . Data by{" "}
+      <a href="https://api-docs.igdb.com/" target="_blank" rel="noreferrer">
+        IGDB.com
+      </a>
+      . Source on{" "}
+      <a
+        href="https://github.com/haggen/dailygametrivia"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
+      .
+    </p>
   );
 }
 
 export function App() {
   const storageKeyOfTheDay = getStorageKeyOfTheDay();
 
-  const [{ stage, level, score, history, attemptsLeft }, dispatch] =
+  const [{ stage, level, history, remainingAttempts }, dispatch] =
     useSimpleState<State>(getInitialState(storageKeyOfTheDay));
 
   useEffect(() => {
     saveState(storageKeyOfTheDay, {
       stage,
       level,
-      score,
       history,
-      attemptsLeft,
+      remainingAttempts,
     });
-  }, [attemptsLeft, history, level, score, stage, storageKeyOfTheDay]);
-
-  const bestScore = loadState<number>("bestScore") ?? 0;
-  useEffect(() => {
-    if (score > bestScore) {
-      saveState("bestScore", score);
-    }
-  }, [bestScore, score]);
+  }, [remainingAttempts, history, level, stage, storageKeyOfTheDay]);
 
   const { data: gameOfTheDayOffset } = useQuery(
     ["/v4/games/count", { where: defaultGameCriteria }] as const,
@@ -106,7 +119,6 @@ export function App() {
   const handleVictory = (game: Game) => {
     dispatch({
       stage: "victory",
-      score: score + 1,
       history: [...history, game],
     });
   };
@@ -115,7 +127,7 @@ export function App() {
     dispatch({
       stage: "gameover",
       history: [...history, game],
-      attemptsLeft: 0,
+      remainingAttempts: 0,
     });
   };
 
@@ -127,55 +139,45 @@ export function App() {
 
     if (comparison.id === "exact") {
       handleVictory(game);
-    } else if (attemptsLeft === 1) {
-      handleGameOver(game);
-    } else {
+    } else if (remainingAttempts > 1) {
       dispatch({
+        remainingAttempts: remainingAttempts - 1,
         history: [...history, game],
-        attemptsLeft: attemptsLeft - 1,
       });
+    } else {
+      handleGameOver(game);
     }
   };
 
   const handleNext = () => {
     dispatch({
       stage: "playing",
-      level: score,
+      level: level + 1,
       history: [],
-      attemptsLeft: startingAttempts,
+      remainingAttempts: initialAttempts,
     });
   };
 
   return (
     <>
-      <header className={classes.header}>
-        <Lives current={attemptsLeft} max={startingAttempts} />
-        <Score score={score} />
-      </header>
+      <div className={classes.header}>
+        <Score
+          remaining={remainingAttempts}
+          initial={initialAttempts}
+          level={level}
+        />
+      </div>
 
       <main className={classes.content}>
         {gameOfTheDay ? (
           history.length > 0 ? (
-            <ol className={classes.history}>
-              {[...history].reverse().map((guessedGame, index) => (
-                <li key={index}>
-                  <span className={classes.number}>
-                    {history.length - index}
-                  </span>
-                  <Guess
-                    guess={guessedGame}
-                    comparison={compareGames(gameOfTheDay, guessedGame)}
-                  />
-                </li>
-              ))}
-            </ol>
+            <History history={history} gameOfTheDay={gameOfTheDay} />
           ) : (
             <Help />
           )
         ) : (
           <div className="banner">
-            <h1 aria-label="Loading">🧠</h1>
-            <p>Thinking of a game…</p>
+            <h1>Loading</h1> <p>Thinking of a game…</p>
           </div>
         )}
       </main>
@@ -188,7 +190,7 @@ export function App() {
         ) : stage === "victory" ? (
           <Toast
             type="positive"
-            icon="popper"
+            icon="party"
             title="Correct!"
             message="You may continue playing."
             extra={
@@ -208,25 +210,7 @@ export function App() {
           </>
         )}
 
-        <p className={classes.copy}>
-          Made by{" "}
-          <a href="https://twitter.com/haggen" target="_blank" rel="noreferrer">
-            me
-          </a>
-          . Data by{" "}
-          <a href="https://api-docs.igdb.com/" target="_blank" rel="noreferrer">
-            IGDB.com
-          </a>
-          . Source on{" "}
-          <a
-            href="https://github.com/haggen/dailygametrivia"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-          .
-        </p>
+        <Copy />
       </footer>
     </>
   );

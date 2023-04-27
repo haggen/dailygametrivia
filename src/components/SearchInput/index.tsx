@@ -52,7 +52,7 @@ export function SearchInput<T>({
     patch({ isFocused: focused });
   });
 
-  const executeSearch = useDebounce(onSearch, 250);
+  const onDelayedSearch = useDebounce(onSearch, 250);
 
   useEffect(() => {
     if (!focusTrapRef.current) {
@@ -98,7 +98,11 @@ export function SearchInput<T>({
       isFocused: true,
     });
 
-    executeSearch(value);
+    if (value === "") {
+      onSearch("");
+    } else {
+      onDelayedSearch(value);
+    }
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
@@ -131,7 +135,7 @@ export function SearchInput<T>({
       throw new Error("Option has no index");
     }
     handleCommit(Number(index));
-    inputRef.current?.focus();
+    // inputRef.current?.focus();
   };
 
   const handleMouseEnter = (event: MouseEvent<HTMLElement>) => {

@@ -2,8 +2,8 @@
   align-items: center;
   color: #fff;
   background-color: var(--color-text-placeholder);
-  box-shadow: var(--drop-shadow);
-  border-radius: 0.125rem;
+  box-shadow: var(--outset-shade), var(--outset-light);
+  border-radius: 0.25rem;
   cursor: pointer;
   display: inline flex;
   font-weight: bolder;
@@ -11,6 +11,11 @@
   height: 3rem;
   justify-content: center;
   padding-inline: 1.5rem;
+}
+
+.button:active {
+  box-shadow: var(--inset);
+  translate: 0.125rem 0.125rem;
 }
 
 .button.blue {
@@ -27,6 +32,10 @@
 
 .button.yellow {
   background-color: var(--color-yellow);
+}
+
+.button:focus-visible {
+  outline: 0.125rem solid var(--color-text);
 }
 
 .button[disabled] {
