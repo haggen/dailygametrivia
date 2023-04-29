@@ -73,6 +73,15 @@ export function Form({ onSubmit }: Props) {
           )
         : [];
 
+    options.forEach((option) => {
+      const homonymous = options.find(
+        ({ key, label }) => key !== option.key && label === option.label
+      );
+      if (homonymous) {
+        option.label = `${option.value.name} (${option.value.releaseYear})`;
+      }
+    });
+
     patch({
       isExpanded: true,
       options,
