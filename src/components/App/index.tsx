@@ -17,6 +17,7 @@ import {
   setSession as setSession,
 } from "~/src/lib/storedState";
 import { History } from "~/src/components/History";
+import { MoreInfo } from "~/src/components/MoreInfo";
 
 type State = {
   stage: "playing" | "victory" | "gameover";
@@ -185,8 +186,11 @@ export function App() {
               title="Bummer."
               message={
                 <>
-                  The game was <strong>{secretGame.name}</strong>. You can try
-                  again tomorrow.
+                  The game was{" "}
+                  <strong>
+                    <MoreInfo game={secretGame} />
+                  </strong>
+                  . You can try again tomorrow.
                 </>
               }
             />

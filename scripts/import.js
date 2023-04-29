@@ -39,10 +39,16 @@ const selectedPlatformIds = [
 const minimumRating = 50;
 const minimumRatingCount = 100;
 
-const criteria = `category = (${selectedCategories}) & platforms = (${selectedPlatformIds}) & total_rating > ${minimumRating} & total_rating_count > ${minimumRatingCount} & version_parent = null & name != null & first_release_date != null & genres != null & player_perspectives != null & involved_companies != null & game_modes != null`;
+const criteria = `
+  category = (${selectedCategories}) & platforms = (${selectedPlatformIds}) &
+  total_rating > ${minimumRating} & total_rating_count > ${minimumRatingCount} &
+  version_parent = null & name != null & first_release_date != null & genres != null &
+  player_perspectives != null & involved_companies != null & game_modes != null`;
 
-const fields =
-  "name, first_release_date, genres.name, player_perspectives.name, involved_companies.company.name, platforms.name, platforms.abbreviation, game_engines.name, game_modes.name, collection.name, total_rating, total_rating_count, version_parent";
+const fields = `
+  name, first_release_date, genres.name, player_perspectives.name,
+  involved_companies.company.name, platforms.name, platforms.abbreviation,
+  game_engines.name, game_modes.name, collection.name, total_rating, total_rating_count`;
 
 const headers = {
   "Client-ID": process.env.CLIENT_ID,
