@@ -1,19 +1,23 @@
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect } from "react";
+
+function isTrapped(elementRefs: RefObject<HTMLElement>[]) {
+  return elementRefs.some(({ current: element }) => {
+    return (
+      element && element.isConnected && element.contains(document.activeElement)
+    );
+  });
+}
 
 /**
- * Control whether focus is trapped within a referred element.
+ * Track when focus is trapped within referred elements.
  */
-export function useFocusTrap<T extends HTMLElement>(
+export function useFocusTrap(
+  elementRefs: RefObject<HTMLElement>[],
   callback: (focused: boolean) => void
 ) {
-  const elementRef = useRef<T>(null);
-
   useEffect(() => {
     const handleFocusIn = () => {
-      if (!elementRef?.current) {
-        return;
-      }
-      if (elementRef.current.contains(document.activeElement)) {
+      if (isTrapped(elementRefs)) {
         callback(true);
       }
     };
@@ -21,10 +25,7 @@ export function useFocusTrap<T extends HTMLElement>(
 
     const handleFocusOut = () => {
       setTimeout(() => {
-        if (!elementRef?.current) {
-          return;
-        }
-        if (!elementRef.current.contains(document.activeElement)) {
+        if (!isTrapped(elementRefs)) {
           callback(false);
         }
       }, 0);
@@ -35,7 +36,5 @@ export function useFocusTrap<T extends HTMLElement>(
       document.removeEventListener("focusin", handleFocusIn);
       document.removeEventListener("focusout", handleFocusOut);
     };
-  }, [callback]);
-
-  return elementRef;
+  }, [callback, elementRefs]);
 }

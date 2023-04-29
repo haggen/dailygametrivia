@@ -1,11 +1,21 @@
 .form {
-  display: flex;
-  gap: 0.25rem;
-  margin-inline: auto;
   padding-inline: 0.5rem;
+  max-width: 40rem;
   width: 100%;
 }
 
 .input {
   flex: 1 0 auto;
+}
+
+.popover {
+  position: relative;
+  overflow: visible;
+}
+
+.popover > * {
+  bottom: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }

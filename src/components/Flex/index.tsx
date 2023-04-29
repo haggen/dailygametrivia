@@ -69,5 +69,4 @@ function Flex<E extends AcceptableElementType = "div">(
 }
 
 const forwardRefFlex = forwardRef(Flex) as typeof Flex;
-
 export { forwardRefFlex as Flex };

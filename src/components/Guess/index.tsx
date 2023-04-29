@@ -2,7 +2,7 @@ import Balancer from "react-wrap-balancer";
 
 import * as classes from "./style.module.css";
 
-import { Game } from "~/src/lib/api";
+import { Game } from "~/src/lib/database";
 import { Icon } from "~/src/components/Icon";
 import { Match } from "~/src/lib/compareGames";
 
@@ -25,8 +25,8 @@ function getIcon(match: Match) {
 
 function format<T extends keyof Game>(key: T, game: Game) {
   switch (key) {
-    case "first_release_date":
-      return <>{new Date(game.first_release_date * 1000).getFullYear()}</>;
+    case "firstReleaseDate":
+      return <>{new Date(game.firstReleaseDate * 1000).getFullYear()}</>;
     case "genres":
       return <>{game.genres.map((genre) => genre.name).join(", ")}</>;
     case "platforms":
@@ -37,22 +37,22 @@ function format<T extends keyof Game>(key: T, game: Game) {
             .join(", ")}
         </>
       );
-    case "player_perspectives":
+    case "playerPerspectives":
       return (
         <>
-          {game.player_perspectives.map((platform) => platform.name).join(", ")}
+          {game.playerPerspectives.map((platform) => platform.name).join(", ")}
         </>
       );
-    case "game_engines":
-      return <>{game.game_engines.map((engine) => engine.name).join(", ")}</>;
-    case "game_modes":
-      return <>{game.game_modes.map((mode) => mode.name).join(", ")}</>;
+    case "gameEngines":
+      return <>{game.gameEngines.map((engine) => engine.name).join(", ")}</>;
+    case "gameModes":
+      return <>{game.gameModes.map((mode) => mode.name).join(", ")}</>;
     case "collection":
       return <>{game.collection.name}</>;
-    case "involved_companies":
+    case "involvedCompanies":
       return (
         <>
-          {game.involved_companies
+          {game.involvedCompanies
             .map((involvement) => involvement.company.name)
             .join(", ")}
         </>
@@ -68,13 +68,13 @@ function format<T extends keyof Game>(key: T, game: Game) {
 
 const displayableComparisons = [
   "collection",
-  "first_release_date",
+  "firstReleaseDate",
   "platforms",
   "genres",
-  "player_perspectives",
-  "game_modes",
-  "game_engines",
-  "involved_companies",
+  "playerPerspectives",
+  "gameModes",
+  "gameEngines",
+  "involvedCompanies",
 ] as const;
 
 type Props = {

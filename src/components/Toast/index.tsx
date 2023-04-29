@@ -9,7 +9,7 @@ type Props = {
   type?: "default" | "positive" | "negative";
   icon: string;
   title: string;
-  message: string;
+  message: ReactNode;
   extra?: ReactNode;
 };
 

@@ -1,77 +1,165 @@
-import { useQuery } from "@tanstack/react-query";
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, KeyboardEvent, useId, useRef } from "react";
 
 import * as classes from "./style.module.css";
 
 import { Button } from "~/src/components/Button";
-import { SearchInput, Option } from "~/src/components/SearchInput";
-import {
-  Game,
-  defaultGameCriteria,
-  defaultGameFields,
-  fixGameData,
-  post,
-} from "~/src/lib/api";
+import { DataList, Option } from "~/src/components/DataList";
+import { Input } from "~/src/components/Input";
+import { useSimpleState } from "~/src/lib/useSimpleState";
+import { useFocusTrap } from "~/src/lib/useFocusTrap";
+import { Flex } from "~/src/components/Flex";
+import { Game, search } from "~/src/lib/database";
 
-type Props = { onGuess: (game: Game) => void };
+type Props = { onSubmit: (game: Game) => void };
 
-export function Form({ onGuess }: Props) {
-  const [guess, setGuess] = useState<Game>();
-  const [query, setQuery] = useState("");
+export function Form({ onSubmit }: Props) {
+  const [
+    { isExpanded, queryValue, options, selectedIndex, candidateIndex },
+    patch,
+  ] = useSimpleState({
+    isExpanded: false,
+    queryValue: "",
+    options: [] as Option<Game>[],
+    selectedIndex: -1,
+    candidateIndex: -1,
+  });
 
-  const { data: options = [], isFetching } = useQuery(
-    [
-      "/v4/games",
-      {
-        search: query,
-        fields: defaultGameFields,
-        where: defaultGameCriteria,
-        limit: 100,
-      },
-    ] as const,
-    ({ queryKey }) => post<Game[]>(...queryKey),
-    {
-      enabled: query.length > 0,
-      select: (data) =>
-        data.map(fixGameData).map(
-          (game) =>
-            ({
-              key: String(game.id),
-              value: game,
-              label: game.name,
-            } as Option<Game>)
-        ),
-    }
-  );
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.currentTarget;
 
-  const handleSearch = (value: string) => {
-    setQuery(value);
+    const options =
+      value.length > 0
+        ? search(value).map(
+            (game) =>
+              ({
+                key: String(game.id),
+                label: game.name,
+                value: game,
+              } as Option<Game>)
+          )
+        : [];
+
+    patch({
+      isExpanded: true,
+      options,
+      candidateIndex: -1,
+      selectedIndex: -1,
+      queryValue: value,
+    });
   };
 
-  const handleChange = (option: Option<Game>) => {
-    setGuess(option.value);
+  const dataListId = useId();
+  const dataListRef = useRef<HTMLUListElement>(null);
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useFocusTrap([inputRef, dataListRef], (focused) => {
+    patch({ isExpanded: focused });
+  });
+
+  const handleClick = () => {
+    patch({ isExpanded: true });
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    switch (event.key) {
+      case "ArrowUp":
+        // handleSelect((candidateIndex - 1 + options.length) % options.length);
+        handleSelect(Math.max(candidateIndex - 1, 0));
+        break;
+      case "ArrowDown":
+        // handleSelect((candidateIndex + 1) % options.length);
+        handleSelect(Math.min(candidateIndex + 1, options.length - 1));
+        break;
+      case "Enter":
+        if (!isExpanded) {
+          return;
+        }
+        handleCommit(candidateIndex);
+        break;
+      default:
+        return;
+    }
+    event.preventDefault();
+  };
+
+  const handleSelect = (index: number) => {
+    const option = options[index];
+    if (option) {
+      patch({
+        isExpanded: true,
+        candidateIndex: index,
+      });
+    }
+  };
+
+  const handleCommit = (index: number) => {
+    const option = options[index];
+    if (option) {
+      patch({
+        candidateIndex: -1,
+        selectedIndex: index,
+        queryValue: option.label,
+        isExpanded: false,
+      });
+    }
   };
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    if (guess) {
-      setQuery("");
-      onGuess(guess);
+
+    const option = options[selectedIndex];
+    if (!option) {
+      return;
     }
+
+    patch({ queryValue: "", selectedIndex: -1 });
+    onSubmit(option.value);
   };
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      <SearchInput
-        className={classes.input}
-        label="Search video games"
-        options={options}
-        query={query}
-        loading={isFetching}
-        onSearch={handleSearch}
-        onChange={handleChange}
-      />
-      <Button type="submit">Guess</Button>
+      {isExpanded ? (
+        <div className={classes.popover}>
+          <DataList
+            id={dataListId}
+            ref={dataListRef}
+            selectedIndex={candidateIndex}
+            options={options}
+            onSelect={handleSelect}
+            onCommit={handleCommit}
+            message={
+              options.length > 0
+                ? undefined
+                : queryValue
+                ? "No results."
+                : undefined
+            }
+          />
+        </div>
+      ) : null}
+
+      <Flex gap="0.25rem">
+        <Input
+          ref={inputRef}
+          type="search"
+          role="combobox"
+          aria-controls={dataListId}
+          aria-label="Search games"
+          aria-expanded={isExpanded}
+          aria-autocomplete="list"
+          value={queryValue}
+          onClick={handleClick}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          placeholder="Type to search…"
+          className={classes.input}
+          required
+        />
+        <Button type="submit" disabled={selectedIndex < 0}>
+          Guess
+        </Button>
+      </Flex>
     </form>
   );
 }

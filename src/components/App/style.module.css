@@ -2,7 +2,9 @@
   align-items: center;
   background-color: var(--color-background);
   display: flex;
+  flex-direction: column;
   height: 4rem;
+  justify-content: center;
   padding-inline: 1rem;
   position: sticky;
   top: 0;
@@ -20,10 +22,11 @@
   display: flex;
   flex-direction: column;
   position: sticky;
+  align-items: center;
 }
 
 .copy {
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   color: var(--color-text-dimmed);
   font-size: 0.75rem;
   text-align: center;

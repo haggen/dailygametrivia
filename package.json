@@ -6,8 +6,9 @@
   "license": "Apache-2.0",
   "browserslist": "> 1%, last 2 versions, not dead",
   "source": "src/index.html",
+  "type": "module",
   "scripts": {
-    "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "format": "prettier .",
     "prepare": "test -f .git/hooks/pre-commit || cp scripts/pre-commit .git/hooks/pre-commit",
     "prestart": "test -d node_modules || npm ci",
@@ -17,6 +18,8 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
+    "fastest-levenshtein": "^1.0.16",
+    "flexsearch": "^0.7.31",
     "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -11,9 +11,11 @@
   height: 3rem;
   justify-content: center;
   padding-inline: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
-.button:active {
+.button:not(:disabled):active {
   box-shadow: var(--inset);
   translate: 0.125rem 0.125rem;
 }
@@ -34,10 +36,10 @@
   background-color: var(--color-yellow);
 }
 
-.button:focus-visible {
-  outline: 0.125rem solid var(--color-text);
+.button:disabled {
+  background-color: var(--color-background-gray);
 }
 
-.button[disabled] {
-  filter: saturate(0%);
+.button:focus-visible {
+  outline: 0.125rem solid var(--color-text);
 }

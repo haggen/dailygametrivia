@@ -1,4 +1,4 @@
-import { Game } from "~/src/lib/api";
+import { Game } from "~/src/lib/database";
 
 export type Match = "exact" | "partial" | "mismatch" | "higher" | "lower";
 
@@ -9,9 +9,9 @@ function compareName(a: Game, b: Game): Match {
   return "mismatch";
 }
 
-function compareReleaseYear(a: Game, b: Game): Match {
-  const ya = new Date(a.first_release_date * 1000).getFullYear();
-  const yb = new Date(b.first_release_date * 1000).getFullYear();
+function compareReleaseDate(a: Game, b: Game): Match {
+  const ya = new Date(a.firstReleaseDate * 1000).getFullYear();
+  const yb = new Date(b.firstReleaseDate * 1000).getFullYear();
 
   if (ya === yb) {
     return "exact";
@@ -43,15 +43,15 @@ function compareGenres(a: Game, b: Game): Match {
 }
 
 function comparePlayerPerspectives(a: Game, b: Game): Match {
-  return compareLists(a.player_perspectives, b.player_perspectives);
+  return compareLists(a.playerPerspectives, b.playerPerspectives);
 }
 
 function compareEngines(a: Game, b: Game): Match {
-  return compareLists(a.game_engines, b.game_engines);
+  return compareLists(a.gameEngines, b.gameEngines);
 }
 
 function compareModes(a: Game, b: Game): Match {
-  return compareLists(a.game_modes, b.game_modes);
+  return compareLists(a.gameModes, b.gameModes);
 }
 
 function compareCollection(a: Game, b: Game): Match {
@@ -62,12 +62,12 @@ function compareCollection(a: Game, b: Game): Match {
 }
 
 function compareInvolvedCompanies(a: Game, b: Game): Match {
-  const intersection = a.involved_companies.filter((a) =>
-    b.involved_companies.some((b) => a.company.id === b.company.id)
+  const intersection = a.involvedCompanies.filter((a) =>
+    b.involvedCompanies.some((b) => a.company.id === b.company.id)
   );
   if (
-    intersection.length === a.involved_companies.length &&
-    intersection.length === b.involved_companies.length
+    intersection.length === a.involvedCompanies.length &&
+    intersection.length === b.involvedCompanies.length
   ) {
     return "exact";
   }
@@ -81,13 +81,13 @@ export function compareGames(a: Game, b: Game) {
   return {
     id: a.id === b.id ? "exact" : "mismatch",
     name: compareName(a, b),
-    first_release_date: compareReleaseYear(a, b),
+    firstReleaseDate: compareReleaseDate(a, b),
     platforms: comparePlatforms(a, b),
     genres: compareGenres(a, b),
-    player_perspectives: comparePlayerPerspectives(a, b),
-    involved_companies: compareInvolvedCompanies(a, b),
-    game_engines: compareEngines(a, b),
-    game_modes: compareModes(a, b),
+    playerPerspectives: comparePlayerPerspectives(a, b),
+    involvedCompanies: compareInvolvedCompanies(a, b),
+    gameEngines: compareEngines(a, b),
+    gameModes: compareModes(a, b),
     collection: compareCollection(a, b),
   } as const;
 }

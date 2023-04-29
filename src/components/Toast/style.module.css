@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 1rem;
   padding-block: 1.5rem;
+  width: 100%;
 }
 
 .positive {

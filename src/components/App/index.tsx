@@ -3,13 +3,7 @@ import { useEffect } from "react";
 
 import * as classes from "./style.module.css";
 
-import {
-  Game,
-  defaultGameCriteria,
-  defaultGameFields,
-  fixGameData,
-  post,
-} from "~/src/lib/api";
+import { Game, getDatabase } from "~/src/lib/database";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
 import { compareGames } from "~/src/lib/compareGames";
@@ -86,32 +80,13 @@ export function App() {
     });
   }, [remainingAttempts, history, level, stage, storageKeyOfTheDay]);
 
-  const { data: gameOfTheDayOffset } = useQuery(
-    ["/v4/games/count", { where: defaultGameCriteria }] as const,
-    ({ queryKey }) => post<{ count: number }>(...queryKey),
-    {
-      select({ count }) {
-        return getGameOfTheDayOffset(level, count);
-      },
-    }
-  );
-
   const { data: gameOfTheDay } = useQuery(
-    [
-      "/v4/games",
-      {
-        fields: defaultGameFields,
-        where: defaultGameCriteria,
-        sort: "id",
-        offset: gameOfTheDayOffset,
-        limit: 1,
-      },
-    ] as const,
-    ({ queryKey }) => post<Game[]>(...queryKey),
+    ["gameOfTheDay"],
+    () => Promise.resolve(getDatabase()),
     {
-      enabled: typeof gameOfTheDayOffset === "number",
-      select(game) {
-        return fixGameData(game[0]);
+      select({ count, games }) {
+        const offset = getGameOfTheDayOffset(level, count);
+        return games[Object.keys(games)[offset]];
       },
     }
   );
@@ -185,7 +160,7 @@ export function App() {
       <footer className={classes.footer}>
         {stage === "playing" ? (
           gameOfTheDay ? (
-            <Form onGuess={handleGuess} />
+            <Form onSubmit={handleGuess} />
           ) : null
         ) : stage === "victory" ? (
           <Toast
@@ -205,7 +180,11 @@ export function App() {
               type="negative"
               icon="dead"
               title="Game over!"
-              message="You can try again tomorrow."
+              message={
+                <>
+                  The game was <strong>{gameOfTheDay?.name}</strong>.
+                </>
+              }
             />
           </>
         )}

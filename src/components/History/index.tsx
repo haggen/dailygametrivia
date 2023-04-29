@@ -2,7 +2,7 @@ import * as classes from "./style.module.css";
 
 import { compareGames } from "~/src/lib/compareGames";
 import { Guess } from "~/src/components/Guess";
-import { Game } from "~/src/lib/api";
+import { Game } from "~/src/lib/database";
 
 type Props = {
   history: Game[];
