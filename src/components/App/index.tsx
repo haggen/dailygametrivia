@@ -133,6 +133,10 @@ export function App() {
     });
   };
 
+  if (!gameOfTheDay) {
+    return null;
+  }
+
   return (
     <>
       <div className={classes.header}>
@@ -144,16 +148,10 @@ export function App() {
       </div>
 
       <main className={classes.content}>
-        {gameOfTheDay ? (
-          history.length > 0 ? (
-            <History history={history} gameOfTheDay={gameOfTheDay} />
-          ) : (
-            <Help />
-          )
+        {history.length > 0 ? (
+          <History history={history} gameOfTheDay={gameOfTheDay} />
         ) : (
-          <div className="banner">
-            <h1>Loading</h1> <p>Thinking of a game…</p>
-          </div>
+          <Help />
         )}
       </main>
 
@@ -166,11 +164,11 @@ export function App() {
           <Toast
             type="positive"
             icon="party"
-            title="Correct!"
-            message="You may continue playing."
+            title="Nice!"
+            message="You get to play the next level."
             extra={
               <Button color="green" onClick={handleNext}>
-                Next →
+                Continue
               </Button>
             }
           />
@@ -179,10 +177,11 @@ export function App() {
             <Toast
               type="negative"
               icon="dead"
-              title="Game over!"
+              title="Bummer."
               message={
                 <>
-                  The game was <strong>{gameOfTheDay?.name}</strong>.
+                  The game was <strong>{gameOfTheDay?.name}</strong>. You can
+                  try again tomorrow.
                 </>
               }
             />

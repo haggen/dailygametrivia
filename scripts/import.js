@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 /**
  * Script to import data from IGDB.
  * @see https://api-docs.igdb.com/
@@ -35,7 +37,7 @@ const selectedPlatformIds = [
 ];
 
 const minimumRating = 50;
-const minimumRatingCount = 50;
+const minimumRatingCount = 100;
 
 const criteria = `category = (${selectedCategories}) & platforms = (${selectedPlatformIds}) & total_rating > ${minimumRating} & total_rating_count > ${minimumRatingCount} & version_parent = null & name != null & first_release_date != null & genres != null & player_perspectives != null & involved_companies != null & game_modes != null`;
 
@@ -122,7 +124,7 @@ async function getGames() {
 
       // Make sure there's an engine.
       if (!game.game_engines) {
-        game.game_engines = [{ id: 0, name: "Unknown" }];
+        game.game_engines = [{ id: 0, name: "Unknown engine" }];
       }
 
       // Remove duplicate companies.
@@ -143,15 +145,20 @@ async function getGames() {
       // );
 
       // Desambiguate homonimous.
-      if (
-        Object.values(games).some(
-          ({ name, id }) => name === game.name && id !== game.id
-        )
-      ) {
-        const release = new Date(game.first_release_date * 1000);
-        game.originalName = game.name;
-        game.name = `${game.name} (${release.getFullYear()})`;
-      }
+      // if (
+      //   Object.values(games).some(
+      //     ({ name, id }) => name === game.name && id !== game.id
+      //   )
+      // ) {
+      //   const release = new Date(game.first_release_date * 1000);
+      //   game.originalName = game.name;
+      //   game.name = `${game.name} (${release.getFullYear()})`;
+      // }
+
+      // Map release timestamp to year.
+      const releaseDate = new Date(game.first_release_date * 1000);
+      game.releaseYear = releaseDate.getFullYear();
+      delete game.first_release_date;
 
       games[game.id] = mapToCamelCaseKeys(game);
     }
@@ -166,3 +173,5 @@ await fs.writeFile(
   JSON.stringify(data, null, 2),
   "utf-8"
 );
+
+console.log(`${data.count} games imported`);

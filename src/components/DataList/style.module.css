@@ -5,6 +5,7 @@
   max-height: min(60dvh, 16.5rem);
   overflow: scroll;
   overflow: overlay;
+  overscroll-behavior: none;
   width: 100%;
 }
 

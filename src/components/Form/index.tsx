@@ -1,4 +1,11 @@
-import { ChangeEvent, FormEvent, KeyboardEvent, useId, useRef } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  KeyboardEvent,
+  useEffect,
+  useId,
+  useRef,
+} from "react";
 
 import * as classes from "./style.module.css";
 
@@ -8,20 +15,47 @@ import { Input } from "~/src/components/Input";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { useFocusTrap } from "~/src/lib/useFocusTrap";
 import { Flex } from "~/src/components/Flex";
-import { Game, search } from "~/src/lib/database";
+import { Game, getDatabase, search } from "~/src/lib/database";
 
 type Props = { onSubmit: (game: Game) => void };
 
 export function Form({ onSubmit }: Props) {
   const [
-    { isExpanded, queryValue, options, selectedIndex, candidateIndex },
+    {
+      isExpanded,
+      queryValue,
+      isLoading,
+      options,
+      selectedIndex,
+      candidateIndex,
+    },
     patch,
   ] = useSimpleState({
     isExpanded: false,
+    isLoading: true,
     queryValue: "",
     options: [] as Option<Game>[],
     selectedIndex: -1,
     candidateIndex: -1,
+  });
+
+  useEffect(() => {
+    getDatabase()
+      .then(() => {
+        patch({ isLoading: false });
+      })
+      .catch(() => {
+        throw new Error("Failed to load the database.");
+      });
+  }, [patch]);
+
+  const dataListId = useId();
+  const dataListRef = useRef<HTMLUListElement>(null);
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useFocusTrap([inputRef, dataListRef], (focused) => {
+    patch({ isExpanded: focused });
   });
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -47,15 +81,6 @@ export function Form({ onSubmit }: Props) {
       queryValue: value,
     });
   };
-
-  const dataListId = useId();
-  const dataListRef = useRef<HTMLUListElement>(null);
-
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useFocusTrap([inputRef, dataListRef], (focused) => {
-    patch({ isExpanded: focused });
-  });
 
   const handleClick = () => {
     patch({ isExpanded: true });
@@ -113,9 +138,13 @@ export function Form({ onSubmit }: Props) {
       return;
     }
 
-    patch({ queryValue: "", selectedIndex: -1 });
+    patch({ queryValue: "", options: [], selectedIndex: -1 });
     onSubmit(option.value);
   };
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>

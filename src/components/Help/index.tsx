@@ -49,12 +49,12 @@ export function Help({ style }: Props) {
       <ul>
         <li>
           <Button onClick={handleBack} disabled={index === 0}>
-            ← Back
+            Back
           </Button>
         </li>
         <li>
           <Button onClick={handleNext} disabled={index === pages.length - 1}>
-            Next →
+            Next
           </Button>
         </li>
       </ul>

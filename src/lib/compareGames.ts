@@ -9,15 +9,12 @@ function compareName(a: Game, b: Game): Match {
   return "mismatch";
 }
 
-function compareReleaseDate(a: Game, b: Game): Match {
-  const ya = new Date(a.firstReleaseDate * 1000).getFullYear();
-  const yb = new Date(b.firstReleaseDate * 1000).getFullYear();
-
-  if (ya === yb) {
+function compareReleaseYear(a: Game, b: Game): Match {
+  if (a.releaseYear === b.releaseYear) {
     return "exact";
-  } else if (ya > yb) {
+  } else if (a.releaseYear > b.releaseYear) {
     return "higher";
-  } else if (ya < yb) {
+  } else if (a.releaseYear < b.releaseYear) {
     return "lower";
   }
   return "mismatch";
@@ -81,7 +78,7 @@ export function compareGames(a: Game, b: Game) {
   return {
     id: a.id === b.id ? "exact" : "mismatch",
     name: compareName(a, b),
-    firstReleaseDate: compareReleaseDate(a, b),
+    releaseYear: compareReleaseYear(a, b),
     platforms: comparePlatforms(a, b),
     genres: compareGenres(a, b),
     playerPerspectives: comparePlayerPerspectives(a, b),

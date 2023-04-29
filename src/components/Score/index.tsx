@@ -23,9 +23,9 @@ export function Score({ remaining, initial, level }: Props) {
           .fill(null)
           .map((_, i) =>
             remaining > i ? (
-              <Icon key={i} name="redHeart" />
+              <Icon key={i} name="heart" color="var(--color-red)" />
             ) : (
-              <Icon key={i} name="grayHeart" />
+              <Icon key={i} name="heart" color="var(--color-text-dimmed)" />
             )
           )}
       </figure>

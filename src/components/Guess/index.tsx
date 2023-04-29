@@ -25,8 +25,8 @@ function getIcon(match: Match) {
 
 function format<T extends keyof Game>(key: T, game: Game) {
   switch (key) {
-    case "firstReleaseDate":
-      return <>{new Date(game.firstReleaseDate * 1000).getFullYear()}</>;
+    case "releaseYear":
+      return <>{game.releaseYear}</>;
     case "genres":
       return <>{game.genres.map((genre) => genre.name).join(", ")}</>;
     case "platforms":
@@ -68,7 +68,7 @@ function format<T extends keyof Game>(key: T, game: Game) {
 
 const displayableComparisons = [
   "collection",
-  "firstReleaseDate",
+  "releaseYear",
   "platforms",
   "genres",
   "playerPerspectives",

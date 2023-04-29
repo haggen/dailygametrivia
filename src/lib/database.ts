@@ -6,7 +6,7 @@ import { match } from "~/src/lib/search";
 export type Game = {
   id: number;
   name: string;
-  firstReleaseDate: number;
+  releaseYear: number;
   platforms: { id: number; name: string; abbreviation?: string }[];
   genres: { id: number; name: string }[];
   playerPerspectives: { id: number; name: string }[];
