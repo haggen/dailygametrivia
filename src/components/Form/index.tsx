@@ -15,7 +15,7 @@ import { Input } from "~/src/components/Input";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { useFocusTrap } from "~/src/lib/useFocusTrap";
 import { Flex } from "~/src/components/Flex";
-import { Game, getDatabase, search } from "~/src/lib/database";
+import { Game, load, search } from "~/src/lib/data";
 
 type Props = { onSubmit: (game: Game) => void };
 
@@ -40,12 +40,12 @@ export function Form({ onSubmit }: Props) {
   });
 
   useEffect(() => {
-    getDatabase()
+    load()
       .then(() => {
         patch({ isLoading: false });
       })
-      .catch(() => {
-        throw new Error("Failed to load the database.");
+      .catch((error) => {
+        throw new Error("Failed to load the database.", { cause: error });
       });
   }, [patch]);
 

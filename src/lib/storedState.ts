@@ -1,6 +1,6 @@
-const latestVersion = "1";
+const version = "1";
 
-export function getStorageKeyOfTheDay() {
+export function getSessionKey() {
   const today = new Date();
   const year = today.getFullYear();
   const month = today.getMonth() + 1;
@@ -8,18 +8,18 @@ export function getStorageKeyOfTheDay() {
   return [year, month, date].join("");
 }
 
-export function saveState<T>(key: string, state: T) {
+export function setSession<T>(key: string, state: T) {
   localStorage.setItem(key, JSON.stringify(state));
-  localStorage.setItem("version", latestVersion);
+  localStorage.setItem("version", version);
 }
 
-export function loadState<T>(key: string) {
-  if (localStorage.getItem("version") !== latestVersion) {
+export function getSession<T>(key: string) {
+  if (localStorage.getItem("version") !== version) {
     return undefined;
   }
-  const storedState = localStorage.getItem(key);
-  if (!storedState) {
+  const value = localStorage.getItem(key);
+  if (!value) {
     return undefined;
   }
-  return JSON.parse(storedState) as T;
+  return JSON.parse(value) as T;
 }

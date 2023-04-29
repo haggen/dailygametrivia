@@ -2,7 +2,7 @@ import Balancer from "react-wrap-balancer";
 
 import * as classes from "./style.module.css";
 
-import { Game } from "~/src/lib/database";
+import { Game } from "~/src/lib/data";
 import { Icon } from "~/src/components/Icon";
 import { Match } from "~/src/lib/compareGames";
 

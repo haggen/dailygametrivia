@@ -1,11 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import * as classes from "./style.module.css";
 
-import { Game, getDatabase } from "~/src/lib/database";
+import { Game, getCount, getGame, getId, load } from "~/src/lib/data";
 import { useSimpleState } from "~/src/lib/useSimpleState";
-import { getGameOfTheDayOffset } from "~/src/lib/gameOfTheDay";
+import { getTodaysOffset } from "~/src/lib/seededOffset";
 import { compareGames } from "~/src/lib/compareGames";
 import { Help } from "~/src/components/Help";
 import { Form } from "~/src/components/Form";
@@ -13,9 +12,9 @@ import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
 import { Button } from "~/src/components/Button";
 import {
-  getStorageKeyOfTheDay,
-  loadState,
-  saveState,
+  getSessionKey as getSessionKey,
+  getSession,
+  setSession as setSession,
 } from "~/src/lib/storedState";
 import { History } from "~/src/components/History";
 
@@ -28,8 +27,8 @@ type State = {
 
 const initialAttempts = 10;
 
-function getInitialState(key: string) {
-  const state = loadState<State>(key);
+function getInitialSession(key: string) {
+  const state = getSession<State>(key);
 
   return (
     state ?? {
@@ -66,30 +65,36 @@ function Copy() {
 }
 
 export function App() {
-  const storageKeyOfTheDay = getStorageKeyOfTheDay();
+  const sessionKey = getSessionKey();
 
   const [{ stage, level, history, remainingAttempts }, dispatch] =
-    useSimpleState<State>(getInitialState(storageKeyOfTheDay));
+    useSimpleState<State>(getInitialSession(sessionKey));
 
   useEffect(() => {
-    saveState(storageKeyOfTheDay, {
+    setSession(sessionKey, {
       stage,
       level,
       history,
       remainingAttempts,
     });
-  }, [remainingAttempts, history, level, stage, storageKeyOfTheDay]);
+  }, [remainingAttempts, history, level, stage, sessionKey]);
 
-  const { data: gameOfTheDay } = useQuery(
-    ["gameOfTheDay"],
-    () => Promise.resolve(getDatabase()),
-    {
-      select({ count, games }) {
-        const offset = getGameOfTheDayOffset(level, count);
-        return games[Object.keys(games)[offset]];
-      },
-    }
-  );
+  const [secretGame, setSecretGame] = useState<Game>();
+
+  useEffect(() => {
+    load()
+      .then(() => {
+        const count = getCount();
+        const offset = getTodaysOffset(level, count);
+        const id = getId(offset);
+        const game = getGame(id);
+
+        setSecretGame(game);
+      })
+      .catch((error) => {
+        throw new Error("Failed to load the database.", { cause: error });
+      });
+  }, [level]);
 
   const handleVictory = (game: Game) => {
     dispatch({
@@ -107,10 +112,10 @@ export function App() {
   };
 
   const handleGuess = (game: Game) => {
-    if (!gameOfTheDay) {
+    if (!secretGame) {
       return;
     }
-    const comparison = compareGames(gameOfTheDay, game);
+    const comparison = compareGames(secretGame, game);
 
     if (comparison.id === "exact") {
       handleVictory(game);
@@ -133,7 +138,7 @@ export function App() {
     });
   };
 
-  if (!gameOfTheDay) {
+  if (!secretGame) {
     return null;
   }
 
@@ -149,7 +154,7 @@ export function App() {
 
       <main className={classes.content}>
         {history.length > 0 ? (
-          <History history={history} gameOfTheDay={gameOfTheDay} />
+          <History history={history} secretGame={secretGame} />
         ) : (
           <Help />
         )}
@@ -157,7 +162,7 @@ export function App() {
 
       <footer className={classes.footer}>
         {stage === "playing" ? (
-          gameOfTheDay ? (
+          secretGame ? (
             <Form onSubmit={handleGuess} />
           ) : null
         ) : stage === "victory" ? (
@@ -180,8 +185,8 @@ export function App() {
               title="Bummer."
               message={
                 <>
-                  The game was <strong>{gameOfTheDay?.name}</strong>. You can
-                  try again tomorrow.
+                  The game was <strong>{secretGame.name}</strong>. You can try
+                  again tomorrow.
                 </>
               }
             />

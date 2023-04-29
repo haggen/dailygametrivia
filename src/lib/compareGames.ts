@@ -1,4 +1,4 @@
-import { Game } from "~/src/lib/database";
+import { Game } from "~/src/lib/data";
 
 export type Match = "exact" | "partial" | "mismatch" | "higher" | "lower";
 

@@ -3,12 +3,12 @@ const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
 /**
  * Create seed based off date and score.
  */
-function getSeed(score = 0) {
+function getSeed(level = 0) {
   const today = new Date();
   const y = today.getFullYear();
   const m = today.getMonth();
   const d = today.getDate();
-  return [y, m, d, score].join("");
+  return [y, m, d, level].join("");
 }
 
 /**
@@ -23,9 +23,9 @@ function getSeededOffset(seed: string, count: number) {
 }
 
 /**
- * Get query offset.
+ * ...
  */
-export function getGameOfTheDayOffset(score: number, count: number) {
-  const seed = getSeed(score);
+export function getTodaysOffset(level: number, count: number) {
+  const seed = getSeed(level);
   return getSeededOffset(seed, count);
 }

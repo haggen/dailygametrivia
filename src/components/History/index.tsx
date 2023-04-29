@@ -2,14 +2,14 @@ import * as classes from "./style.module.css";
 
 import { compareGames } from "~/src/lib/compareGames";
 import { Guess } from "~/src/components/Guess";
-import { Game } from "~/src/lib/database";
+import { Game } from "~/src/lib/data";
 
 type Props = {
   history: Game[];
-  gameOfTheDay: Game;
+  secretGame: Game;
 };
 
-export function History({ history, gameOfTheDay }: Props) {
+export function History({ history, secretGame: gameOfTheDay }: Props) {
   const reversed = history.concat().reverse();
 
   return (

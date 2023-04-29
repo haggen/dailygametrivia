@@ -29,7 +29,7 @@ let database: Database;
 /**
  * Load and return the database.
  */
-export async function getDatabase() {
+export async function load() {
   if (!database) {
     database = await import("~/src/database.json");
   }
@@ -37,9 +37,43 @@ export async function getDatabase() {
 }
 
 /**
+ * Get game count.
+ */
+export function getCount() {
+  if (!database) {
+    throw new Error("Database hasn't been loaded");
+  }
+  return database.count;
+}
+
+/**
+ * Get game by ID.
+ */
+export function getGame(id: string) {
+  if (!database) {
+    throw new Error("Database hasn't been loaded");
+  }
+  return database.games[id];
+}
+
+/**
+ * Get ID by offset.
+ */
+export function getId(offset: number) {
+  if (!database) {
+    throw new Error("Database hasn't been loaded");
+  }
+  return Object.keys(database.games)[offset];
+}
+
+/**
  * Search games in the database and return sorted results.
  */
 export function search(query: string, limit = 50) {
+  if (!database) {
+    throw new Error("Database hasn't been loaded");
+  }
+
   const games = Object.values(database.games);
   const results = [];
 
