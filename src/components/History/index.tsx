@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import * as classes from "./style.module.css";
 
 import { compareGames } from "~/src/lib/compareGames";
@@ -10,6 +12,10 @@ type Props = {
 };
 
 export function History({ history, secretGame: gameOfTheDay }: Props) {
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: 0 });
+  });
+
   const reversed = history.concat().reverse();
 
   return (
