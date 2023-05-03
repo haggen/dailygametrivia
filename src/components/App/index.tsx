@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Balancer from "react-wrap-balancer";
 
 import * as classes from "./style.module.css";
 
@@ -11,11 +12,7 @@ import { Form } from "~/src/components/Form";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
 import { Button } from "~/src/components/Button";
-import {
-  getSessionKey as getSessionKey,
-  getSession,
-  setSession as setSession,
-} from "~/src/lib/storedState";
+import * as Storage from "~/src/lib/storage";
 import { History } from "~/src/components/History";
 import { MoreInfo } from "~/src/components/MoreInfo";
 
@@ -29,7 +26,7 @@ type State = {
 const initialAttempts = 10;
 
 function getInitialSession(key: string) {
-  const state = getSession<State>(key);
+  const state = Storage.load<State>(key);
 
   return (
     state ?? {
@@ -66,19 +63,19 @@ function Copy() {
 }
 
 export function App() {
-  const sessionKey = getSessionKey();
+  const dailyKey = Storage.getDailyKey();
 
   const [{ stage, level, history, remainingAttempts }, dispatch] =
-    useSimpleState<State>(getInitialSession(sessionKey));
+    useSimpleState<State>(getInitialSession(dailyKey));
 
   useEffect(() => {
-    setSession(sessionKey, {
+    Storage.save(dailyKey, {
       stage,
       level,
       history,
       remainingAttempts,
     });
-  }, [remainingAttempts, history, level, stage, sessionKey]);
+  }, [remainingAttempts, history, level, stage, dailyKey]);
 
   const [secretGame, setSecretGame] = useState<Game>();
 
@@ -96,6 +93,8 @@ export function App() {
         throw new Error("Failed to load the database.", { cause: error });
       });
   }, [level]);
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleVictory = (game: Game) => {
     dispatch({
@@ -139,6 +138,12 @@ export function App() {
     });
   };
 
+  const handleHelp = (page: number, total: number) => {
+    if (page === total - 1) {
+      inputRef.current?.focus();
+    }
+  };
+
   if (!secretGame) {
     return null;
   }
@@ -157,15 +162,36 @@ export function App() {
         {history.length > 0 ? (
           <History history={history} secretGame={secretGame} />
         ) : (
-          <Help />
+          <Help onChange={handleHelp}>
+            <p>
+              <Balancer>You have 10 guesses to find the secret game.</Balancer>
+            </p>
+            <p>
+              <Balancer>
+                For each guess you'll get hints about the secret game.
+              </Balancer>
+            </p>
+            <p>
+              <Balancer>
+                If you guess correctly you'll get to keep playing with a new
+                game.
+              </Balancer>
+            </p>
+            <p>
+              <Balancer>
+                If you lose you'll have to wait until tomorrow to play again.
+              </Balancer>
+            </p>
+            <p>
+              <Balancer>Take your first guess to start and good luck!</Balancer>
+            </p>
+          </Help>
         )}
       </main>
 
       <footer className={classes.footer}>
         {stage === "playing" ? (
-          secretGame ? (
-            <Form onSubmit={handleGuess} />
-          ) : null
+          <Form inputRef={inputRef} onSubmit={handleGuess} />
         ) : stage === "victory" ? (
           <Toast
             type="positive"
@@ -178,7 +204,7 @@ export function App() {
               </Button>
             }
           />
-        ) : (
+        ) : stage === "gameover" ? (
           <>
             <Toast
               type="negative"
@@ -186,16 +212,13 @@ export function App() {
               title="Bummer."
               message={
                 <>
-                  The game was{" "}
-                  <strong>
-                    <MoreInfo game={secretGame} />
-                  </strong>
-                  . You can try again tomorrow.
+                  The game was <MoreInfo game={secretGame} />. You can try again
+                  tomorrow.
                 </>
               }
             />
           </>
-        )}
+        ) : null}
 
         <Copy />
       </footer>

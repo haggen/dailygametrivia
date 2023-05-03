@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.help ul {
+.help menu {
   display: flex;
   gap: 0.5rem;
 }

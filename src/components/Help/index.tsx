@@ -1,61 +1,59 @@
-import { CSSProperties, useState } from "react";
-import Balancer from "react-wrap-balancer";
+import { CSSProperties, Children, ReactNode, useState } from "react";
 
 import * as classes from "./style.module.css";
 
 import { Button } from "~/src/components/Button";
 
-const pages = [
-  <>You have 10 attempts to figure out the secret game.</>,
-  <>
-    For each guess we'll compare attributes such as games series, genres, game
-    modes and more.
-  </>,
-  <>
-    For each attribute we'll give a hint of either{" "}
-    <strong style={{ color: "var(--color-green)" }}>exact</strong>,{" "}
-    <strong style={{ color: "var(--color-yellow)" }}>partial</strong> or{" "}
-    <strong style={{ color: "var(--color-red)" }}>mismatch</strong>.
-  </>,
-  <>Take your first guess to start and good luck!</>,
-];
-
 type Props = {
+  children: ReactNode[];
+  page?: number;
   style?: CSSProperties;
+  onChange?: (page: number, total: number) => void;
 };
 
-export function Help({ style }: Props) {
-  const [index, setIndex] = useState(0);
+export function Help({
+  children,
+  page: initialPage = 0,
+  style,
+  onChange,
+}: Props) {
+  const [page, setPage] = useState(initialPage);
+
+  const total = Children.count(children);
 
   const handleBack = () => {
-    if (index > 0) {
-      setIndex(index - 1);
+    if (page > 0) {
+      setPage(page - 1);
+      onChange?.(page - 1, total);
     }
   };
 
   const handleNext = () => {
-    if (index < pages.length - 1) {
-      setIndex(index + 1);
+    if (page < total - 1) {
+      setPage(page + 1);
+      onChange?.(page + 1, total);
     }
   };
 
+  const isLastPage = page === total - 1;
+  // const isSecondToLastPage = page === total - 2;
+
   return (
     <article className={classes.help} style={style}>
-      <p>
-        <Balancer>{pages[index]}</Balancer>
-      </p>
-      <ul>
+      {Children.toArray(children)[page]}
+
+      <menu>
         <li>
-          <Button onClick={handleBack} disabled={index === 0}>
+          <Button onClick={handleBack} disabled={page === 0}>
             Back
           </Button>
         </li>
         <li>
-          <Button onClick={handleNext} disabled={index === pages.length - 1}>
+          <Button onClick={handleNext} disabled={isLastPage}>
             Next
           </Button>
         </li>
-      </ul>
+      </menu>
     </article>
   );
 }

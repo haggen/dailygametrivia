@@ -1,3 +1,5 @@
+import * as classes from "./style.module.css";
+
 import { Game } from "~/src/lib/data";
 
 type Props = {
@@ -9,7 +11,12 @@ export function MoreInfo({ game }: Props) {
   url.searchParams.set("search_query", game.name + " gameplay");
 
   return (
-    <a href={url.toString()} target="_blank" rel="noreferrer">
+    <a
+      href={url.toString()}
+      target="_blank"
+      rel="noreferrer"
+      className={classes.link}
+    >
       {game.name}
     </a>
   );

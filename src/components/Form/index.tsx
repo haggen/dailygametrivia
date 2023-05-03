@@ -5,6 +5,7 @@ import {
   useEffect,
   useId,
   useRef,
+  RefObject,
 } from "react";
 
 import * as classes from "./style.module.css";
@@ -17,9 +18,12 @@ import { useFocusTrap } from "~/src/lib/useFocusTrap";
 import { Flex } from "~/src/components/Flex";
 import { Game, load, search } from "~/src/lib/data";
 
-type Props = { onSubmit: (game: Game) => void };
+type Props = {
+  inputRef: RefObject<HTMLInputElement>;
+  onSubmit: (game: Game) => void;
+};
 
-export function Form({ onSubmit }: Props) {
+export function Form({ inputRef, onSubmit }: Props) {
   const [
     {
       isExpanded,
@@ -51,8 +55,6 @@ export function Form({ onSubmit }: Props) {
 
   const dataListId = useId();
   const dataListRef = useRef<HTMLUListElement>(null);
-
-  const inputRef = useRef<HTMLInputElement>(null);
 
   useFocusTrap([inputRef, dataListRef], (focused) => {
     patch({ isExpanded: focused });
@@ -190,9 +192,10 @@ export function Form({ onSubmit }: Props) {
           onClick={handleClick}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          placeholder="Type to search…"
+          placeholder="Type to search games…"
           className={classes.input}
           required
+          autoFocus
         />
         <Button type="submit" disabled={selectedIndex < 0}>
           Guess
