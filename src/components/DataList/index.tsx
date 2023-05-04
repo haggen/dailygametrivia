@@ -1,15 +1,10 @@
-import {
-  ComponentProps,
-  ForwardedRef,
-  KeyboardEvent,
-  forwardRef,
-  useEffect,
-} from "react";
+import { ComponentProps, ForwardedRef, KeyboardEvent, forwardRef } from "react";
 
 import * as classes from "./style.module.css";
 
 import { ClassList } from "~/src/lib/classList";
 import { useForwardRef } from "~/src/lib/useForwardRef";
+import { useScheduledEffect } from "~/src/lib/useScheduledEffect";
 
 export type Option<T = unknown> = {
   key: string;
@@ -39,7 +34,7 @@ function DataList<T>(
 ) {
   const listRef = useForwardRef(ref);
 
-  useEffect(() => {
+  const scrollToSelectedOption = useScheduledEffect(() => {
     listRef.current
       ?.querySelector('li[aria-selected="true"]')
       ?.scrollIntoView({ block: "nearest" });
@@ -50,10 +45,12 @@ function DataList<T>(
       case "ArrowUp":
         // onSelect((selectedIndex - 1 + options.length) % options.length);
         onSelect(Math.max(selectedIndex - 1, 0));
+        scrollToSelectedOption();
         break;
       case "ArrowDown":
         // onSelect((selectedIndex + 1) % options.length);
         onSelect(Math.min(selectedIndex + 1, options.length - 1));
+        scrollToSelectedOption();
         break;
       case "Enter":
         onCommit(selectedIndex);

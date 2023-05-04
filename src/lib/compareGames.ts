@@ -76,7 +76,7 @@ function compareInvolvedCompanies(a: Game, b: Game): Match {
 
 export function compareGames(a: Game, b: Game) {
   return {
-    id: a.id === b.id ? "exact" : "mismatch",
+    id: (a.id === b.id ? "exact" : "mismatch") as Match,
     name: compareName(a, b),
     releaseYear: compareReleaseYear(a, b),
     platforms: comparePlatforms(a, b),

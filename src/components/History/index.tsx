@@ -11,7 +11,7 @@ type Props = {
   secretGame: Game;
 };
 
-export function History({ history, secretGame: gameOfTheDay }: Props) {
+export function History({ history, secretGame }: Props) {
   useEffect(() => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   });
@@ -23,7 +23,7 @@ export function History({ history, secretGame: gameOfTheDay }: Props) {
       {reversed.map((game, index) => (
         <li key={index}>
           <span className={classes.attempt}>{history.length - index}</span>
-          <Guess guess={game} comparison={compareGames(gameOfTheDay, game)} />
+          <Guess guess={game} comparison={compareGames(secretGame, game)} />
         </li>
       ))}
     </ol>
