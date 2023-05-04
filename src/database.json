@@ -398,7 +398,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 87.04453320260279,
+      "totalRating": 87.0432970346894,
       "totalRatingCount": 280,
       "releaseYear": 1998
     },
@@ -484,7 +484,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 89.0900081914879,
+      "totalRating": 89.09073229171744,
       "totalRatingCount": 407,
       "releaseYear": 2000
     },
@@ -693,8 +693,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 89.62183118695339,
-      "totalRatingCount": 606,
+      "totalRating": 89.61871580388261,
+      "totalRatingCount": 607,
       "gameEngines": [
         {
           "id": 0,
@@ -865,8 +865,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.57410491095345,
-      "totalRatingCount": 1542,
+      "totalRating": 84.57431417518941,
+      "totalRatingCount": 1543,
       "releaseYear": 2010
     },
     "18": {
@@ -1026,8 +1026,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.91490205810695,
-      "totalRatingCount": 1398,
+      "totalRating": 79.91451105832965,
+      "totalRatingCount": 1399,
       "releaseYear": 2001
     },
     "19": {
@@ -1354,8 +1354,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 83.94923547551676,
-      "totalRatingCount": 840,
+      "totalRating": 83.9489801866149,
+      "totalRatingCount": 842,
       "releaseYear": 2010
     },
     "22": {
@@ -1432,8 +1432,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 89.8424978965865,
-      "totalRatingCount": 265,
+      "totalRating": 89.83851402200081,
+      "totalRatingCount": 267,
       "releaseYear": 1999
     },
     "36": {
@@ -1566,8 +1566,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.8683329537725,
-      "totalRatingCount": 946,
+      "totalRating": 86.8686351799762,
+      "totalRatingCount": 949,
       "releaseYear": 2008
     },
     "38": {
@@ -1654,8 +1654,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.36097469777249,
-      "totalRatingCount": 770,
+      "totalRating": 88.36105166110605,
+      "totalRatingCount": 771,
       "gameEngines": [
         {
           "id": 0,
@@ -1747,7 +1747,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.98687412272895,
+      "totalRating": 74.9860290136991,
       "totalRatingCount": 997,
       "releaseYear": 2002
     },
@@ -1837,7 +1837,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.15086098476695,
+      "totalRating": 77.14948667948615,
       "totalRatingCount": 900,
       "releaseYear": 2010
     },
@@ -2171,7 +2171,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.27278937150575,
+      "totalRating": 85.27253352792334,
       "totalRatingCount": 667,
       "releaseYear": 2002
     },
@@ -2520,8 +2520,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 83.4528610708882,
-      "totalRatingCount": 2620,
+      "totalRating": 83.4523093727705,
+      "totalRatingCount": 2621,
       "releaseYear": 2007
     },
     "72": {
@@ -2622,8 +2622,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 92.1178642292063,
-      "totalRatingCount": 2924,
+      "totalRating": 92.11816263495069,
+      "totalRatingCount": 2930,
       "releaseYear": 2011
     },
     "73": {
@@ -2812,8 +2812,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 93.53736060553905,
-      "totalRatingCount": 2046,
+      "totalRating": 93.5371800996349,
+      "totalRatingCount": 2050,
       "releaseYear": 2010
     },
     "75": {
@@ -2904,8 +2904,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.02851725871244,
-      "totalRatingCount": 1549,
+      "totalRating": 88.02873632783835,
+      "totalRatingCount": 1550,
       "releaseYear": 2012
     },
     "76": {
@@ -2988,7 +2988,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 88.59845303508865,
+      "totalRating": 88.59838028450531,
       "totalRatingCount": 1325,
       "releaseYear": 2009
     },
@@ -3097,7 +3097,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 75.42740613215301,
+      "totalRating": 75.42744743044946,
       "totalRatingCount": 546,
       "releaseYear": 2011
     },
@@ -3168,7 +3168,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.3026755229027,
+      "totalRating": 85.30267552290265,
       "totalRatingCount": 605,
       "releaseYear": 2007
     },
@@ -3360,31 +3360,10 @@
           }
         },
         {
-          "id": 1049,
-          "company": {
-            "id": 353,
-            "name": "Pocketeers"
-          }
-        },
-        {
           "id": 1050,
           "company": {
             "id": 1,
             "name": "Electronic Arts"
-          }
-        },
-        {
-          "id": 1051,
-          "company": {
-            "id": 354,
-            "name": "DSI Games"
-          }
-        },
-        {
-          "id": 1052,
-          "company": {
-            "id": 355,
-            "name": "Zoo Digital"
           }
         },
         {
@@ -3406,11 +3385,6 @@
           "id": 7,
           "abbreviation": "PS1",
           "name": "PlayStation"
-        },
-        {
-          "id": 24,
-          "abbreviation": "GBA",
-          "name": "Game Boy Advance"
         }
       ],
       "playerPerspectives": [
@@ -3423,8 +3397,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.117816243042,
-      "totalRatingCount": 158,
+      "totalRating": 82.1140169068844,
+      "totalRatingCount": 159,
       "gameEngines": [
         {
           "id": 0,
@@ -3517,8 +3491,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.219283995469,
-      "totalRatingCount": 211,
+      "totalRating": 77.21737550751604,
+      "totalRatingCount": 212,
       "releaseYear": 2002
     },
     "96": {
@@ -3602,8 +3576,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.194613521354,
-      "totalRatingCount": 614,
+      "totalRating": 80.1939031238587,
+      "totalRatingCount": 616,
       "releaseYear": 2003
     },
     "97": {
@@ -3687,8 +3661,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.1052566130506,
-      "totalRatingCount": 625,
+      "totalRating": 81.1047314170407,
+      "totalRatingCount": 626,
       "releaseYear": 2004
     },
     "98": {
@@ -3769,8 +3743,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.83432143783054,
-      "totalRatingCount": 725,
+      "totalRating": 84.8344128798628,
+      "totalRatingCount": 726,
       "releaseYear": 2005
     },
     "99": {
@@ -3811,53 +3785,45 @@
       ],
       "involvedCompanies": [
         {
-          "id": 46794,
+          "id": 205299,
           "company": {
-            "id": 1,
-            "name": "Electronic Arts"
+            "id": 1967,
+            "name": "TransGaming Inc."
           }
         },
         {
-          "id": 205298,
+          "id": 212431,
           "company": {
             "id": 332,
             "name": "EA Black Box"
           }
         },
         {
-          "id": 205299,
+          "id": 212432,
           "company": {
-            "id": 1967,
-            "name": "TransGaming Inc."
+            "id": 277,
+            "name": "EA Canada"
+          }
+        },
+        {
+          "id": 212439,
+          "company": {
+            "id": 1,
+            "name": "Electronic Arts"
           }
         }
       ],
       "name": "Need for Speed: Carbon",
       "platforms": [
         {
-          "id": 5,
-          "abbreviation": "Wii",
-          "name": "Wii"
-        },
-        {
           "id": 6,
           "abbreviation": "PC",
           "name": "PC (Microsoft Windows)"
         },
         {
-          "id": 8,
-          "abbreviation": "PS2",
-          "name": "PlayStation 2"
-        },
-        {
           "id": 9,
           "abbreviation": "PS3",
           "name": "PlayStation 3"
-        },
-        {
-          "id": 11,
-          "abbreviation": "XBOX",
-          "name": "Xbox"
         },
         {
           "id": 12,
@@ -3868,11 +3834,6 @@
           "id": 14,
           "abbreviation": "Mac",
           "name": "Mac"
-        },
-        {
-          "id": 21,
-          "abbreviation": "NGC",
-          "name": "Nintendo GameCube"
         }
       ],
       "playerPerspectives": [
@@ -3927,36 +3888,26 @@
       ],
       "involvedCompanies": [
         {
-          "id": 25206,
-          "company": {
-            "id": 332,
-            "name": "EA Black Box"
-          }
-        },
-        {
-          "id": 180138,
+          "id": 212448,
           "company": {
             "id": 1,
             "name": "Electronic Arts"
+          }
+        },
+        {
+          "id": 212449,
+          "company": {
+            "id": 332,
+            "name": "EA Black Box"
           }
         }
       ],
       "name": "Need for Speed: ProStreet",
       "platforms": [
         {
-          "id": 5,
-          "abbreviation": "Wii",
-          "name": "Wii"
-        },
-        {
           "id": 6,
           "abbreviation": "PC",
           "name": "PC (Microsoft Windows)"
-        },
-        {
-          "id": 8,
-          "abbreviation": "PS2",
-          "name": "PlayStation 2"
         },
         {
           "id": 9,
@@ -3967,11 +3918,6 @@
           "id": 12,
           "abbreviation": "X360",
           "name": "Xbox 360"
-        },
-        {
-          "id": 38,
-          "abbreviation": "PSP",
-          "name": "PlayStation Portable"
         }
       ],
       "playerPerspectives": [
@@ -4022,13 +3968,6 @@
       ],
       "involvedCompanies": [
         {
-          "id": 52648,
-          "company": {
-            "id": 1,
-            "name": "Electronic Arts"
-          }
-        },
-        {
           "id": 52649,
           "company": {
             "id": 332,
@@ -4036,43 +3975,19 @@
           }
         },
         {
-          "id": 82801,
+          "id": 212493,
           "company": {
-            "id": 233,
-            "name": "Piranha Games"
-          }
-        },
-        {
-          "id": 82802,
-          "company": {
-            "id": 348,
-            "name": "Exient Entertainment"
-          }
-        },
-        {
-          "id": 82803,
-          "company": {
-            "id": 357,
-            "name": "Firebrand Games"
+            "id": 1,
+            "name": "Electronic Arts"
           }
         }
       ],
       "name": "Need for Speed: Undercover",
       "platforms": [
         {
-          "id": 5,
-          "abbreviation": "Wii",
-          "name": "Wii"
-        },
-        {
           "id": 6,
           "abbreviation": "PC",
           "name": "PC (Microsoft Windows)"
-        },
-        {
-          "id": 8,
-          "abbreviation": "PS2",
-          "name": "PlayStation 2"
         },
         {
           "id": 9,
@@ -4083,16 +3998,6 @@
           "id": 12,
           "abbreviation": "X360",
           "name": "Xbox 360"
-        },
-        {
-          "id": 20,
-          "abbreviation": "NDS",
-          "name": "Nintendo DS"
-        },
-        {
-          "id": 38,
-          "abbreviation": "PSP",
-          "name": "PlayStation Portable"
         }
       ],
       "playerPerspectives": [
@@ -4106,14 +4011,14 @@
         }
       ],
       "totalRating": 59.82271106166669,
-      "totalRatingCount": 224,
+      "totalRatingCount": 223,
       "releaseYear": 2008
     },
     "102": {
       "id": 102,
       "collection": {
-        "id": 12,
-        "name": "Need for Speed"
+        "id": 8757,
+        "name": "Need for Speed: Shift"
       },
       "gameModes": [
         {
@@ -4137,13 +4042,6 @@
       ],
       "involvedCompanies": [
         {
-          "id": 52632,
-          "company": {
-            "id": 1,
-            "name": "Electronic Arts"
-          }
-        },
-        {
           "id": 52633,
           "company": {
             "id": 356,
@@ -4151,10 +4049,10 @@
           }
         },
         {
-          "id": 52634,
+          "id": 212480,
           "company": {
-            "id": 2142,
-            "name": "EA Bright Light"
+            "id": 1,
+            "name": "Electronic Arts"
           }
         }
       ],
@@ -4174,11 +4072,6 @@
           "id": 12,
           "abbreviation": "X360",
           "name": "Xbox 360"
-        },
-        {
-          "id": 38,
-          "abbreviation": "PSP",
-          "name": "PlayStation Portable"
         }
       ],
       "playerPerspectives": [
@@ -4191,8 +4084,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.74905548527269,
-      "totalRatingCount": 171,
+      "totalRating": 76.74875016639065,
+      "totalRatingCount": 172,
       "gameEngines": [
         {
           "id": 0,
@@ -4245,14 +4138,7 @@
           }
         },
         {
-          "id": 1037,
-          "company": {
-            "id": 348,
-            "name": "Exient Entertainment"
-          }
-        },
-        {
-          "id": 8370,
+          "id": 212599,
           "company": {
             "id": 1,
             "name": "Electronic Arts"
@@ -4261,11 +4147,6 @@
       ],
       "name": "Need for Speed: Hot Pursuit",
       "platforms": [
-        {
-          "id": 5,
-          "abbreviation": "Wii",
-          "name": "Wii"
-        },
         {
           "id": 6,
           "abbreviation": "PC",
@@ -4280,11 +4161,6 @@
           "id": 12,
           "abbreviation": "X360",
           "name": "Xbox 360"
-        },
-        {
-          "id": 39,
-          "abbreviation": "iOS",
-          "name": "iOS"
         }
       ],
       "playerPerspectives": [
@@ -4380,7 +4256,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.11679102356149,
+      "totalRating": 86.116186730062,
       "totalRatingCount": 825,
       "collection": {
         "id": 109,
@@ -4469,8 +4345,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 83.7178436200371,
-      "totalRatingCount": 370,
+      "totalRating": 83.7159857311192,
+      "totalRatingCount": 371,
       "releaseYear": 2010
     },
     "112": {
@@ -4541,7 +4417,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.69078261497256,
+      "totalRating": 80.69091123965015,
       "totalRatingCount": 348,
       "releaseYear": 2008
     },
@@ -4646,7 +4522,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.20872855184925,
+      "totalRating": 83.20851686705845,
       "totalRatingCount": 1343,
       "releaseYear": 2010
     },
@@ -4802,8 +4678,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 80.42719695341344,
-      "totalRatingCount": 619,
+      "totalRating": 80.42662371914165,
+      "totalRatingCount": 620,
       "collection": {
         "id": 115,
         "name": "League of Legends"
@@ -4913,8 +4789,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 92.4780541505325,
-      "totalRatingCount": 1044,
+      "totalRating": 92.47719941697085,
+      "totalRatingCount": 1045,
       "releaseYear": 2003
     },
     "117": {
@@ -5364,7 +5240,7 @@
         }
       ],
       "totalRating": 84.39833775021344,
-      "totalRatingCount": 1457,
+      "totalRatingCount": 1458,
       "releaseYear": 2011
     },
     "122": {
@@ -5447,7 +5323,7 @@
         }
       ],
       "totalRating": 82.6107524791566,
-      "totalRatingCount": 550,
+      "totalRatingCount": 551,
       "releaseYear": 2008
     },
     "123": {
@@ -5693,8 +5569,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 83.9427722507491,
-      "totalRatingCount": 443,
+      "totalRating": 83.9421365094025,
+      "totalRatingCount": 444,
       "gameEngines": [
         {
           "id": 0,
@@ -5768,8 +5644,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 89.166778424733,
-      "totalRatingCount": 1045,
+      "totalRating": 89.16738561489714,
+      "totalRatingCount": 1047,
       "gameEngines": [
         {
           "id": 0,
@@ -5863,8 +5739,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.75062120113239,
-      "totalRatingCount": 2192,
+      "totalRating": 88.7504840239413,
+      "totalRatingCount": 2194,
       "releaseYear": 2009
     },
     "128": {
@@ -5935,8 +5811,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.12985673456694,
-      "totalRatingCount": 1379,
+      "totalRating": 77.12959205545,
+      "totalRatingCount": 1381,
       "releaseYear": 2007
     },
     "130": {
@@ -6114,7 +5990,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 90.8796865724195,
+      "totalRating": 90.8796785119651,
       "totalRatingCount": 1139,
       "gameEngines": [
         {
@@ -6172,7 +6048,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.15726111602814,
+      "totalRating": 83.15770164682625,
       "totalRatingCount": 288,
       "gameEngines": [
         {
@@ -6626,8 +6502,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.39934460643465,
-      "totalRatingCount": 571,
+      "totalRating": 80.39945122443595,
+      "totalRatingCount": 572,
       "releaseYear": 2005
     },
     "148": {
@@ -6721,7 +6597,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 81.48937753657285,
+      "totalRating": 81.48955066376774,
       "totalRatingCount": 184,
       "collection": {
         "id": 148,
@@ -6855,8 +6731,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.12254725951095,
-      "totalRatingCount": 255,
+      "totalRating": 79.12146679212545,
+      "totalRatingCount": 256,
       "releaseYear": 2002
     },
     "153": {
@@ -6973,8 +6849,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.95752006664935,
-      "totalRatingCount": 334,
+      "totalRating": 76.95814093639176,
+      "totalRatingCount": 335,
       "releaseYear": 2003
     },
     "154": {
@@ -7079,7 +6955,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 71.75743427935404,
+      "totalRating": 71.96548725433544,
       "totalRatingCount": 145,
       "gameEngines": [
         {
@@ -7241,7 +7117,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 85.12743230806835,
+      "totalRating": 85.12552453643245,
       "totalRatingCount": 137,
       "collection": {
         "id": 180,
@@ -7308,7 +7184,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 85.8601498606921,
+      "totalRating": 85.8593824221565,
       "totalRatingCount": 317,
       "releaseYear": 1998
     },
@@ -7409,8 +7285,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.8870494348587,
-      "totalRatingCount": 325,
+      "totalRating": 89.8813889005859,
+      "totalRatingCount": 327,
       "releaseYear": 1992
     },
     "189": {
@@ -7638,8 +7514,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 73.12196741763245,
-      "totalRatingCount": 177,
+      "totalRating": 73.1208832712741,
+      "totalRatingCount": 178,
       "gameEngines": [
         {
           "id": 0,
@@ -8033,7 +7909,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.252263846333,
+      "totalRating": 78.25173103157606,
       "totalRatingCount": 178,
       "releaseYear": 2002
     },
@@ -8144,8 +8020,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 82.4680596738585,
-      "totalRatingCount": 414,
+      "totalRating": 82.46786026288825,
+      "totalRatingCount": 415,
       "releaseYear": 2000
     },
     "224": {
@@ -8241,8 +8117,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 75.0535948502725,
-      "totalRatingCount": 413,
+      "totalRating": 75.05333815092695,
+      "totalRatingCount": 414,
       "releaseYear": 2004
     },
     "230": {
@@ -8397,8 +8273,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 84.4929430065394,
-      "totalRatingCount": 1984,
+      "totalRating": 84.49306980863174,
+      "totalRatingCount": 1985,
       "releaseYear": 1998
     },
     "232": {
@@ -8485,7 +8361,7 @@
         }
       ],
       "totalRating": 75.48201143671946,
-      "totalRatingCount": 271,
+      "totalRatingCount": 272,
       "releaseYear": 1999
     },
     "233": {
@@ -8579,8 +8455,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 90.88836410676694,
-      "totalRatingCount": 2329,
+      "totalRating": 90.88789221011595,
+      "totalRatingCount": 2333,
       "releaseYear": 2004
     },
     "236": {
@@ -9189,7 +9065,7 @@
         }
       ],
       "totalRating": 78.84874102673825,
-      "totalRatingCount": 1120,
+      "totalRatingCount": 1121,
       "releaseYear": 2007
     },
     "250": {
@@ -9436,8 +9312,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.8227546785793,
-      "totalRatingCount": 148,
+      "totalRating": 85.8219939961889,
+      "totalRatingCount": 149,
       "gameEngines": [
         {
           "id": 0,
@@ -9752,8 +9628,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.3284146890015,
-      "totalRatingCount": 279,
+      "totalRating": 87.32841468900156,
+      "totalRatingCount": 280,
       "releaseYear": 2005
     },
     "280": {
@@ -10195,8 +10071,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 66.77694916886759,
-      "totalRatingCount": 257,
+      "totalRating": 66.7754816642926,
+      "totalRatingCount": 258,
       "releaseYear": 1992
     },
     "286": {
@@ -10337,8 +10213,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 83.6811367908443,
-      "totalRatingCount": 231,
+      "totalRating": 83.68350112015371,
+      "totalRatingCount": 233,
       "releaseYear": 1997
     },
     "289": {
@@ -10612,8 +10488,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.3433846902665,
-      "totalRatingCount": 266,
+      "totalRating": 86.34249436491521,
+      "totalRatingCount": 267,
       "gameEngines": [
         {
           "id": 0,
@@ -10948,7 +10824,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.28374980880879,
+      "totalRating": 78.2812986158133,
       "totalRatingCount": 121,
       "gameEngines": [
         {
@@ -11099,7 +10975,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 75.55992899310391,
+      "totalRating": 75.5605068817443,
       "totalRatingCount": 106,
       "gameEngines": [
         {
@@ -11342,7 +11218,7 @@
         }
       ],
       "totalRating": 84.91648174747266,
-      "totalRatingCount": 421,
+      "totalRatingCount": 422,
       "releaseYear": 1994
     },
     "316": {
@@ -11688,8 +11564,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.78380232096904,
-      "totalRatingCount": 370,
+      "totalRating": 78.78367016640955,
+      "totalRatingCount": 371,
       "releaseYear": 2002
     },
     "326": {
@@ -11774,8 +11650,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 81.39672406600751,
-      "totalRatingCount": 268,
+      "totalRating": 81.39668817638615,
+      "totalRatingCount": 270,
       "releaseYear": 2002
     },
     "327": {
@@ -12298,8 +12174,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.463826776131,
-      "totalRatingCount": 283,
+      "totalRating": 82.4675066765073,
+      "totalRatingCount": 284,
       "releaseYear": 1996
     },
     "336": {
@@ -12450,7 +12326,7 @@
         }
       ],
       "totalRating": 85.3288758476055,
-      "totalRatingCount": 690,
+      "totalRatingCount": 691,
       "releaseYear": 2006
     },
     "340": {
@@ -12771,8 +12647,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 78.6757502422924,
-      "totalRatingCount": 353,
+      "totalRating": 78.67575024229245,
+      "totalRatingCount": 354,
       "releaseYear": 1996
     },
     "343": {
@@ -13261,8 +13137,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.9694901565254,
-      "totalRatingCount": 1011,
+      "totalRating": 83.90438776441,
+      "totalRatingCount": 1015,
       "gameEngines": [
         {
           "id": 0,
@@ -13369,8 +13245,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.17442974955955,
-      "totalRatingCount": 475,
+      "totalRating": 79.1733867289729,
+      "totalRatingCount": 476,
       "releaseYear": 2016
     },
     "361": {
@@ -13438,8 +13314,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 78.5951765886945,
-      "totalRatingCount": 413,
+      "totalRating": 78.5951481895869,
+      "totalRatingCount": 414,
       "releaseYear": 2008
     },
     "363": {
@@ -13920,8 +13796,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.35542182700566,
-      "totalRatingCount": 1200,
+      "totalRating": 85.3549202608953,
+      "totalRatingCount": 1202,
       "gameEngines": [
         {
           "id": 0,
@@ -13978,8 +13854,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.29743698039115,
-      "totalRatingCount": 703,
+      "totalRating": 89.29746695956246,
+      "totalRatingCount": 704,
       "gameEngines": [
         {
           "id": 0,
@@ -14063,8 +13939,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.03024710958596,
-      "totalRatingCount": 411,
+      "totalRating": 82.03014191056485,
+      "totalRatingCount": 412,
       "gameEngines": [
         {
           "id": 0,
@@ -14137,8 +14013,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 89.06154265022914,
-      "totalRatingCount": 923,
+      "totalRating": 89.0605240720774,
+      "totalRatingCount": 926,
       "gameEngines": [
         {
           "id": 0,
@@ -14203,8 +14079,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.63433581530191,
-      "totalRatingCount": 556,
+      "totalRating": 90.63420849026619,
+      "totalRatingCount": 557,
       "gameEngines": [
         {
           "id": 0,
@@ -14470,8 +14346,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 73.96927364701605,
-      "totalRatingCount": 204,
+      "totalRating": 73.9694945071131,
+      "totalRatingCount": 206,
       "gameEngines": [
         {
           "id": 0,
@@ -14562,7 +14438,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.6209296895585,
+      "totalRating": 83.6031050388354,
       "totalRatingCount": 150,
       "releaseYear": 2013
     },
@@ -14631,7 +14507,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 76.83540645584385,
+      "totalRating": 76.8352164430282,
       "totalRatingCount": 350,
       "releaseYear": 2009
     },
@@ -14680,7 +14556,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.79947749063855,
+      "totalRating": 87.78842528720051,
       "totalRatingCount": 254,
       "gameEngines": [
         {
@@ -14818,8 +14694,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.036747219891,
-      "totalRatingCount": 118,
+      "totalRating": 86.03627488008726,
+      "totalRatingCount": 119,
       "gameEngines": [
         {
           "id": 0,
@@ -14888,8 +14764,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 91.20208934455164,
-      "totalRatingCount": 706,
+      "totalRating": 91.2021614432229,
+      "totalRatingCount": 707,
       "gameEngines": [
         {
           "id": 0,
@@ -14964,8 +14840,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 78.2433242371396,
-      "totalRatingCount": 109,
+      "totalRating": 78.2515580285484,
+      "totalRatingCount": 110,
       "gameEngines": [
         {
           "id": 0,
@@ -15052,8 +14928,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.00039321666864,
-      "totalRatingCount": 655,
+      "totalRating": 86.00076226496884,
+      "totalRatingCount": 658,
       "gameEngines": [
         {
           "id": 0,
@@ -15145,7 +15021,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 78.34727721236774,
+      "totalRating": 78.34683772793764,
       "totalRatingCount": 334,
       "gameEngines": [
         {
@@ -15238,8 +15114,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.2214109314479,
-      "totalRatingCount": 406,
+      "totalRating": 86.21996735662695,
+      "totalRatingCount": 407,
       "gameEngines": [
         {
           "id": 0,
@@ -15338,8 +15214,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 94.81092327922354,
-      "totalRatingCount": 578,
+      "totalRating": 94.8015089520861,
+      "totalRatingCount": 579,
       "gameEngines": [
         {
           "id": 0,
@@ -15430,8 +15306,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 87.58465384121155,
-      "totalRatingCount": 1143,
+      "totalRating": 87.58378944480256,
+      "totalRatingCount": 1146,
       "gameEngines": [
         {
           "id": 0,
@@ -15726,7 +15602,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.11845203508125,
+      "totalRating": 83.11823049769235,
       "totalRatingCount": 964,
       "gameEngines": [
         {
@@ -15920,8 +15796,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.69329132302136,
-      "totalRatingCount": 1666,
+      "totalRating": 90.62921022943681,
+      "totalRatingCount": 1669,
       "releaseYear": 2010
     },
     "438": {
@@ -16027,7 +15903,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.6407231614908,
+      "totalRating": 86.64053114421739,
       "totalRatingCount": 249,
       "releaseYear": 2004
     },
@@ -16122,7 +15998,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 88.24846935362095,
+      "totalRating": 88.24785586835495,
       "totalRatingCount": 185,
       "releaseYear": 2006
     },
@@ -16504,8 +16380,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 91.92012578008124,
-      "totalRatingCount": 2886,
+      "totalRating": 91.92029783580699,
+      "totalRatingCount": 2887,
       "releaseYear": 2011
     },
     "473": {
@@ -16719,8 +16595,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 68.0638181480993,
-      "totalRatingCount": 364,
+      "totalRating": 68.00704252087431,
+      "totalRatingCount": 365,
       "releaseYear": 2008
     },
     "478": {
@@ -16903,8 +16779,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.29452245773541,
-      "totalRatingCount": 388,
+      "totalRating": 83.2946089400861,
+      "totalRatingCount": 390,
       "gameEngines": [
         {
           "id": 0,
@@ -16965,8 +16841,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.7874641352042,
-      "totalRatingCount": 776,
+      "totalRating": 90.78666933991,
+      "totalRatingCount": 779,
       "gameEngines": [
         {
           "id": 0,
@@ -17032,8 +16908,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.9102301007868,
-      "totalRatingCount": 292,
+      "totalRating": 85.9104166270609,
+      "totalRatingCount": 294,
       "gameEngines": [
         {
           "id": 0,
@@ -17104,8 +16980,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.08557544481314,
-      "totalRatingCount": 188,
+      "totalRating": 74.0855754448132,
+      "totalRatingCount": 189,
       "gameEngines": [
         {
           "id": 0,
@@ -17391,8 +17267,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.52736182041579,
-      "totalRatingCount": 198,
+      "totalRating": 81.52774498468696,
+      "totalRatingCount": 199,
       "releaseYear": 2010
     },
     "492": {
@@ -17534,8 +17410,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.18519886870915,
-      "totalRatingCount": 827,
+      "totalRating": 81.1842593690218,
+      "totalRatingCount": 828,
       "collection": {
         "id": 493,
         "name": "Heavy Rain"
@@ -17613,8 +17489,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 83.3049162214032,
-      "totalRatingCount": 300,
+      "totalRating": 83.3051753712781,
+      "totalRatingCount": 301,
       "collection": {
         "id": 494,
         "name": "Bulletstorm"
@@ -17684,8 +17560,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 84.74389505647241,
-      "totalRatingCount": 654,
+      "totalRating": 84.74397622351384,
+      "totalRatingCount": 655,
       "releaseYear": 2010
     },
     "496": {
@@ -17920,7 +17796,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 80.00665046114139,
+      "totalRating": 80.00672770329274,
       "totalRatingCount": 779,
       "releaseYear": 2009
     },
@@ -17988,8 +17864,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.96710038818486,
-      "totalRatingCount": 609,
+      "totalRating": 90.9664002403084,
+      "totalRatingCount": 611,
       "gameEngines": [
         {
           "id": 0,
@@ -18090,8 +17966,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.79119464566945,
-      "totalRatingCount": 2052,
+      "totalRating": 87.7911350954289,
+      "totalRatingCount": 2053,
       "releaseYear": 2009
     },
     "501": {
@@ -18173,7 +18049,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.05849292606555,
+      "totalRating": 89.05860373678935,
       "totalRatingCount": 1842,
       "releaseYear": 2011
     },
@@ -18330,7 +18206,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 72.8227083196803,
+      "totalRating": 72.822317419537,
       "totalRatingCount": 212,
       "gameEngines": [
         {
@@ -18589,8 +18465,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.15488963981946,
-      "totalRatingCount": 1205,
+      "totalRating": 89.1544972256969,
+      "totalRatingCount": 1206,
       "releaseYear": 2011
     },
     "514": {
@@ -18729,7 +18605,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.16471321409135,
+      "totalRating": 83.16519799281474,
       "totalRatingCount": 227,
       "gameEngines": [
         {
@@ -18804,8 +18680,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 80.86324977230049,
-      "totalRatingCount": 421,
+      "totalRating": 80.86314255969731,
+      "totalRatingCount": 422,
       "releaseYear": 2005
     },
     "520": {
@@ -19075,7 +18951,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.0424486496583,
+      "totalRating": 81.04244864965835,
       "totalRatingCount": 286,
       "gameEngines": [
         {
@@ -19429,7 +19305,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 86.6574372012003,
+      "totalRating": 86.65773872297095,
       "totalRatingCount": 1663,
       "releaseYear": 2012
     },
@@ -19577,8 +19453,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 87.56838728271615,
-      "totalRatingCount": 1343,
+      "totalRating": 87.5682299855181,
+      "totalRatingCount": 1346,
       "releaseYear": 2012
     },
     "534": {
@@ -19653,7 +19529,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.34393677803595,
+      "totalRating": 87.34414846999664,
       "totalRatingCount": 317,
       "gameEngines": [
         {
@@ -19853,7 +19729,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.2695325071998,
+      "totalRating": 79.26949448697894,
       "totalRatingCount": 933,
       "releaseYear": 2011
     },
@@ -19978,8 +19854,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 89.56518505815005,
-      "totalRatingCount": 2086,
+      "totalRating": 89.61128189488825,
+      "totalRatingCount": 2089,
       "releaseYear": 2013
     },
     "539": {
@@ -20056,8 +19932,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 81.2953598720135,
-      "totalRatingCount": 562,
+      "totalRating": 81.2958297689113,
+      "totalRatingCount": 563,
       "releaseYear": 2013
     },
     "544": {
@@ -20368,8 +20244,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.0109464241319,
-      "totalRatingCount": 155,
+      "totalRating": 76.02094242916431,
+      "totalRatingCount": 156,
       "releaseYear": 2006
     },
     "547": {
@@ -20600,8 +20476,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.8605936776095,
-      "totalRatingCount": 826,
+      "totalRating": 88.86066015199134,
+      "totalRatingCount": 827,
       "releaseYear": 2005
     },
     "551": {
@@ -20673,8 +20549,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.2972244395846,
-      "totalRatingCount": 840,
+      "totalRating": 89.2970534380484,
+      "totalRatingCount": 841,
       "releaseYear": 2007
     },
     "553": {
@@ -21001,7 +20877,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.53063354199345,
+      "totalRating": 81.53009218294224,
       "totalRatingCount": 371,
       "releaseYear": 2010
     },
@@ -21507,8 +21383,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 92.27316901741865,
-      "totalRatingCount": 1645,
+      "totalRating": 92.27317902189179,
+      "totalRatingCount": 1649,
       "releaseYear": 2009
     },
     "569": {
@@ -22141,8 +22017,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 84.40256338660109,
-      "totalRatingCount": 604,
+      "totalRating": 84.4032556695202,
+      "totalRatingCount": 605,
       "releaseYear": 2003
     },
     "622": {
@@ -22213,8 +22089,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 84.13974124270085,
-      "totalRatingCount": 794,
+      "totalRating": 84.1398579993059,
+      "totalRatingCount": 795,
       "releaseYear": 2005
     },
     "623": {
@@ -22453,8 +22329,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 77.8155946645312,
-      "totalRatingCount": 672,
+      "totalRating": 77.81509946845111,
+      "totalRatingCount": 673,
       "releaseYear": 2008
     },
     "626": {
@@ -22812,8 +22688,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.0978707041171,
-      "totalRatingCount": 268,
+      "totalRating": 85.0967818994759,
+      "totalRatingCount": 269,
       "gameEngines": [
         {
           "id": 0,
@@ -23398,8 +23274,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.56115438534036,
-      "totalRatingCount": 840,
+      "totalRating": 82.56038546243985,
+      "totalRatingCount": 843,
       "releaseYear": 1993
     },
     "675": {
@@ -23633,8 +23509,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 90.07557935114245,
-      "totalRatingCount": 1195,
+      "totalRating": 90.07415099678525,
+      "totalRatingCount": 1198,
       "releaseYear": 2001
     },
     "731": {
@@ -23855,8 +23731,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 91.90284192303645,
-      "totalRatingCount": 2575,
+      "totalRating": 91.90226154634286,
+      "totalRatingCount": 2577,
       "releaseYear": 2004
     },
     "733": {
@@ -23961,8 +23837,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.83611767464996,
-      "totalRatingCount": 2056,
+      "totalRating": 90.83622517635766,
+      "totalRatingCount": 2058,
       "releaseYear": 2002
     },
     "740": {
@@ -24071,7 +23947,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.23927724080035,
+      "totalRating": 85.23946289141966,
       "totalRatingCount": 672,
       "releaseYear": 2001
     },
@@ -24148,8 +24024,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.0743441475127,
-      "totalRatingCount": 330,
+      "totalRating": 79.07320854937095,
+      "totalRatingCount": 331,
       "releaseYear": 2002
     },
     "787": {
@@ -24489,8 +24365,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 79.9944173119921,
-      "totalRatingCount": 285,
+      "totalRating": 79.99047414507879,
+      "totalRatingCount": 286,
       "releaseYear": 1999
     },
     "836": {
@@ -24578,8 +24454,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.28021729444345,
-      "totalRatingCount": 572,
+      "totalRating": 83.27974815894785,
+      "totalRatingCount": 573,
       "releaseYear": 2003
     },
     "837": {
@@ -24662,8 +24538,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.3692113811216,
-      "totalRatingCount": 410,
+      "totalRating": 81.3681753655353,
+      "totalRatingCount": 411,
       "releaseYear": 2004
     },
     "843": {
@@ -24724,7 +24600,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.3875656515916,
+      "totalRating": 85.3884623377379,
       "totalRatingCount": 171,
       "releaseYear": 1999
     },
@@ -24898,8 +24774,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.32571201436096,
-      "totalRatingCount": 596,
+      "totalRating": 76.3256087174289,
+      "totalRatingCount": 598,
       "releaseYear": 2009
     },
     "848": {
@@ -25054,7 +24930,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 81.69532513462855,
+      "totalRating": 81.69506434759384,
       "totalRatingCount": 201,
       "releaseYear": 2001
     },
@@ -25218,8 +25094,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.17210763530164,
-      "totalRatingCount": 916,
+      "totalRating": 86.16964545001304,
+      "totalRatingCount": 917,
       "releaseYear": 2010
     },
     "873": {
@@ -25332,7 +25208,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.37689606001405,
+      "totalRating": 81.3764502011976,
       "totalRatingCount": 549,
       "releaseYear": 2011
     },
@@ -25432,8 +25308,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.33456410161014,
-      "totalRatingCount": 184,
+      "totalRating": 80.33350388696044,
+      "totalRatingCount": 185,
       "releaseYear": 2004
     },
     "879": {
@@ -25628,8 +25504,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 69.44535602534054,
-      "totalRatingCount": 417,
+      "totalRating": 69.4440870436095,
+      "totalRatingCount": 418,
       "gameEngines": [
         {
           "id": 0,
@@ -25817,7 +25693,7 @@
         }
       ],
       "totalRating": 84.48768146072575,
-      "totalRatingCount": 701,
+      "totalRatingCount": 702,
       "gameEngines": [
         {
           "id": 0,
@@ -26231,8 +26107,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 93.2429508291368,
-      "totalRatingCount": 137,
+      "totalRating": 93.2335884467096,
+      "totalRatingCount": 139,
       "gameEngines": [
         {
           "id": 0,
@@ -26419,8 +26295,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.89691176673836,
-      "totalRatingCount": 317,
+      "totalRating": 83.8963047435816,
+      "totalRatingCount": 318,
       "releaseYear": 2002
     },
     "911": {
@@ -26508,8 +26384,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.19148108884514,
-      "totalRatingCount": 255,
+      "totalRating": 81.1906979551537,
+      "totalRatingCount": 256,
       "releaseYear": 2005
     },
     "912": {
@@ -26622,8 +26498,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.93431203781105,
-      "totalRatingCount": 329,
+      "totalRating": 82.93401907627874,
+      "totalRatingCount": 331,
       "releaseYear": 1996
     },
     "913": {
@@ -26846,8 +26722,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.00610079318176,
-      "totalRatingCount": 213,
+      "totalRating": 85.00480286642821,
+      "totalRatingCount": 214,
       "gameEngines": [
         {
           "id": 0,
@@ -26935,8 +26811,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.58771518196676,
-      "totalRatingCount": 137,
+      "totalRating": 77.58630933514834,
+      "totalRatingCount": 138,
       "gameEngines": [
         {
           "id": 0,
@@ -27392,8 +27268,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.10231690061241,
-      "totalRatingCount": 254,
+      "totalRating": 82.10278043127641,
+      "totalRatingCount": 255,
       "gameEngines": [
         {
           "id": 0,
@@ -27487,7 +27363,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 72.4497482036139,
+      "totalRating": 72.453060745796,
       "totalRatingCount": 238,
       "releaseYear": 2006
     },
@@ -28146,8 +28022,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.1570911176288,
-      "totalRatingCount": 329,
+      "totalRating": 80.1540232963346,
+      "totalRatingCount": 330,
       "releaseYear": 1999
     },
     "974": {
@@ -28198,8 +28074,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.54576872158835,
-      "totalRatingCount": 1206,
+      "totalRating": 84.54531786881483,
+      "totalRatingCount": 1208,
       "gameEngines": [
         {
           "id": 0,
@@ -28438,8 +28314,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.01841379378081,
-      "totalRatingCount": 371,
+      "totalRating": 78.0179110299141,
+      "totalRatingCount": 372,
       "releaseYear": 1997
     },
     "981": {
@@ -28538,8 +28414,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 86.1522693032331,
-      "totalRatingCount": 311,
+      "totalRating": 86.1516474635618,
+      "totalRatingCount": 313,
       "releaseYear": 2011
     },
     "986": {
@@ -28629,7 +28505,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.61864388216284,
+      "totalRating": 82.6187637919628,
       "totalRatingCount": 513,
       "releaseYear": 2004
     },
@@ -28779,7 +28655,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 71.98641846830586,
+      "totalRating": 71.9856070774983,
       "totalRatingCount": 126,
       "releaseYear": 2009
     },
@@ -28855,7 +28731,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.4914704995434,
+      "totalRating": 76.49122365225045,
       "totalRatingCount": 293,
       "releaseYear": 2009
     },
@@ -28950,7 +28826,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.165141951088,
+      "totalRating": 87.16528147685861,
       "totalRatingCount": 485,
       "releaseYear": 2010
     },
@@ -29146,7 +29022,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 91.1289706465985,
+      "totalRating": 91.12904850016815,
       "totalRatingCount": 185,
       "releaseYear": 1997
     },
@@ -29225,8 +29101,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 59.0670658114101,
-      "totalRatingCount": 126,
+      "totalRating": 59.0657572237576,
+      "totalRatingCount": 127,
       "gameEngines": [
         {
           "id": 0,
@@ -29291,8 +29167,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 92.45615744174859,
-      "totalRatingCount": 2386,
+      "totalRating": 92.45597069918804,
+      "totalRatingCount": 2389,
       "gameEngines": [
         {
           "id": 0,
@@ -29437,8 +29313,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.52131823361961,
-      "totalRatingCount": 1463,
+      "totalRating": 82.52148016045305,
+      "totalRatingCount": 1464,
       "releaseYear": 2012
     },
     "1015": {
@@ -29519,8 +29395,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.770997278196,
-      "totalRatingCount": 113,
+      "totalRating": 76.7658973038434,
+      "totalRatingCount": 114,
       "releaseYear": 2002
     },
     "1020": {
@@ -29620,8 +29496,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.21754749678914,
-      "totalRatingCount": 3849,
+      "totalRating": 89.2159062853317,
+      "totalRatingCount": 3856,
       "releaseYear": 2013
     },
     "1022": {
@@ -29702,8 +29578,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 80.8955351671762,
-      "totalRatingCount": 570,
+      "totalRating": 80.8963485501668,
+      "totalRatingCount": 571,
       "gameEngines": [
         {
           "id": 0,
@@ -29784,8 +29660,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 65.4650549076319,
-      "totalRatingCount": 222,
+      "totalRating": 65.4686792291136,
+      "totalRatingCount": 223,
       "gameEngines": [
         {
           "id": 0,
@@ -29880,8 +29756,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 96.4368359083222,
-      "totalRatingCount": 1220,
+      "totalRating": 96.4368257151759,
+      "totalRatingCount": 1221,
       "gameEngines": [
         {
           "id": 0,
@@ -29938,7 +29814,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 83.35734146931651,
+      "totalRating": 83.35816144195475,
       "totalRatingCount": 176,
       "gameEngines": [
         {
@@ -30021,8 +29897,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 92.1031364038079,
-      "totalRatingCount": 1501,
+      "totalRating": 92.1003148437099,
+      "totalRatingCount": 1504,
       "releaseYear": 1998
     },
     "1030": {
@@ -30094,8 +29970,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.7027804106205,
-      "totalRatingCount": 609,
+      "totalRating": 88.7026995518197,
+      "totalRatingCount": 610,
       "releaseYear": 2000
     },
     "1032": {
@@ -30225,8 +30101,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.50601051060545,
-      "totalRatingCount": 765,
+      "totalRating": 88.50606647382965,
+      "totalRatingCount": 767,
       "gameEngines": [
         {
           "id": 0,
@@ -30297,8 +30173,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 87.0962693102622,
-      "totalRatingCount": 315,
+      "totalRating": 87.0964921367009,
+      "totalRatingCount": 316,
       "gameEngines": [
         {
           "id": 0,
@@ -30366,8 +30242,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.7226951284826,
-      "totalRatingCount": 577,
+      "totalRating": 90.72262563195684,
+      "totalRatingCount": 579,
       "gameEngines": [
         {
           "id": 0,
@@ -30437,7 +30313,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 83.0691762588637,
+      "totalRating": 83.06920610497656,
       "totalRatingCount": 212,
       "gameEngines": [
         {
@@ -30508,7 +30384,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 84.21348088159935,
+      "totalRating": 84.21442736222656,
       "totalRatingCount": 144,
       "gameEngines": [
         {
@@ -30590,8 +30466,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 72.61599607468415,
-      "totalRatingCount": 215,
+      "totalRating": 72.61634746859386,
+      "totalRatingCount": 217,
       "releaseYear": 2011
     },
     "1041": {
@@ -30651,7 +30527,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 89.85301909753721,
+      "totalRating": 89.85287327774294,
       "totalRatingCount": 119,
       "gameEngines": [
         {
@@ -30958,7 +30834,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 67.55212700140666,
+      "totalRating": 67.55242931543066,
       "totalRatingCount": 233,
       "releaseYear": 2000
     },
@@ -31058,8 +30934,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 74.98812026918276,
-      "totalRatingCount": 769,
+      "totalRating": 74.9879577070181,
+      "totalRatingCount": 771,
       "releaseYear": 2008
     },
     "1052": {
@@ -31297,7 +31173,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.53148756761615,
+      "totalRating": 77.53191892669714,
       "totalRatingCount": 167,
       "gameEngines": [
         {
@@ -31406,7 +31282,7 @@
         }
       ],
       "totalRating": 82.333630743247,
-      "totalRatingCount": 706,
+      "totalRatingCount": 707,
       "releaseYear": 2010
     },
     "1063": {
@@ -31462,7 +31338,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 78.4967384109042,
+      "totalRating": 78.4960025193337,
       "totalRatingCount": 123,
       "gameEngines": [
         {
@@ -31471,6 +31347,87 @@
         }
       ],
       "releaseYear": 1992
+    },
+    "1066": {
+      "id": 1066,
+      "collection": {
+        "id": 6118,
+        "name": "Super Mario Bros."
+      },
+      "gameModes": [
+        {
+          "id": 1,
+          "name": "Single player"
+        },
+        {
+          "id": 2,
+          "name": "Multiplayer"
+        }
+      ],
+      "genres": [
+        {
+          "id": 8,
+          "name": "Platform"
+        },
+        {
+          "id": 31,
+          "name": "Adventure"
+        }
+      ],
+      "involvedCompanies": [
+        {
+          "id": 149824,
+          "company": {
+            "id": 70,
+            "name": "Nintendo"
+          }
+        },
+        {
+          "id": 200088,
+          "company": {
+            "id": 32471,
+            "name": "Nintendo R&D4"
+          }
+        }
+      ],
+      "name": "Super Mario Bros.: The Lost Levels",
+      "platforms": [
+        {
+          "id": 5,
+          "abbreviation": "Wii",
+          "name": "Wii"
+        },
+        {
+          "id": 37,
+          "abbreviation": "3DS",
+          "name": "Nintendo 3DS"
+        },
+        {
+          "id": 41,
+          "abbreviation": "WiiU",
+          "name": "Wii U"
+        },
+        {
+          "id": 51,
+          "abbreviation": "fds",
+          "name": "Family Computer Disk System"
+        }
+      ],
+      "playerPerspectives": [
+        {
+          "id": 4,
+          "name": "Side view"
+        }
+      ],
+      "totalRating": 73.86105501463591,
+      "totalRatingCount": 101,
+      "gameEngines": [
+        {
+          "id": 0,
+          "name": "Unknown engine"
+        }
+      ],
+      "releaseYear": 1986
     },
     "1068": {
       "id": 1068,
@@ -31549,8 +31506,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.3775457840901,
-      "totalRatingCount": 1191,
+      "totalRating": 89.37828878697759,
+      "totalRatingCount": 1194,
       "gameEngines": [
         {
           "id": 0,
@@ -31702,8 +31659,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 96.4346232425257,
-      "totalRatingCount": 1341,
+      "totalRating": 96.43472584398111,
+      "totalRatingCount": 1345,
       "gameEngines": [
         {
           "id": 0,
@@ -31765,8 +31722,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 80.66658670795411,
-      "totalRatingCount": 144,
+      "totalRating": 80.66531497764471,
+      "totalRatingCount": 145,
       "gameEngines": [
         {
           "id": 0,
@@ -31839,8 +31796,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 94.08186141856149,
-      "totalRatingCount": 511,
+      "totalRating": 94.08205685268535,
+      "totalRatingCount": 512,
       "gameEngines": [
         {
           "id": 0,
@@ -31917,8 +31874,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.6552555701591,
-      "totalRatingCount": 1365,
+      "totalRating": 89.65546337219524,
+      "totalRatingCount": 1366,
       "releaseYear": 1996
     },
     "1075": {
@@ -31977,8 +31934,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.01317152492155,
-      "totalRatingCount": 401,
+      "totalRating": 86.01296189251926,
+      "totalRatingCount": 403,
       "gameEngines": [
         {
           "id": 0,
@@ -32123,8 +32080,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 92.80649779115876,
-      "totalRatingCount": 633,
+      "totalRating": 92.80651669499196,
+      "totalRatingCount": 635,
       "gameEngines": [
         {
           "id": 0,
@@ -32313,8 +32270,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 65.3129088675483,
-      "totalRatingCount": 384,
+      "totalRating": 65.3129041242405,
+      "totalRatingCount": 386,
       "releaseYear": 2012
     },
     "1090": {
@@ -32396,8 +32353,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.44299159234495,
-      "totalRatingCount": 439,
+      "totalRating": 82.4431821444813,
+      "totalRatingCount": 440,
       "gameEngines": [
         {
           "id": 0,
@@ -32481,7 +32438,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.5770954283197,
+      "totalRating": 79.57540094273736,
       "totalRatingCount": 280,
       "gameEngines": [
         {
@@ -32566,8 +32523,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 74.63935504209185,
-      "totalRatingCount": 179,
+      "totalRating": 74.64023883448125,
+      "totalRatingCount": 180,
       "gameEngines": [
         {
           "id": 0,
@@ -32641,8 +32598,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 73.0027797007127,
-      "totalRatingCount": 125,
+      "totalRating": 73.00272571590641,
+      "totalRatingCount": 127,
       "gameEngines": [
         {
           "id": 0,
@@ -32716,7 +32673,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.2967207720217,
+      "totalRating": 84.2963596841188,
       "totalRatingCount": 163,
       "gameEngines": [
         {
@@ -32803,8 +32760,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 65.87512734083305,
-      "totalRatingCount": 185,
+      "totalRating": 65.8761172156002,
+      "totalRatingCount": 187,
       "gameEngines": [
         {
           "id": 0,
@@ -32895,8 +32852,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 96.6603238380158,
-      "totalRatingCount": 723,
+      "totalRating": 96.6604181564373,
+      "totalRatingCount": 724,
       "gameEngines": [
         {
           "id": 0,
@@ -32976,8 +32933,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.3889820984963,
-      "totalRatingCount": 224,
+      "totalRating": 84.3875618565082,
+      "totalRatingCount": 226,
       "gameEngines": [
         {
           "id": 0,
@@ -33048,8 +33005,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 93.93637482151516,
-      "totalRatingCount": 627,
+      "totalRating": 93.93993170685725,
+      "totalRatingCount": 630,
       "releaseYear": 2002
     },
     "1108": {
@@ -33118,8 +33075,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 83.3582041003321,
-      "totalRatingCount": 148,
+      "totalRating": 83.35574038026324,
+      "totalRatingCount": 151,
       "releaseYear": 2004
     },
     "1114": {
@@ -33224,8 +33181,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 78.53224675623639,
-      "totalRatingCount": 253,
+      "totalRating": 78.5313469725791,
+      "totalRatingCount": 254,
       "gameEngines": [
         {
           "id": 0,
@@ -33303,8 +33260,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 59.9273183467145,
-      "totalRatingCount": 104,
+      "totalRating": 59.9304517680058,
+      "totalRatingCount": 105,
       "gameEngines": [
         {
           "id": 0,
@@ -33576,8 +33533,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 92.26019281418435,
-      "totalRatingCount": 517,
+      "totalRating": 92.26014904894424,
+      "totalRatingCount": 518,
       "gameEngines": [
         {
           "id": 0,
@@ -33647,8 +33604,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 87.15126500785874,
-      "totalRatingCount": 163,
+      "totalRating": 87.15172921801636,
+      "totalRatingCount": 164,
       "gameEngines": [
         {
           "id": 0,
@@ -34176,8 +34133,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 67.676165627564,
-      "totalRatingCount": 233,
+      "totalRating": 67.67527587881764,
+      "totalRatingCount": 234,
       "releaseYear": 2006
     },
     "1163": {
@@ -34398,8 +34355,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.32853444578814,
-      "totalRatingCount": 1832,
+      "totalRating": 83.32803869353086,
+      "totalRatingCount": 1835,
       "releaseYear": 2013
     },
     "1182": {
@@ -34470,8 +34427,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 68.2596188653967,
-      "totalRatingCount": 112,
+      "totalRating": 68.2601228058468,
+      "totalRatingCount": 113,
       "releaseYear": 2014
     },
     "1183": {
@@ -34790,8 +34747,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.3398505633326,
-      "totalRatingCount": 374,
+      "totalRating": 83.3402651560441,
+      "totalRatingCount": 375,
       "gameEngines": [
         {
           "id": 0,
@@ -34871,8 +34828,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 83.4815339240108,
-      "totalRatingCount": 389,
+      "totalRating": 83.4819258792453,
+      "totalRatingCount": 390,
       "gameEngines": [
         {
           "id": 0,
@@ -34958,8 +34915,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 64.6777530376369,
-      "totalRatingCount": 139,
+      "totalRating": 64.67971104206865,
+      "totalRatingCount": 140,
       "gameEngines": [
         {
           "id": 0,
@@ -35034,8 +34991,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.55450088893309,
-      "totalRatingCount": 336,
+      "totalRating": 84.55504632582249,
+      "totalRatingCount": 337,
       "gameEngines": [
         {
           "id": 0,
@@ -35359,7 +35316,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.19830087329649,
+      "totalRating": 81.19791143977051,
       "totalRatingCount": 434,
       "gameEngines": [
         {
@@ -35428,7 +35385,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.9714243832177,
+      "totalRating": 88.97122647074225,
       "totalRatingCount": 569,
       "gameEngines": [
         {
@@ -35510,8 +35467,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 71.32075272675415,
-      "totalRatingCount": 108,
+      "totalRating": 71.32202108841304,
+      "totalRatingCount": 109,
       "gameEngines": [
         {
           "id": 0,
@@ -35680,8 +35637,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.9638055340241,
-      "totalRatingCount": 461,
+      "totalRating": 84.96191395358221,
+      "totalRatingCount": 463,
       "gameEngines": [
         {
           "id": 0,
@@ -35754,8 +35711,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 73.33658254522109,
-      "totalRatingCount": 145,
+      "totalRating": 73.3350040506524,
+      "totalRatingCount": 146,
       "gameEngines": [
         {
           "id": 0,
@@ -36055,7 +36012,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.08949203460185,
+      "totalRating": 79.08948224002535,
       "totalRatingCount": 386,
       "releaseYear": 2013
     },
@@ -36266,7 +36223,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.484299759926,
+      "totalRating": 77.48435749707015,
       "totalRatingCount": 1119,
       "releaseYear": 2012
     },
@@ -36543,7 +36500,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.29342769289985,
+      "totalRating": 81.29365514035965,
       "totalRatingCount": 250,
       "releaseYear": 2012
     },
@@ -37289,7 +37246,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.04023558750885,
+      "totalRating": 81.03977061961774,
       "totalRatingCount": 223,
       "releaseYear": 2002
     },
@@ -37350,7 +37307,7 @@
         }
       ],
       "totalRating": 74.81441229470965,
-      "totalRatingCount": 193,
+      "totalRatingCount": 194,
       "gameEngines": [
         {
           "id": 0,
@@ -37655,7 +37612,7 @@
         }
       ],
       "totalRating": 80.1888440029924,
-      "totalRatingCount": 132,
+      "totalRatingCount": 133,
       "releaseYear": 2004
     },
     "1314": {
@@ -37932,8 +37889,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.6723822074065,
-      "totalRatingCount": 1187,
+      "totalRating": 82.67280417497055,
+      "totalRatingCount": 1188,
       "collection": {
         "id": 1331,
         "name": "Limbo"
@@ -38055,7 +38012,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.47629539507835,
+      "totalRating": 82.47615556379695,
       "totalRatingCount": 645,
       "collection": {
         "id": 1334,
@@ -38162,8 +38119,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 81.72846126382831,
-      "totalRatingCount": 255,
+      "totalRating": 81.7270053760662,
+      "totalRatingCount": 256,
       "releaseYear": 2012
     },
     "1338": {
@@ -38487,8 +38444,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.49883775684745,
-      "totalRatingCount": 300,
+      "totalRating": 88.4976809076324,
+      "totalRatingCount": 301,
       "releaseYear": 2003
     },
     "1342": {
@@ -38754,7 +38711,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.0466800776851,
+      "totalRating": 79.0457623598129,
       "totalRatingCount": 200,
       "collection": {
         "id": 1354,
@@ -38848,7 +38805,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 69.38969570400076,
+      "totalRating": 69.3890545739225,
       "totalRatingCount": 120,
       "collection": {
         "id": 1363,
@@ -38940,8 +38897,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 81.57633500529704,
-      "totalRatingCount": 988,
+      "totalRating": 81.57518562937699,
+      "totalRatingCount": 989,
       "releaseYear": 2012
     },
     "1377": {
@@ -39231,8 +39188,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 84.9462258405402,
-      "totalRatingCount": 972,
+      "totalRating": 84.94628525191746,
+      "totalRatingCount": 973,
       "releaseYear": 2012
     },
     "1404": {
@@ -39488,8 +39445,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.6611984772068,
-      "totalRatingCount": 122,
+      "totalRating": 81.6567721043524,
+      "totalRatingCount": 123,
       "gameEngines": [
         {
           "id": 0,
@@ -39576,8 +39533,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.91657966173395,
-      "totalRatingCount": 101,
+      "totalRating": 83.9152330974634,
+      "totalRatingCount": 102,
       "gameEngines": [
         {
           "id": 0,
@@ -39725,7 +39682,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 85.7162079870168,
+      "totalRating": 85.71560713067029,
       "totalRatingCount": 346,
       "gameEngines": [
         {
@@ -39878,8 +39835,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.5847410202835,
-      "totalRatingCount": 223,
+      "totalRating": 82.58383301225649,
+      "totalRatingCount": 225,
       "gameEngines": [
         {
           "id": 0,
@@ -39968,7 +39925,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.9950767731646,
+      "totalRating": 84.99487950082495,
       "totalRatingCount": 236,
       "releaseYear": 2001
     },
@@ -40144,8 +40101,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 72.6787543503939,
-      "totalRatingCount": 142,
+      "totalRating": 72.67921780769521,
+      "totalRatingCount": 143,
       "releaseYear": 2004
     },
     "1557": {
@@ -40212,7 +40169,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.67549496077291,
+      "totalRating": 81.6767087164913,
       "totalRatingCount": 261,
       "gameEngines": [
         {
@@ -40370,8 +40327,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.85437110974914,
-      "totalRatingCount": 432,
+      "totalRating": 79.8548362545012,
+      "totalRatingCount": 433,
       "gameEngines": [
         {
           "id": 0,
@@ -40676,8 +40633,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 68.28598944741655,
-      "totalRatingCount": 151,
+      "totalRating": 68.28565102922344,
+      "totalRatingCount": 152,
       "gameEngines": [
         {
           "id": 0,
@@ -40772,7 +40729,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 81.30138164095601,
+      "totalRating": 81.2999994335074,
       "totalRatingCount": 248,
       "releaseYear": 2015
     },
@@ -41044,8 +41001,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 75.7589527866403,
-      "totalRatingCount": 234,
+      "totalRating": 75.7555079894797,
+      "totalRatingCount": 236,
       "gameEngines": [
         {
           "id": 0,
@@ -41131,8 +41088,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 61.88984604043375,
-      "totalRatingCount": 163,
+      "totalRating": 61.8882695795191,
+      "totalRatingCount": 164,
       "gameEngines": [
         {
           "id": 0,
@@ -41217,8 +41174,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 70.6232081793589,
-      "totalRatingCount": 157,
+      "totalRating": 70.61997525657671,
+      "totalRatingCount": 158,
       "gameEngines": [
         {
           "id": 0,
@@ -41371,8 +41328,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.2811275021225,
-      "totalRatingCount": 332,
+      "totalRating": 83.28076336933384,
+      "totalRatingCount": 333,
       "gameEngines": [
         {
           "id": 0,
@@ -41441,8 +41398,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 94.2481644707471,
-      "totalRatingCount": 703,
+      "totalRating": 94.24717426843534,
+      "totalRatingCount": 705,
       "gameEngines": [
         {
           "id": 0,
@@ -41513,8 +41470,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 86.85909322256884,
-      "totalRatingCount": 297,
+      "totalRating": 86.8587776734922,
+      "totalRatingCount": 298,
       "releaseYear": 1997
     },
     "1652": {
@@ -41834,8 +41791,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 76.0279062000982,
-      "totalRatingCount": 227,
+      "totalRating": 76.0262289553355,
+      "totalRatingCount": 228,
       "gameEngines": [
         {
           "id": 0,
@@ -41914,8 +41871,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 80.72809111568651,
-      "totalRatingCount": 148,
+      "totalRating": 80.7194295612544,
+      "totalRatingCount": 149,
       "gameEngines": [
         {
           "id": 0,
@@ -42003,8 +41960,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 77.0814418740606,
-      "totalRatingCount": 102,
+      "totalRating": 77.0719319842785,
+      "totalRatingCount": 103,
       "gameEngines": [
         {
           "id": 0,
@@ -42110,8 +42067,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 85.74108602584425,
-      "totalRatingCount": 226,
+      "totalRating": 85.74000559240116,
+      "totalRatingCount": 227,
       "gameEngines": [
         {
           "id": 0,
@@ -42193,8 +42150,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.3871376589186,
-      "totalRatingCount": 114,
+      "totalRating": 83.3787683809094,
+      "totalRatingCount": 115,
       "gameEngines": [
         {
           "id": 0,
@@ -42772,8 +42729,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 92.37635413417186,
-      "totalRatingCount": 945,
+      "totalRating": 92.37464414115806,
+      "totalRatingCount": 950,
       "gameEngines": [
         {
           "id": 0,
@@ -42965,8 +42922,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 66.6584257345513,
-      "totalRatingCount": 172,
+      "totalRating": 66.65682855050225,
+      "totalRatingCount": 173,
       "gameEngines": [
         {
           "id": 0,
@@ -43031,8 +42988,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.79511001253044,
-      "totalRatingCount": 101,
+      "totalRating": 86.79808607140936,
+      "totalRatingCount": 102,
       "gameEngines": [
         {
           "id": 0,
@@ -43344,8 +43301,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.0913889386427,
-      "totalRatingCount": 185,
+      "totalRating": 85.09206239766246,
+      "totalRatingCount": 186,
       "releaseYear": 2011
     },
     "1866": {
@@ -43400,8 +43357,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 84.34115516607531,
-      "totalRatingCount": 134,
+      "totalRating": 84.3412308656916,
+      "totalRatingCount": 135,
       "gameEngines": [
         {
           "id": 0,
@@ -43477,7 +43434,7 @@
         }
       ],
       "totalRating": 80.6215149244825,
-      "totalRatingCount": 123,
+      "totalRatingCount": 124,
       "releaseYear": 2011
     },
     "1871": {
@@ -43588,8 +43545,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.06518081499394,
-      "totalRatingCount": 1376,
+      "totalRating": 85.06550271943209,
+      "totalRatingCount": 1378,
       "releaseYear": 2012
     },
     "1876": {
@@ -43665,7 +43622,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 77.6045593143924,
+      "totalRating": 77.60404894112365,
       "totalRatingCount": 273,
       "gameEngines": [
         {
@@ -43776,8 +43733,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.0567974720615,
-      "totalRatingCount": 592,
+      "totalRating": 77.06092771435985,
+      "totalRatingCount": 594,
       "collection": {
         "id": 1877,
         "name": "Cyberpunk 2077"
@@ -43965,7 +43922,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.13191769627261,
+      "totalRating": 81.1315430709978,
       "totalRatingCount": 615,
       "gameEngines": [
         {
@@ -44143,8 +44100,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 71.50348996440995,
-      "totalRatingCount": 168,
+      "totalRating": 71.50304143432331,
+      "totalRatingCount": 169,
       "releaseYear": 2011
     },
     "1887": {
@@ -44248,7 +44205,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.57889018772865,
+      "totalRating": 85.5791178491334,
       "totalRatingCount": 884,
       "releaseYear": 2014
     },
@@ -44328,8 +44285,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 87.46079518903255,
-      "totalRatingCount": 145,
+      "totalRating": 87.46081669469085,
+      "totalRatingCount": 147,
       "releaseYear": 2013
     },
     "1905": {
@@ -44450,8 +44407,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.05936868147714,
-      "totalRatingCount": 585,
+      "totalRating": 76.05958031427404,
+      "totalRatingCount": 586,
       "collection": {
         "id": 1905,
         "name": "Fortnite"
@@ -44623,7 +44580,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 77.70046558740265,
+      "totalRating": 77.70155812728976,
       "totalRatingCount": 140,
       "collection": {
         "id": 1907,
@@ -44911,8 +44868,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 76.2937558855538,
-      "totalRatingCount": 265,
+      "totalRating": 76.2934423646456,
+      "totalRatingCount": 266,
       "releaseYear": 2013
     },
     "1919": {
@@ -45441,8 +45398,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 93.2876616622408,
-      "totalRatingCount": 3414,
+      "totalRating": 93.2866441380677,
+      "totalRatingCount": 3423,
       "releaseYear": 2015
     },
     "1961": {
@@ -45593,8 +45550,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 78.41036025518454,
-      "totalRatingCount": 159,
+      "totalRating": 78.41244610578934,
+      "totalRatingCount": 160,
       "gameEngines": [
         {
           "id": 0,
@@ -45602,6 +45559,102 @@
         }
       ],
       "releaseYear": 1995
+    },
+    "1966": {
+      "id": 1966,
+      "collection": {
+        "id": 206,
+        "name": "Rayman"
+      },
+      "gameModes": [
+        {
+          "id": 1,
+          "name": "Single player"
+        }
+      ],
+      "genres": [
+        {
+          "id": 8,
+          "name": "Platform"
+        }
+      ],
+      "involvedCompanies": [
+        {
+          "id": 5096,
+          "company": {
+            "id": 398,
+            "name": "Ubisoft Shanghai"
+          }
+        },
+        {
+          "id": 101753,
+          "company": {
+            "id": 702,
+            "name": "Ubisoft Montpellier"
+          }
+        },
+        {
+          "id": 101754,
+          "company": {
+            "id": 23,
+            "name": "Feral Interactive"
+          }
+        },
+        {
+          "id": 192549,
+          "company": {
+            "id": 631,
+            "name": "Zonic Limited"
+          }
+        }
+      ],
+      "name": "Rayman 3: Hoodlum Havoc",
+      "platforms": [
+        {
+          "id": 6,
+          "abbreviation": "PC",
+          "name": "PC (Microsoft Windows)"
+        },
+        {
+          "id": 8,
+          "abbreviation": "PS2",
+          "name": "PlayStation 2"
+        },
+        {
+          "id": 11,
+          "abbreviation": "XBOX",
+          "name": "Xbox"
+        },
+        {
+          "id": 14,
+          "abbreviation": "Mac",
+          "name": "Mac"
+        },
+        {
+          "id": 21,
+          "abbreviation": "NGC",
+          "name": "Nintendo GameCube"
+        }
+      ],
+      "playerPerspectives": [
+        {
+          "id": 2,
+          "name": "Third person"
+        },
+        {
+          "id": 4,
+          "name": "Side view"
+        }
+      ],
+      "totalRating": 71.7411466838028,
+      "totalRatingCount": 101,
+      "gameEngines": [
+        {
+          "id": 0,
+          "name": "Unknown engine"
+        }
+      ],
+      "releaseYear": 2003
     },
     "1970": {
       "id": 1970,
@@ -45872,8 +45925,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.70718780152325,
-      "totalRatingCount": 147,
+      "totalRating": 74.7076928842263,
+      "totalRatingCount": 148,
       "releaseYear": 2003
     },
     "1976": {
@@ -45946,7 +45999,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.24550694743985,
+      "totalRating": 76.2449178577847,
       "totalRatingCount": 252,
       "releaseYear": 2013
     },
@@ -46032,8 +46085,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 78.3019889233392,
-      "totalRatingCount": 667,
+      "totalRating": 78.30198892333925,
+      "totalRatingCount": 668,
       "releaseYear": 2013
     },
     "1981": {
@@ -46344,8 +46397,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.44567729473209,
-      "totalRatingCount": 856,
+      "totalRating": 90.44554158071554,
+      "totalRatingCount": 858,
       "releaseYear": 2015
     },
     "1987": {
@@ -46436,8 +46489,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 75.99102824083701,
-      "totalRatingCount": 109,
+      "totalRating": 75.98846190298926,
+      "totalRatingCount": 110,
       "collection": {
         "id": 1987,
         "name": "XIII"
@@ -46557,7 +46610,7 @@
         }
       ],
       "totalRating": 79.4047699867572,
-      "totalRatingCount": 150,
+      "totalRatingCount": 151,
       "collection": {
         "id": 1990,
         "name": "VVVVVV"
@@ -46684,7 +46737,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.94905469585005,
+      "totalRating": 82.94919770228739,
       "totalRatingCount": 372,
       "gameEngines": [
         {
@@ -46767,8 +46820,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 80.6720788056432,
-      "totalRatingCount": 305,
+      "totalRating": 80.67234842339519,
+      "totalRatingCount": 306,
       "releaseYear": 2013
     },
     "2002": {
@@ -46937,8 +46990,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 73.197011032468,
-      "totalRatingCount": 612,
+      "totalRating": 73.19705998122495,
+      "totalRatingCount": 613,
       "releaseYear": 2013
     },
     "2025": {
@@ -47121,8 +47174,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 79.70120266687636,
-      "totalRatingCount": 975,
+      "totalRating": 79.70084945789884,
+      "totalRatingCount": 977,
       "releaseYear": 2014
     },
     "2033": {
@@ -47640,8 +47693,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 81.71060647282866,
-      "totalRatingCount": 178,
+      "totalRating": 81.709025319347,
+      "totalRatingCount": 179,
       "collection": {
         "id": 2064,
         "name": "Antichamber"
@@ -47817,8 +47870,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 69.47573681232251,
-      "totalRatingCount": 237,
+      "totalRating": 69.47592064579595,
+      "totalRatingCount": 238,
       "releaseYear": 2016
     },
     "2113": {
@@ -48191,8 +48244,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 74.98207645240505,
-      "totalRatingCount": 330,
+      "totalRating": 74.98176357190715,
+      "totalRatingCount": 331,
       "releaseYear": 2015
     },
     "2129": {
@@ -48366,7 +48419,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.5449912464596,
+      "totalRating": 79.545442976891,
       "totalRatingCount": 146,
       "collection": {
         "id": 2130,
@@ -48505,7 +48558,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.4276495159033,
+      "totalRating": 90.4284279102867,
       "totalRatingCount": 213,
       "gameEngines": [
         {
@@ -48608,8 +48661,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.5903385725554,
-      "totalRatingCount": 461,
+      "totalRating": 86.59102503758976,
+      "totalRatingCount": 462,
       "gameEngines": [
         {
           "id": 0,
@@ -48811,7 +48864,7 @@
         }
       ],
       "totalRating": 77.23193752158346,
-      "totalRatingCount": 139,
+      "totalRatingCount": 140,
       "releaseYear": 2013
     },
     "2140": {
@@ -48888,6 +48941,86 @@
       ],
       "releaseYear": 2011
     },
+    "2143": {
+      "id": 2143,
+      "collection": {
+        "id": 436,
+        "name": "TimeSplitters"
+      },
+      "gameModes": [
+        {
+          "id": 1,
+          "name": "Single player"
+        },
+        {
+          "id": 2,
+          "name": "Multiplayer"
+        },
+        {
+          "id": 3,
+          "name": "Co-operative"
+        },
+        {
+          "id": 4,
+          "name": "Split screen"
+        }
+      ],
+      "genres": [
+        {
+          "id": 5,
+          "name": "Shooter"
+        }
+      ],
+      "involvedCompanies": [
+        {
+          "id": 4455,
+          "company": {
+            "id": 4,
+            "name": "Eidos Interactive"
+          }
+        },
+        {
+          "id": 4456,
+          "company": {
+            "id": 1008,
+            "name": "Free Radical Design"
+          }
+        }
+      ],
+      "name": "TimeSplitters 2",
+      "platforms": [
+        {
+          "id": 8,
+          "abbreviation": "PS2",
+          "name": "PlayStation 2"
+        },
+        {
+          "id": 11,
+          "abbreviation": "XBOX",
+          "name": "Xbox"
+        },
+        {
+          "id": 21,
+          "abbreviation": "NGC",
+          "name": "Nintendo GameCube"
+        }
+      ],
+      "playerPerspectives": [
+        {
+          "id": 1,
+          "name": "First person"
+        }
+      ],
+      "totalRating": 91.13207671934936,
+      "totalRatingCount": 102,
+      "gameEngines": [
+        {
+          "id": 0,
+          "name": "Unknown engine"
+        }
+      ],
+      "releaseYear": 2002
+    },
     "2148": {
       "id": 2148,
       "collection": {
@@ -48940,8 +49073,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.54342099070425,
-      "totalRatingCount": 252,
+      "totalRating": 81.54257509827765,
+      "totalRatingCount": 253,
       "gameEngines": [
         {
           "id": 0,
@@ -49183,8 +49316,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.05842910063605,
-      "totalRatingCount": 1032,
+      "totalRating": 89.0585480722572,
+      "totalRatingCount": 1033,
       "gameEngines": [
         {
           "id": 0,
@@ -49657,8 +49790,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.86925089269755,
-      "totalRatingCount": 245,
+      "totalRating": 81.86967144024484,
+      "totalRatingCount": 246,
       "gameEngines": [
         {
           "id": 0,
@@ -49882,8 +50015,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.33830021120829,
-      "totalRatingCount": 943,
+      "totalRating": 89.3373366805072,
+      "totalRatingCount": 946,
       "gameEngines": [
         {
           "id": 0,
@@ -49944,8 +50077,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 81.2845249600188,
-      "totalRatingCount": 117,
+      "totalRating": 81.28150939417836,
+      "totalRatingCount": 118,
       "gameEngines": [
         {
           "id": 0,
@@ -50454,8 +50587,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 73.304321292122,
-      "totalRatingCount": 212,
+      "totalRating": 73.29933632249,
+      "totalRatingCount": 213,
       "gameEngines": [
         {
           "id": 0,
@@ -50535,8 +50668,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 68.1252956380518,
-      "totalRatingCount": 123,
+      "totalRating": 68.1193556953829,
+      "totalRatingCount": 124,
       "gameEngines": [
         {
           "id": 0,
@@ -50751,8 +50884,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.306700337994,
-      "totalRatingCount": 175,
+      "totalRating": 76.3039023105203,
+      "totalRatingCount": 176,
       "gameEngines": [
         {
           "id": 0,
@@ -50828,8 +50961,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 76.6818983723236,
-      "totalRatingCount": 125,
+      "totalRating": 76.67758893946815,
+      "totalRatingCount": 126,
       "gameEngines": [
         {
           "id": 0,
@@ -50917,8 +51050,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.7576579173701,
-      "totalRatingCount": 340,
+      "totalRating": 85.7576054397465,
+      "totalRatingCount": 342,
       "gameEngines": [
         {
           "id": 0,
@@ -50993,8 +51126,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.50768581574584,
-      "totalRatingCount": 447,
+      "totalRating": 81.5080047715642,
+      "totalRatingCount": 448,
       "gameEngines": [
         {
           "id": 0,
@@ -51065,8 +51198,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.9867620923352,
-      "totalRatingCount": 136,
+      "totalRating": 82.98776148251184,
+      "totalRatingCount": 137,
       "gameEngines": [
         {
           "id": 0,
@@ -51135,8 +51268,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.4122842512882,
-      "totalRatingCount": 278,
+      "totalRating": 84.4120787677706,
+      "totalRatingCount": 280,
       "gameEngines": [
         {
           "id": 0,
@@ -51202,7 +51335,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.3679222661083,
+      "totalRating": 85.3684525174634,
       "totalRatingCount": 296,
       "gameEngines": [
         {
@@ -51279,8 +51412,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.19986234268245,
-      "totalRatingCount": 552,
+      "totalRating": 89.1989483651102,
+      "totalRatingCount": 555,
       "gameEngines": [
         {
           "id": 0,
@@ -51695,8 +51828,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.86077306576524,
-      "totalRatingCount": 621,
+      "totalRating": 84.86081161823205,
+      "totalRatingCount": 623,
       "gameEngines": [
         {
           "id": 0,
@@ -51858,8 +51991,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.3547127484061,
-      "totalRatingCount": 346,
+      "totalRating": 80.3536895452571,
+      "totalRatingCount": 347,
       "releaseYear": 2005
     },
     "2438": {
@@ -52242,8 +52375,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.28855914925539,
-      "totalRatingCount": 224,
+      "totalRating": 82.2840958871467,
+      "totalRatingCount": 225,
       "gameEngines": [
         {
           "id": 0,
@@ -52317,8 +52450,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.0921227782433,
-      "totalRatingCount": 150,
+      "totalRating": 81.0892343796275,
+      "totalRatingCount": 151,
       "collection": {
         "id": 2473,
         "name": "Disney's Aladdin"
@@ -52432,7 +52565,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.66778150966215,
+      "totalRating": 78.6674116283269,
       "totalRatingCount": 202,
       "releaseYear": 2009
     },
@@ -52640,8 +52773,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.7076527250174,
-      "totalRatingCount": 187,
+      "totalRating": 74.70645985634515,
+      "totalRatingCount": 189,
       "gameEngines": [
         {
           "id": 0,
@@ -52714,7 +52847,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.49246398676945,
+      "totalRating": 81.49209419164299,
       "totalRatingCount": 191,
       "collection": {
         "id": 2538,
@@ -52879,7 +53012,7 @@
         }
       ],
       "totalRating": 66.13998076248915,
-      "totalRatingCount": 264,
+      "totalRatingCount": 265,
       "releaseYear": 2001
     },
     "2552": {
@@ -53055,8 +53188,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.98660115366661,
-      "totalRatingCount": 186,
+      "totalRating": 85.9846723876309,
+      "totalRatingCount": 187,
       "gameEngines": [
         {
           "id": 0,
@@ -53406,8 +53539,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.30542937611796,
-      "totalRatingCount": 145,
+      "totalRating": 83.30852352422335,
+      "totalRatingCount": 146,
       "collection": {
         "id": 2605,
         "name": "BattleBlock Theater"
@@ -54201,8 +54334,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.9490392233064,
-      "totalRatingCount": 183,
+      "totalRating": 77.9475525318002,
+      "totalRatingCount": 184,
       "gameEngines": [
         {
           "id": 0,
@@ -54334,8 +54467,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.7639219884836,
-      "totalRatingCount": 281,
+      "totalRating": 83.7630632500018,
+      "totalRatingCount": 282,
       "gameEngines": [
         {
           "id": 0,
@@ -54430,8 +54563,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.8380264456254,
-      "totalRatingCount": 129,
+      "totalRating": 79.83601178334905,
+      "totalRatingCount": 130,
       "gameEngines": [
         {
           "id": 0,
@@ -54519,8 +54652,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.0117919673198,
-      "totalRatingCount": 119,
+      "totalRating": 80.00997181113044,
+      "totalRatingCount": 120,
       "gameEngines": [
         {
           "id": 0,
@@ -54611,8 +54744,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.29544620686374,
-      "totalRatingCount": 229,
+      "totalRating": 86.29294578574576,
+      "totalRatingCount": 230,
       "releaseYear": 2006
     },
     "2723": {
@@ -54675,7 +54808,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 64.78733896489865,
+      "totalRating": 64.78760618272705,
       "totalRatingCount": 138,
       "gameEngines": [
         {
@@ -54888,8 +55021,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 70.5479843583345,
-      "totalRatingCount": 171,
+      "totalRating": 70.5442454299444,
+      "totalRatingCount": 172,
       "gameEngines": [
         {
           "id": 0,
@@ -55135,8 +55268,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.05050201922984,
-      "totalRatingCount": 205,
+      "totalRating": 74.0491059154416,
+      "totalRatingCount": 207,
       "collection": {
         "id": 2844,
         "name": "The Simpsons: Hit & Run"
@@ -55237,8 +55370,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 86.1256687528392,
-      "totalRatingCount": 508,
+      "totalRating": 86.04534296940889,
+      "totalRatingCount": 509,
       "collection": {
         "id": 2853,
         "name": "Braid"
@@ -55339,8 +55472,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 91.48637204318,
-      "totalRatingCount": 385,
+      "totalRating": 91.48467396488479,
+      "totalRatingCount": 386,
       "gameEngines": [
         {
           "id": 0,
@@ -55444,7 +55577,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.76534028797344,
+      "totalRating": 74.76445328813145,
       "totalRatingCount": 275,
       "releaseYear": 2013
     },
@@ -55673,7 +55806,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.40832723353675,
+      "totalRating": 84.40808550715205,
       "totalRatingCount": 148,
       "gameEngines": [
         {
@@ -55755,7 +55888,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.40542113054575,
+      "totalRating": 82.40569624471385,
       "totalRatingCount": 196,
       "releaseYear": 2019
     },
@@ -55846,7 +55979,7 @@
           "name": "Text"
         }
       ],
-      "totalRating": 82.03380000943625,
+      "totalRating": 82.03355716018011,
       "totalRatingCount": 475,
       "collection": {
         "id": 2935,
@@ -55923,7 +56056,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 78.91001322886025,
+      "totalRating": 78.91027065588415,
       "totalRatingCount": 323,
       "collection": {
         "id": 2939,
@@ -56422,8 +56555,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 68.9929850682287,
-      "totalRatingCount": 102,
+      "totalRating": 68.99049468362486,
+      "totalRatingCount": 103,
       "gameEngines": [
         {
           "id": 0,
@@ -56557,8 +56690,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.00769467060455,
-      "totalRatingCount": 198,
+      "totalRating": 76.0066478299195,
+      "totalRatingCount": 200,
       "gameEngines": [
         {
           "id": 0,
@@ -56852,7 +56985,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.80934104012985,
+      "totalRating": 81.8092301561974,
       "totalRatingCount": 952,
       "releaseYear": 2013
     },
@@ -56911,8 +57044,8 @@
           "name": "Auditory"
         }
       ],
-      "totalRating": 73.48842193825399,
-      "totalRatingCount": 108,
+      "totalRating": 73.4876102387647,
+      "totalRatingCount": 109,
       "collection": {
         "id": 3012,
         "name": "Osu!"
@@ -57108,8 +57241,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 74.28508183450705,
-      "totalRatingCount": 143,
+      "totalRating": 74.2846479319991,
+      "totalRatingCount": 144,
       "releaseYear": 2013
     },
     "3022": {
@@ -57194,7 +57327,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.2472015476948,
+      "totalRating": 84.2475117377148,
       "totalRatingCount": 398,
       "collection": {
         "id": 3022,
@@ -57402,8 +57535,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 68.90516985791045,
-      "totalRatingCount": 111,
+      "totalRating": 68.90486964878374,
+      "totalRatingCount": 112,
       "gameEngines": [
         {
           "id": 0,
@@ -57584,8 +57717,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.5378520580925,
-      "totalRatingCount": 674,
+      "totalRating": 76.62423022196245,
+      "totalRatingCount": 677,
       "releaseYear": 2015
     },
     "3047": {
@@ -57651,7 +57784,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.48948730712985,
+      "totalRating": 83.48978961932809,
       "totalRatingCount": 117,
       "gameEngines": [
         {
@@ -58142,7 +58275,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 71.75946502235774,
+      "totalRating": 71.76046490158065,
       "totalRatingCount": 155,
       "collection": {
         "id": 3082,
@@ -58386,7 +58519,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.5226999249614,
+      "totalRating": 80.5224896874316,
       "totalRatingCount": 661,
       "releaseYear": 2013
     },
@@ -58484,8 +58617,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 87.7896988481162,
-      "totalRatingCount": 156,
+      "totalRating": 87.78842706622105,
+      "totalRatingCount": 157,
       "collection": {
         "id": 3102,
         "name": "Kerbal Space Program"
@@ -58630,8 +58763,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 75.7801996368503,
-      "totalRatingCount": 108,
+      "totalRating": 75.77717992334075,
+      "totalRatingCount": 109,
       "gameEngines": [
         {
           "id": 0,
@@ -58940,7 +59073,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 77.38833210693761,
+      "totalRating": 77.38784155001974,
       "totalRatingCount": 301,
       "gameEngines": [
         {
@@ -59102,7 +59235,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 83.06080309780215,
+      "totalRating": 83.06047233532439,
       "totalRatingCount": 195,
       "releaseYear": 2004
     },
@@ -59682,8 +59815,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.4769144246666,
-      "totalRatingCount": 306,
+      "totalRating": 82.4750902733146,
+      "totalRatingCount": 307,
       "gameEngines": [
         {
           "id": 0,
@@ -59770,8 +59903,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 62.7992285323115,
-      "totalRatingCount": 216,
+      "totalRating": 62.79934572083044,
+      "totalRatingCount": 217,
       "collection": {
         "id": 3188,
         "name": "Murdered: Soul Suspect"
@@ -59863,8 +59996,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.68632368395595,
-      "totalRatingCount": 461,
+      "totalRating": 83.6854611350193,
+      "totalRatingCount": 462,
       "gameEngines": [
         {
           "id": 0,
@@ -59907,24 +60040,17 @@
       ],
       "involvedCompanies": [
         {
-          "id": 45485,
-          "company": {
-            "id": 347,
-            "name": "Criterion Games"
-          }
-        },
-        {
-          "id": 45486,
+          "id": 212592,
           "company": {
             "id": 1,
             "name": "Electronic Arts"
           }
         },
         {
-          "id": 198590,
+          "id": 212593,
           "company": {
-            "id": 6963,
-            "name": "Firemonkeys Studios"
+            "id": 347,
+            "name": "Criterion Games"
           }
         }
       ],
@@ -59944,21 +60070,6 @@
           "id": 12,
           "abbreviation": "X360",
           "name": "Xbox 360"
-        },
-        {
-          "id": 34,
-          "abbreviation": "Android",
-          "name": "Android"
-        },
-        {
-          "id": 39,
-          "abbreviation": "iOS",
-          "name": "iOS"
-        },
-        {
-          "id": 46,
-          "abbreviation": "Vita",
-          "name": "PlayStation Vita"
         }
       ],
       "playerPerspectives": [
@@ -59972,7 +60083,7 @@
         }
       ],
       "totalRating": 79.41057114936714,
-      "totalRatingCount": 325,
+      "totalRatingCount": 326,
       "releaseYear": 2012
     },
     "3195": {
@@ -60255,8 +60366,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 70.38180315442534,
-      "totalRatingCount": 410,
+      "totalRating": 70.38224445445636,
+      "totalRatingCount": 411,
       "releaseYear": 2014
     },
     "3216": {
@@ -60340,8 +60451,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.6548241045448,
-      "totalRatingCount": 153,
+      "totalRating": 86.65487119008681,
+      "totalRatingCount": 154,
       "gameEngines": [
         {
           "id": 0,
@@ -60425,7 +60536,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.10906537432855,
+      "totalRating": 80.10834485519595,
       "totalRatingCount": 204,
       "collection": {
         "id": 3218,
@@ -60668,8 +60779,8 @@
           "name": "Virtual Reality"
         }
       ],
-      "totalRating": 71.69752047552896,
-      "totalRatingCount": 413,
+      "totalRating": 71.70001055039936,
+      "totalRatingCount": 414,
       "collection": {
         "id": 3225,
         "name": "No Man's Sky"
@@ -61456,8 +61567,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 88.78408891749756,
-      "totalRatingCount": 190,
+      "totalRating": 88.78524128790875,
+      "totalRatingCount": 191,
       "gameEngines": [
         {
           "id": 0,
@@ -61528,8 +61639,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 91.19398493337765,
-      "totalRatingCount": 332,
+      "totalRating": 91.19211963012074,
+      "totalRatingCount": 334,
       "releaseYear": 2004
     },
     "3351": {
@@ -61592,8 +61703,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 86.38580166110155,
-      "totalRatingCount": 136,
+      "totalRating": 86.3856685988774,
+      "totalRatingCount": 137,
       "gameEngines": [
         {
           "id": 0,
@@ -61662,7 +61773,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.0586559581899,
+      "totalRating": 87.0610910000153,
       "totalRatingCount": 121,
       "gameEngines": [
         {
@@ -61740,8 +61851,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 71.77213252642301,
-      "totalRatingCount": 151,
+      "totalRating": 71.7677667438593,
+      "totalRatingCount": 153,
       "gameEngines": [
         {
           "id": 0,
@@ -61872,8 +61983,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 76.1375624382249,
-      "totalRatingCount": 160,
+      "totalRating": 76.1355469199923,
+      "totalRatingCount": 161,
       "gameEngines": [
         {
           "id": 0,
@@ -61960,8 +62071,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.794659799142,
-      "totalRatingCount": 131,
+      "totalRating": 79.79400189770729,
+      "totalRatingCount": 132,
       "gameEngines": [
         {
           "id": 0,
@@ -62072,8 +62183,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 77.7760208934941,
-      "totalRatingCount": 134,
+      "totalRating": 77.7664157328699,
+      "totalRatingCount": 135,
       "gameEngines": [
         {
           "id": 0,
@@ -62106,13 +62217,6 @@
       ],
       "involvedCompanies": [
         {
-          "id": 9312,
-          "company": {
-            "id": 66,
-            "name": "Activision"
-          }
-        },
-        {
           "id": 9315,
           "company": {
             "id": 90,
@@ -62141,10 +62245,10 @@
           }
         },
         {
-          "id": 42811,
+          "id": 212578,
           "company": {
-            "id": 72,
-            "name": "Vicarious Visions"
+            "id": 66,
+            "name": "Activision"
           }
         }
       ],
@@ -62164,11 +62268,6 @@
           "id": 7,
           "abbreviation": "PS1",
           "name": "PlayStation"
-        },
-        {
-          "id": 22,
-          "abbreviation": "GBC",
-          "name": "Game Boy Color"
         },
         {
           "id": 23,
@@ -62260,8 +62359,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 90.55476666850151,
-      "totalRatingCount": 130,
+      "totalRating": 90.54582384900999,
+      "totalRatingCount": 131,
       "gameEngines": [
         {
           "id": 0,
@@ -62333,8 +62432,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 70.18772107093295,
-      "totalRatingCount": 138,
+      "totalRating": 70.18832256529765,
+      "totalRatingCount": 139,
       "gameEngines": [
         {
           "id": 0,
@@ -62762,8 +62861,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 70.11290995155305,
-      "totalRatingCount": 114,
+      "totalRating": 70.11076032729116,
+      "totalRatingCount": 115,
       "collection": {
         "id": 3939,
         "name": "Gun"
@@ -62928,8 +63027,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 59.4173533152579,
-      "totalRatingCount": 109,
+      "totalRating": 59.29474482134511,
+      "totalRatingCount": 110,
       "releaseYear": 2005
     },
     "3943": {
@@ -63072,7 +63171,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.3857037164195,
+      "totalRating": 80.37374142585969,
       "totalRatingCount": 102,
       "gameEngines": [
         {
@@ -63185,8 +63284,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.18602991303075,
-      "totalRatingCount": 103,
+      "totalRating": 76.1836433529871,
+      "totalRatingCount": 104,
       "releaseYear": 2005
     },
     "4122": {
@@ -63469,8 +63568,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 63.28108630509195,
-      "totalRatingCount": 162,
+      "totalRating": 63.28131376267564,
+      "totalRatingCount": 163,
       "releaseYear": 2003
     },
     "4225": {
@@ -63556,8 +63655,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.60048622432899,
-      "totalRatingCount": 135,
+      "totalRating": 74.59886860252439,
+      "totalRatingCount": 136,
       "releaseYear": 2005
     },
     "4348": {
@@ -63688,8 +63787,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 87.0622587119478,
-      "totalRatingCount": 149,
+      "totalRating": 87.0553920585099,
+      "totalRatingCount": 150,
       "gameEngines": [
         {
           "id": 0,
@@ -63806,8 +63905,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 88.19771849099095,
-      "totalRatingCount": 464,
+      "totalRating": 88.1973098587406,
+      "totalRatingCount": 466,
       "gameEngines": [
         {
           "id": 0,
@@ -63889,8 +63988,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 72.4682088575627,
-      "totalRatingCount": 123,
+      "totalRating": 72.4617973315926,
+      "totalRatingCount": 124,
       "gameEngines": [
         {
           "id": 0,
@@ -63995,8 +64094,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 85.42353098809255,
-      "totalRatingCount": 512,
+      "totalRating": 85.42335258084046,
+      "totalRatingCount": 513,
       "releaseYear": 2014
     },
     "4756": {
@@ -64186,8 +64285,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.9140719495293,
-      "totalRatingCount": 319,
+      "totalRating": 74.95126595547859,
+      "totalRatingCount": 320,
       "releaseYear": 2014
     },
     "4797": {
@@ -64510,8 +64609,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.21505322849985,
-      "totalRatingCount": 244,
+      "totalRating": 76.21641705119146,
+      "totalRatingCount": 246,
       "collection": {
         "id": 4843,
         "name": "Kingdom Come: Deliverance"
@@ -64703,8 +64802,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.0644164743295,
-      "totalRatingCount": 145,
+      "totalRating": 76.0632089420049,
+      "totalRatingCount": 146,
       "gameEngines": [
         {
           "id": 0,
@@ -64946,7 +65045,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 82.13933779614705,
+      "totalRating": 82.13880925243595,
       "totalRatingCount": 353,
       "releaseYear": 2011
     },
@@ -65039,7 +65138,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 76.83009634838405,
+      "totalRating": 76.83043346531994,
       "totalRatingCount": 145,
       "releaseYear": 2012
     },
@@ -65109,7 +65208,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.6817072348747,
+      "totalRating": 85.6821765148654,
       "totalRatingCount": 184,
       "gameEngines": [
         {
@@ -65292,6 +65391,93 @@
       "totalRatingCount": 110,
       "releaseYear": 2007
     },
+    "5181": {
+      "id": 5181,
+      "collection": {
+        "id": 108,
+        "name": "Spider-Man"
+      },
+      "gameEngines": [
+        {
+          "id": 124,
+          "name": "Treyarch NGL"
+        }
+      ],
+      "gameModes": [
+        {
+          "id": 1,
+          "name": "Single player"
+        }
+      ],
+      "genres": [
+        {
+          "id": 4,
+          "name": "Fighting"
+        },
+        {
+          "id": 8,
+          "name": "Platform"
+        },
+        {
+          "id": 25,
+          "name": "Hack and slash/Beat 'em up"
+        },
+        {
+          "id": 31,
+          "name": "Adventure"
+        }
+      ],
+      "involvedCompanies": [
+        {
+          "id": 12528,
+          "company": {
+            "id": 428,
+            "name": "Treyarch"
+          }
+        },
+        {
+          "id": 179478,
+          "company": {
+            "id": 66,
+            "name": "Activision"
+          }
+        },
+        {
+          "id": 179479,
+          "company": {
+            "id": 705,
+            "name": "Shaba Games"
+          }
+        }
+      ],
+      "name": "Spider-Man: Web of Shadows",
+      "platforms": [
+        {
+          "id": 6,
+          "abbreviation": "PC",
+          "name": "PC (Microsoft Windows)"
+        },
+        {
+          "id": 9,
+          "abbreviation": "PS3",
+          "name": "PlayStation 3"
+        },
+        {
+          "id": 12,
+          "abbreviation": "X360",
+          "name": "Xbox 360"
+        }
+      ],
+      "playerPerspectives": [
+        {
+          "id": 2,
+          "name": "Third person"
+        }
+      ],
+      "totalRating": 72.2617583166336,
+      "totalRatingCount": 101,
+      "releaseYear": 2008
+    },
     "5314": {
       "id": 5314,
       "collection": {
@@ -65466,8 +65652,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.60742826883944,
-      "totalRatingCount": 406,
+      "totalRating": 77.60771084163385,
+      "totalRatingCount": 407,
       "releaseYear": 2014
     },
     "5335": {
@@ -65652,8 +65838,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 88.79837608157146,
-      "totalRatingCount": 169,
+      "totalRating": 88.79844274469124,
+      "totalRatingCount": 170,
       "collection": {
         "id": 5418,
         "name": "Super Mario RPG: Legend of the Seven Stars"
@@ -65772,8 +65958,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.40275046299445,
-      "totalRatingCount": 134,
+      "totalRating": 79.4014240984065,
+      "totalRatingCount": 135,
       "gameEngines": [
         {
           "id": 0,
@@ -65964,7 +66150,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.67085973681219,
+      "totalRating": 83.67146644511851,
       "totalRatingCount": 232,
       "gameEngines": [
         {
@@ -66068,7 +66254,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.4163431274159,
+      "totalRating": 77.4160200242776,
       "totalRatingCount": 143,
       "releaseYear": 2014
     },
@@ -66437,7 +66623,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 85.41977057432766,
+      "totalRating": 85.6540912212413,
       "totalRatingCount": 386,
       "collection": {
         "id": 5601,
@@ -66607,16 +66793,8 @@
       ],
       "genres": [
         {
-          "id": 5,
-          "name": "Shooter"
-        },
-        {
           "id": 15,
           "name": "Strategy"
-        },
-        {
-          "id": 31,
-          "name": "Adventure"
         },
         {
           "id": 36,
@@ -66942,7 +67120,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 77.75176879633486,
+      "totalRating": 77.75132206190784,
       "totalRatingCount": 180,
       "gameEngines": [
         {
@@ -67166,7 +67344,7 @@
         }
       ],
       "totalRating": 73.62808976981215,
-      "totalRatingCount": 272,
+      "totalRatingCount": 273,
       "collection": {
         "id": 5973,
         "name": "Broforce"
@@ -67609,8 +67787,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.25209523421265,
-      "totalRatingCount": 243,
+      "totalRating": 81.2521889859636,
+      "totalRatingCount": 244,
       "releaseYear": 2009
     },
     "6250": {
@@ -67708,7 +67886,7 @@
         }
       ],
       "totalRating": 81.14213710021346,
-      "totalRatingCount": 236,
+      "totalRatingCount": 237,
       "gameEngines": [
         {
           "id": 0,
@@ -67910,8 +68088,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 71.9287019573105,
-      "totalRatingCount": 206,
+      "totalRating": 71.9272963939762,
+      "totalRatingCount": 208,
       "releaseYear": 2004
     },
     "6294": {
@@ -68029,8 +68207,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.18677673362295,
-      "totalRatingCount": 112,
+      "totalRating": 81.85595541775265,
+      "totalRatingCount": 113,
       "gameEngines": [
         {
           "id": 0,
@@ -68114,7 +68292,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.98445554081894,
+      "totalRating": 79.985023153438,
       "totalRatingCount": 106,
       "collection": {
         "id": 6611,
@@ -68327,8 +68505,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 75.99529510567851,
-      "totalRatingCount": 479,
+      "totalRating": 75.99514388971535,
+      "totalRatingCount": 480,
       "releaseYear": 2014
     },
     "6692": {
@@ -69027,8 +69205,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.94982675587539,
-      "totalRatingCount": 209,
+      "totalRating": 81.95108648019391,
+      "totalRatingCount": 210,
       "gameEngines": [
         {
           "id": 0,
@@ -69813,8 +69991,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.68713080741425,
-      "totalRatingCount": 240,
+      "totalRating": 90.68744433015146,
+      "totalRatingCount": 242,
       "collection": {
         "id": 7170,
         "name": "Ico"
@@ -69950,8 +70128,8 @@
           "name": "Text"
         }
       ],
-      "totalRating": 88.07198615947766,
-      "totalRatingCount": 120,
+      "totalRating": 88.0618248181962,
+      "totalRatingCount": 121,
       "gameEngines": [
         {
           "id": 0,
@@ -70462,7 +70640,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.65469378115421,
+      "totalRating": 84.65661372615085,
       "totalRatingCount": 115,
       "gameEngines": [
         {
@@ -70560,7 +70738,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.22761161539856,
+      "totalRating": 79.2277331976203,
       "totalRatingCount": 339,
       "collection": {
         "id": 7327,
@@ -70690,8 +70868,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 92.31868395813855,
-      "totalRatingCount": 1748,
+      "totalRating": 92.31776495803268,
+      "totalRatingCount": 1753,
       "gameEngines": [
         {
           "id": 0,
@@ -70752,8 +70930,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 91.4277973380839,
-      "totalRatingCount": 1171,
+      "totalRating": 91.42689716010969,
+      "totalRatingCount": 1174,
       "collection": {
         "id": 7334,
         "name": "Bloodborne"
@@ -71047,8 +71225,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.47532950705795,
-      "totalRatingCount": 1224,
+      "totalRating": 89.4754046798644,
+      "totalRatingCount": 1226,
       "collection": {
         "id": 7342,
         "name": "Inside"
@@ -71127,8 +71305,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 88.02890666413401,
-      "totalRatingCount": 1041,
+      "totalRating": 88.02857792552005,
+      "totalRatingCount": 1045,
       "releaseYear": 2015
     },
     "7346": {
@@ -71205,8 +71383,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 95.18599082547685,
-      "totalRatingCount": 1835,
+      "totalRating": 95.18577715760335,
+      "totalRatingCount": 1840,
       "releaseYear": 2017
     },
     "7349": {
@@ -71296,8 +71474,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 72.10280006538724,
-      "totalRatingCount": 434,
+      "totalRating": 72.10272720636425,
+      "totalRatingCount": 435,
       "releaseYear": 2017
     },
     "7351": {
@@ -71414,8 +71592,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 86.6335437123342,
-      "totalRatingCount": 1431,
+      "totalRating": 86.63392046453549,
+      "totalRatingCount": 1433,
       "releaseYear": 2016
     },
     "7352": {
@@ -71688,8 +71866,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.2468249859804,
-      "totalRatingCount": 329,
+      "totalRating": 87.24573764475676,
+      "totalRatingCount": 330,
       "collection": {
         "id": 7386,
         "name": "The Talos Principle"
@@ -71751,8 +71929,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 75.7819400419494,
-      "totalRatingCount": 161,
+      "totalRating": 75.75626282394714,
+      "totalRatingCount": 162,
       "collection": {
         "id": 7405,
         "name": "Everybody's Gone to the Rapture"
@@ -71947,7 +72125,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 87.5025557075477,
+      "totalRating": 87.5026941546489,
       "totalRatingCount": 449,
       "gameEngines": [
         {
@@ -72272,7 +72450,7 @@
           "name": "Virtual Reality"
         }
       ],
-      "totalRating": 76.7340668768943,
+      "totalRating": 76.73498854772185,
       "totalRatingCount": 180,
       "collection": {
         "id": 7504,
@@ -72656,8 +72834,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.16207917903776,
-      "totalRatingCount": 1412,
+      "totalRating": 81.1624249212712,
+      "totalRatingCount": 1413,
       "releaseYear": 2015
     },
     "7603": {
@@ -72735,8 +72913,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.6302199372462,
-      "totalRatingCount": 773,
+      "totalRating": 84.62858082996479,
+      "totalRatingCount": 775,
       "releaseYear": 2017
     },
     "7605": {
@@ -72830,7 +73008,7 @@
         }
       ],
       "totalRating": 78.5643831420317,
-      "totalRatingCount": 164,
+      "totalRatingCount": 165,
       "releaseYear": 2009
     },
     "7609": {
@@ -73098,7 +73276,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 70.1391465426465,
+      "totalRating": 70.1387531500967,
       "totalRatingCount": 151,
       "collection": {
         "id": 7618,
@@ -73204,7 +73382,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 74.66934692736706,
+      "totalRating": 74.669346927367,
       "totalRatingCount": 201,
       "collection": {
         "id": 7621,
@@ -73606,8 +73784,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.28290946872724,
-      "totalRatingCount": 264,
+      "totalRating": 82.28074369044444,
+      "totalRatingCount": 265,
       "gameEngines": [
         {
           "id": 0,
@@ -74099,7 +74277,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 85.75406459683379,
+      "totalRating": 85.75418450346694,
       "totalRatingCount": 946,
       "releaseYear": 2016
     },
@@ -74168,8 +74346,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.66547358734665,
-      "totalRatingCount": 319,
+      "totalRating": 76.6653673381242,
+      "totalRatingCount": 320,
       "gameEngines": [
         {
           "id": 0,
@@ -74390,8 +74568,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 74.7475225623743,
-      "totalRatingCount": 111,
+      "totalRating": 74.74657803569116,
+      "totalRatingCount": 112,
       "collection": {
         "id": 8259,
         "name": "Tacoma"
@@ -74530,8 +74708,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 73.40900520838764,
-      "totalRatingCount": 592,
+      "totalRating": 73.40902257296695,
+      "totalRatingCount": 593,
       "releaseYear": 2015
     },
     "8311": {
@@ -75061,8 +75239,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 75.79616261238115,
-      "totalRatingCount": 115,
+      "totalRating": 75.79267278454554,
+      "totalRatingCount": 116,
       "gameEngines": [
         {
           "id": 0,
@@ -75175,8 +75353,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.60831276179755,
-      "totalRatingCount": 129,
+      "totalRating": 79.69957656577796,
+      "totalRatingCount": 130,
       "releaseYear": 2015
     },
     "8729": {
@@ -75255,7 +75433,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 70.18363462071474,
+      "totalRating": 70.1838313068778,
       "totalRatingCount": 212,
       "collection": {
         "id": 8729,
@@ -75368,7 +75546,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.9428922065974,
+      "totalRating": 82.943477362923,
       "totalRatingCount": 308,
       "releaseYear": 2016
     },
@@ -75459,8 +75637,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 86.1413152685027,
-      "totalRatingCount": 592,
+      "totalRating": 86.14157461753857,
+      "totalRatingCount": 594,
       "collection": {
         "id": 9061,
         "name": "Cuphead"
@@ -75567,8 +75745,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.73303946726969,
-      "totalRatingCount": 486,
+      "totalRating": 78.7328759206129,
+      "totalRatingCount": 487,
       "releaseYear": 2015
     },
     "9136": {
@@ -75753,8 +75931,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.16059189505131,
-      "totalRatingCount": 419,
+      "totalRating": 79.16018544948295,
+      "totalRatingCount": 421,
       "releaseYear": 2017
     },
     "9192": {
@@ -76652,7 +76830,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.81434707172295,
+      "totalRating": 89.81379089807635,
       "totalRatingCount": 285,
       "releaseYear": 2014
     },
@@ -76827,7 +77005,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 92.4031822290201,
+      "totalRating": 92.40195225392034,
       "totalRatingCount": 222,
       "collection": {
         "id": 9643,
@@ -77012,8 +77190,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.7740209323632,
-      "totalRatingCount": 191,
+      "totalRating": 84.77469852050405,
+      "totalRatingCount": 192,
       "gameEngines": [
         {
           "id": 0,
@@ -77096,8 +77274,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.10141121944125,
-      "totalRatingCount": 472,
+      "totalRating": 82.1004449030595,
+      "totalRatingCount": 473,
       "collection": {
         "id": 9727,
         "name": "Soma"
@@ -77288,12 +77466,12 @@
       ],
       "genres": [
         {
-          "id": 8,
-          "name": "Platform"
-        },
-        {
           "id": 12,
           "name": "Role-playing (RPG)"
+        },
+        {
+          "id": 25,
+          "name": "Hack and slash/Beat 'em up"
         },
         {
           "id": 31,
@@ -77347,7 +77525,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.8205056135123,
+      "totalRating": 85.8204193037496,
       "totalRatingCount": 211,
       "collection": {
         "id": 9806,
@@ -77546,7 +77724,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.20874740327855,
+      "totalRating": 85.20984809461515,
       "totalRatingCount": 110,
       "releaseYear": 2016
     },
@@ -77625,8 +77803,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 93.2774427629736,
-      "totalRatingCount": 744,
+      "totalRating": 93.27590657091335,
+      "totalRatingCount": 746,
       "gameEngines": [
         {
           "id": 0,
@@ -77832,7 +78010,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 68.50406396195444,
+      "totalRating": 68.5049277896695,
       "totalRatingCount": 104,
       "releaseYear": 2017
     },
@@ -77940,7 +78118,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 85.2609656342226,
+      "totalRating": 85.26140490496786,
       "totalRatingCount": 240,
       "releaseYear": 2017
     },
@@ -78135,8 +78313,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 71.374919437053,
-      "totalRatingCount": 134,
+      "totalRating": 71.37519486532659,
+      "totalRatingCount": 135,
       "collection": {
         "id": 10233,
         "name": "Brawlhalla"
@@ -78493,7 +78671,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.25199465545,
+      "totalRating": 84.25220837097496,
       "totalRatingCount": 141,
       "releaseYear": 2019
     },
@@ -78857,8 +79035,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 76.48240868772255,
-      "totalRatingCount": 108,
+      "totalRating": 76.4782292938319,
+      "totalRatingCount": 109,
       "releaseYear": 2016
     },
     "11071": {
@@ -79115,8 +79293,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 65.94408664939225,
-      "totalRatingCount": 286,
+      "totalRating": 65.95830250810286,
+      "totalRatingCount": 287,
       "releaseYear": 2015
     },
     "11133": {
@@ -79189,8 +79367,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.79635389064745,
-      "totalRatingCount": 1110,
+      "totalRating": 86.79629799806224,
+      "totalRatingCount": 1113,
       "gameEngines": [
         {
           "id": 0,
@@ -79275,7 +79453,7 @@
         }
       ],
       "totalRating": 67.83958368748965,
-      "totalRatingCount": 141,
+      "totalRatingCount": 142,
       "collection": {
         "id": 11137,
         "name": "Sea of Thieves"
@@ -79349,8 +79527,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.02608757566131,
-      "totalRatingCount": 1556,
+      "totalRating": 89.02532630887575,
+      "totalRatingCount": 1560,
       "releaseYear": 2017
     },
     "11157": {
@@ -79637,8 +79815,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 73.85827712763125,
-      "totalRatingCount": 212,
+      "totalRating": 73.8592310055501,
+      "totalRatingCount": 213,
       "collection": {
         "id": 11162,
         "name": "For Honor"
@@ -79717,8 +79895,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.1160199204554,
-      "totalRatingCount": 218,
+      "totalRating": 81.1160980637909,
+      "totalRatingCount": 219,
       "releaseYear": 2016
     },
     "11171": {
@@ -80106,8 +80284,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.5801014481807,
-      "totalRatingCount": 841,
+      "totalRating": 85.579981926141,
+      "totalRatingCount": 843,
       "releaseYear": 2015
     },
     "11204": {
@@ -80191,8 +80369,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 67.90573647426106,
-      "totalRatingCount": 154,
+      "totalRating": 67.9065037533519,
+      "totalRatingCount": 155,
       "releaseYear": 2016
     },
     "11208": {
@@ -80263,8 +80441,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 88.42102392690896,
-      "totalRatingCount": 970,
+      "totalRating": 88.4199949109363,
+      "totalRatingCount": 973,
       "gameEngines": [
         {
           "id": 0,
@@ -80366,8 +80544,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 85.34067957120845,
-      "totalRatingCount": 696,
+      "totalRating": 85.34031017303225,
+      "totalRatingCount": 697,
       "collection": {
         "id": 11233,
         "name": "What Remains of Edith Finch"
@@ -80606,8 +80784,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.5110762759625,
-      "totalRatingCount": 330,
+      "totalRating": 86.51214266741121,
+      "totalRatingCount": 332,
       "gameEngines": [
         {
           "id": 0,
@@ -81100,8 +81278,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 78.28823365925936,
-      "totalRatingCount": 194,
+      "totalRating": 78.29079058336465,
+      "totalRatingCount": 195,
       "collection": {
         "id": 11582,
         "name": "Stellaris"
@@ -81255,7 +81433,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.7404620853921,
+      "totalRating": 84.7413534123921,
       "totalRatingCount": 105,
       "releaseYear": 2017
     },
@@ -81350,8 +81528,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 87.50664648510515,
-      "totalRatingCount": 299,
+      "totalRating": 87.49810735939225,
+      "totalRatingCount": 302,
       "releaseYear": 2019
     },
     "11790": {
@@ -81411,8 +81589,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.95309291122024,
-      "totalRatingCount": 264,
+      "totalRating": 84.95302408382025,
+      "totalRatingCount": 265,
       "gameEngines": [
         {
           "id": 0,
@@ -81590,8 +81768,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 73.34866014754745,
-      "totalRatingCount": 205,
+      "totalRating": 73.646253423009,
+      "totalRatingCount": 206,
       "releaseYear": 2016
     },
     "12517": {
@@ -81768,7 +81946,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.27804557896465,
+      "totalRating": 84.2789273272052,
       "totalRatingCount": 160,
       "gameEngines": [
         {
@@ -82031,8 +82209,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 74.3229925299068,
-      "totalRatingCount": 332,
+      "totalRating": 74.32464190336191,
+      "totalRatingCount": 333,
       "releaseYear": 2016
     },
     "13212": {
@@ -82259,8 +82437,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.9768017745339,
-      "totalRatingCount": 722,
+      "totalRating": 79.9795084420557,
+      "totalRatingCount": 725,
       "collection": {
         "id": 14362,
         "name": "Detroit: Become Human"
@@ -82434,7 +82612,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 77.3292200933404,
+      "totalRating": 77.3298427984059,
       "totalRatingCount": 353,
       "collection": {
         "id": 14587,
@@ -82512,8 +82690,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 91.7694023205401,
-      "totalRatingCount": 1078,
+      "totalRating": 91.8464697438708,
+      "totalRatingCount": 1082,
       "releaseYear": 2017
     },
     "14741": {
@@ -83026,7 +83204,7 @@
           "name": "Text"
         }
       ],
-      "totalRating": 83.4606573289486,
+      "totalRating": 83.4632538319876,
       "totalRatingCount": 105,
       "collection": {
         "id": 15734,
@@ -83214,7 +83392,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 77.03625620768426,
+      "totalRating": 77.03535788846469,
       "totalRatingCount": 142,
       "releaseYear": 2016
     },
@@ -83304,7 +83482,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 81.6099710654185,
+      "totalRating": 81.61216272796365,
       "totalRatingCount": 167,
       "gameEngines": [
         {
@@ -83679,8 +83857,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 88.9004282824207,
-      "totalRatingCount": 980,
+      "totalRating": 88.9001765041599,
+      "totalRatingCount": 981,
       "collection": {
         "id": 17000,
         "name": "Stardew Valley"
@@ -83952,8 +84130,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 75.4785466223584,
-      "totalRatingCount": 140,
+      "totalRating": 75.48028404061921,
+      "totalRatingCount": 141,
       "gameEngines": [
         {
           "id": 0,
@@ -84123,8 +84301,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.3394153687997,
-      "totalRatingCount": 636,
+      "totalRating": 83.33914163921565,
+      "totalRatingCount": 637,
       "releaseYear": 2016
     },
     "18366": {
@@ -84282,7 +84460,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 82.55537095966704,
+      "totalRating": 82.5567729041765,
       "totalRatingCount": 105,
       "collection": {
         "id": 18398,
@@ -84458,7 +84636,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 80.93783615021724,
+      "totalRating": 80.93876429168006,
       "totalRatingCount": 113,
       "gameEngines": [
         {
@@ -84762,7 +84940,7 @@
         }
       ],
       "totalRating": 76.98872319771205,
-      "totalRatingCount": 107,
+      "totalRatingCount": 108,
       "collection": {
         "id": 18857,
         "name": "Ruiner"
@@ -84946,8 +85124,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 74.16123602006294,
-      "totalRatingCount": 316,
+      "totalRating": 74.16154506275134,
+      "totalRatingCount": 317,
       "releaseYear": 2016
     },
     "19000": {
@@ -85135,7 +85313,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 87.7356951049989,
+      "totalRating": 87.60605005426135,
       "totalRatingCount": 154,
       "collection": {
         "id": 19085,
@@ -85230,8 +85408,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 70.80021079911836,
-      "totalRatingCount": 114,
+      "totalRating": 70.79825156631695,
+      "totalRatingCount": 115,
       "releaseYear": 2002
     },
     "19130": {
@@ -85437,8 +85615,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 79.90306832888245,
-      "totalRatingCount": 271,
+      "totalRating": 79.8994672546071,
+      "totalRatingCount": 272,
       "releaseYear": 2019
     },
     "19241": {
@@ -85526,8 +85704,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.67598217509496,
-      "totalRatingCount": 125,
+      "totalRating": 79.67660855720311,
+      "totalRatingCount": 127,
       "releaseYear": 2018
     },
     "19441": {
@@ -85604,8 +85782,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.55043057374476,
-      "totalRatingCount": 488,
+      "totalRating": 79.5504305737447,
+      "totalRatingCount": 489,
       "releaseYear": 2016
     },
     "19449": {
@@ -85873,8 +86051,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 83.74628751761779,
-      "totalRatingCount": 180,
+      "totalRating": 83.7464776622642,
+      "totalRatingCount": 181,
       "gameEngines": [
         {
           "id": 0,
@@ -85962,7 +86140,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 81.51943831275085,
+      "totalRating": 81.5235525619538,
       "totalRatingCount": 119,
       "releaseYear": 2018
     },
@@ -86034,8 +86212,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 78.1734081300973,
-      "totalRatingCount": 452,
+      "totalRating": 78.17292513058375,
+      "totalRatingCount": 454,
       "releaseYear": 2017
     },
     "19539": {
@@ -86199,8 +86377,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 75.2853292029076,
-      "totalRatingCount": 127,
+      "totalRating": 75.28752554353775,
+      "totalRatingCount": 129,
       "collection": {
         "id": 19545,
         "name": "Observer"
@@ -86377,8 +86555,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 95.18404705299035,
-      "totalRatingCount": 1927,
+      "totalRating": 95.18355019241034,
+      "totalRatingCount": 1935,
       "gameEngines": [
         {
           "id": 0,
@@ -86539,8 +86717,8 @@
           "name": "Virtual Reality"
         }
       ],
-      "totalRating": 86.1730013037492,
-      "totalRatingCount": 676,
+      "totalRating": 86.17370137964224,
+      "totalRatingCount": 679,
       "releaseYear": 2017
     },
     "19564": {
@@ -86620,8 +86798,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 85.9197634979773,
-      "totalRatingCount": 457,
+      "totalRating": 85.92298299935315,
+      "totalRatingCount": 458,
       "collection": {
         "id": 19564,
         "name": "Death Stranding"
@@ -86686,8 +86864,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 88.6799577198383,
-      "totalRatingCount": 1167,
+      "totalRating": 88.6796004045764,
+      "totalRatingCount": 1170,
       "releaseYear": 2018
     },
     "20150": {
@@ -86771,7 +86949,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.4102982621663,
+      "totalRating": 81.67602099713125,
       "totalRatingCount": 208,
       "collection": {
         "id": 20150,
@@ -86882,8 +87060,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.85407733238395,
-      "totalRatingCount": 260,
+      "totalRating": 84.8552861188985,
+      "totalRatingCount": 262,
       "gameEngines": [
         {
           "id": 0,
@@ -87080,8 +87258,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.2958581487002,
-      "totalRatingCount": 332,
+      "totalRating": 81.29686464400655,
+      "totalRatingCount": 333,
       "collection": {
         "id": 22917,
         "name": "Gris"
@@ -87251,8 +87429,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 93.5036804963135,
-      "totalRatingCount": 1695,
+      "totalRating": 93.50319745435769,
+      "totalRatingCount": 1702,
       "releaseYear": 2018
     },
     "25657": {
@@ -87517,8 +87695,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 93.81729290515565,
-      "totalRatingCount": 838,
+      "totalRating": 93.81597123907076,
+      "totalRatingCount": 842,
       "gameEngines": [
         {
           "id": 0,
@@ -87689,8 +87867,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.74590174751319,
-      "totalRatingCount": 847,
+      "totalRating": 89.74626448899315,
+      "totalRatingCount": 848,
       "releaseYear": 2018
     },
     "26401": {
@@ -87847,8 +88025,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 92.48626953386795,
-      "totalRatingCount": 431,
+      "totalRating": 92.4841492579184,
+      "totalRatingCount": 433,
       "collection": {
         "id": 26472,
         "name": "Disco Elysium"
@@ -87911,8 +88089,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 93.15591786357811,
-      "totalRatingCount": 1166,
+      "totalRating": 93.124218862352,
+      "totalRatingCount": 1172,
       "gameEngines": [
         {
           "id": 0,
@@ -88064,7 +88242,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.81338485850904,
+      "totalRating": 82.81365041428029,
       "totalRatingCount": 115,
       "collection": {
         "id": 26765,
@@ -88124,8 +88302,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.87447257686256,
-      "totalRatingCount": 147,
+      "totalRating": 87.87439234735669,
+      "totalRatingCount": 148,
       "gameEngines": [
         {
           "id": 0,
@@ -88223,8 +88401,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 79.5832193415963,
-      "totalRatingCount": 137,
+      "totalRating": 79.58220543330525,
+      "totalRatingCount": 138,
       "gameEngines": [
         {
           "id": 0,
@@ -88314,8 +88492,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 89.45453334179305,
-      "totalRatingCount": 207,
+      "totalRating": 89.45803333493456,
+      "totalRatingCount": 209,
       "releaseYear": 2019
     },
     "26855": {
@@ -88528,7 +88706,7 @@
         }
       ],
       "totalRating": 66.24232094161025,
-      "totalRatingCount": 116,
+      "totalRatingCount": 117,
       "collection": {
         "id": 26950,
         "name": "Marvel's Avengers"
@@ -88700,8 +88878,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 72.9964293927808,
-      "totalRatingCount": 129,
+      "totalRating": 72.99574214490505,
+      "totalRatingCount": 130,
       "collection": {
         "id": 27092,
         "name": "GreedFall"
@@ -88799,7 +88977,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.564686789646,
+      "totalRating": 86.5648524147455,
       "totalRatingCount": 207,
       "collection": {
         "id": 27117,
@@ -88899,8 +89077,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.32222322211015,
-      "totalRatingCount": 102,
+      "totalRating": 82.23071655836941,
+      "totalRatingCount": 103,
       "collection": {
         "id": 27134,
         "name": "Deep Rock Galactic"
@@ -88986,7 +89164,7 @@
         }
       ],
       "totalRating": 81.43737916216325,
-      "totalRatingCount": 496,
+      "totalRatingCount": 497,
       "releaseYear": 2019
     },
     "27421": {
@@ -89154,7 +89332,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 86.50853102347051,
+      "totalRating": 86.50858788199776,
       "totalRatingCount": 153,
       "gameEngines": [
         {
@@ -89270,7 +89448,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 75.30169587910996,
+      "totalRating": 75.30295238413555,
       "totalRatingCount": 101,
       "collection": {
         "id": 27771,
@@ -89644,7 +89822,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 68.1000348908978,
+      "totalRating": 68.10069945635729,
       "totalRatingCount": 109,
       "releaseYear": 2018
     },
@@ -89956,8 +90134,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.32454542222459,
-      "totalRatingCount": 740,
+      "totalRating": 84.32438025858053,
+      "totalRatingCount": 742,
       "releaseYear": 2017
     },
     "28552": {
@@ -90062,8 +90240,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 80.21041371435,
-      "totalRatingCount": 553,
+      "totalRating": 80.20642899379226,
+      "totalRatingCount": 554,
       "releaseYear": 2018
     },
     "29004": {
@@ -90374,8 +90552,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 76.89412489192284,
-      "totalRatingCount": 365,
+      "totalRating": 76.89302127143425,
+      "totalRatingCount": 366,
       "collection": {
         "id": 36897,
         "name": "A Way Out"
@@ -90783,8 +90961,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.4495010312844,
-      "totalRatingCount": 353,
+      "totalRating": 89.45010375392624,
+      "totalRatingCount": 356,
       "releaseYear": 2020
     },
     "37016": {
@@ -91006,8 +91184,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 77.42526085566985,
-      "totalRatingCount": 176,
+      "totalRating": 77.42581639209351,
+      "totalRatingCount": 177,
       "gameEngines": [
         {
           "id": 0,
@@ -91232,8 +91410,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 89.32542503072625,
-      "totalRatingCount": 249,
+      "totalRating": 89.3225347580747,
+      "totalRatingCount": 251,
       "collection": {
         "id": 40477,
         "name": "Slay the Spire"
@@ -91694,8 +91872,8 @@
           "name": "Virtual Reality"
         }
       ],
-      "totalRating": 85.3581279059116,
-      "totalRatingCount": 219,
+      "totalRating": 85.35782259070996,
+      "totalRatingCount": 220,
       "releaseYear": 2021
     },
     "55935": {
@@ -91759,8 +91937,8 @@
           "name": "Text"
         }
       ],
-      "totalRating": 88.8597341402614,
-      "totalRatingCount": 356,
+      "totalRating": 88.8734441520067,
+      "totalRatingCount": 357,
       "collection": {
         "id": 55935,
         "name": "Doki Doki Literature Club!"
@@ -91853,7 +92031,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 79.3533444890094,
+      "totalRating": 79.35327910622095,
       "totalRatingCount": 185,
       "releaseYear": 2018
     },
@@ -92034,8 +92212,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 84.1357287998613,
-      "totalRatingCount": 133,
+      "totalRating": 84.13288953137456,
+      "totalRatingCount": 134,
       "collection": {
         "id": 71628,
         "name": "The Messenger"
@@ -92236,8 +92414,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.06164562088355,
-      "totalRatingCount": 589,
+      "totalRating": 82.061617981472,
+      "totalRatingCount": 592,
       "releaseYear": 2019
     },
     "75235": {
@@ -92292,8 +92470,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.77223253765206,
-      "totalRatingCount": 303,
+      "totalRating": 90.77353323824332,
+      "totalRatingCount": 308,
       "collection": {
         "id": 75235,
         "name": "Ghost of Tsushima"
@@ -92389,7 +92567,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 87.0715295575566,
+      "totalRating": 87.0698913942833,
       "totalRatingCount": 350,
       "releaseYear": 2019
     },
@@ -92540,8 +92718,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 90.5675586067602,
-      "totalRatingCount": 659,
+      "totalRating": 90.56436950428504,
+      "totalRatingCount": 663,
       "collection": {
         "id": 76882,
         "name": "Sekiro: Shadows Die Twice"
@@ -92925,8 +93103,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 75.8877582951634,
-      "totalRatingCount": 112,
+      "totalRating": 75.9155566657566,
+      "totalRatingCount": 113,
       "collection": {
         "id": 90055,
         "name": "Carrion"
@@ -93152,7 +93330,7 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 86.82058009200975,
+      "totalRating": 86.8204865995969,
       "totalRatingCount": 659,
       "gameEngines": [
         {
@@ -93273,6 +93451,10 @@
           "name": "Shooter"
         },
         {
+          "id": 10,
+          "name": "Racing"
+        },
+        {
           "id": 12,
           "name": "Role-playing (RPG)"
         },
@@ -93333,8 +93515,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 69.16400309712155,
-      "totalRatingCount": 160,
+      "totalRating": 69.16365356150709,
+      "totalRatingCount": 161,
       "releaseYear": 2019
     },
     "103020": {
@@ -93989,7 +94171,7 @@
         }
       ],
       "totalRating": 85.52255615755195,
-      "totalRatingCount": 370,
+      "totalRatingCount": 371,
       "releaseYear": 2020
     },
     "103301": {
@@ -94177,8 +94359,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.39971955024046,
-      "totalRatingCount": 530,
+      "totalRating": 83.39951595425525,
+      "totalRatingCount": 532,
       "releaseYear": 2019
     },
     "103339": {
@@ -94553,7 +94735,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 77.4307598411202,
+      "totalRating": 77.4307440670155,
       "totalRatingCount": 174,
       "releaseYear": 2019
     },
@@ -94679,8 +94861,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 81.71652695428779,
-      "totalRatingCount": 144,
+      "totalRating": 81.77482366572485,
+      "totalRatingCount": 146,
       "gameEngines": [
         {
           "id": 0,
@@ -94777,8 +94959,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 85.9203733100116,
-      "totalRatingCount": 121,
+      "totalRating": 85.93002714689334,
+      "totalRatingCount": 122,
       "releaseYear": 2018
     },
     "109455": {
@@ -94841,8 +95023,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 86.210099883311,
-      "totalRatingCount": 146,
+      "totalRating": 86.21063270992705,
+      "totalRatingCount": 147,
       "gameEngines": [
         {
           "id": 0,
@@ -94911,8 +95093,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 86.87507213486936,
-      "totalRatingCount": 302,
+      "totalRating": 86.8736269356016,
+      "totalRatingCount": 304,
       "gameEngines": [
         {
           "id": 0,
@@ -94985,8 +95167,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.9705345244459,
-      "totalRatingCount": 275,
+      "totalRating": 83.97008684964766,
+      "totalRatingCount": 277,
       "collection": {
         "id": 110248,
         "name": "Stray"
@@ -95161,8 +95343,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.63717110605944,
-      "totalRatingCount": 117,
+      "totalRating": 89.4768107737988,
+      "totalRatingCount": 120,
       "releaseYear": 2022
     },
     "112875": {
@@ -95271,8 +95453,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 94.91782664112614,
-      "totalRatingCount": 154,
+      "totalRating": 94.91078828327775,
+      "totalRatingCount": 161,
       "gameEngines": [
         {
           "id": 0,
@@ -95390,8 +95572,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.1717509854294,
-      "totalRatingCount": 176,
+      "totalRating": 82.13899049416764,
+      "totalRatingCount": 177,
       "releaseYear": 2019
     },
     "113111": {
@@ -95476,7 +95658,7 @@
         }
       ],
       "totalRating": 69.7891330465339,
-      "totalRatingCount": 160,
+      "totalRatingCount": 161,
       "releaseYear": 2019
     },
     "113112": {
@@ -95564,8 +95746,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 93.0058812834074,
-      "totalRatingCount": 699,
+      "totalRating": 93.00460827864235,
+      "totalRatingCount": 702,
       "collection": {
         "id": 113112,
         "name": "Hades"
@@ -95733,8 +95915,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 87.26872051919725,
-      "totalRatingCount": 102,
+      "totalRating": 87.25472266673052,
+      "totalRatingCount": 104,
       "collection": {
         "id": 113598,
         "name": "Deathloop"
@@ -95911,7 +96093,7 @@
           "name": "First person"
         }
       ],
-      "totalRating": 82.72836743764695,
+      "totalRating": 82.7285493254634,
       "totalRatingCount": 378,
       "collection": {
         "id": 114795,
@@ -96052,8 +96234,8 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 66.62290389356065,
-      "totalRatingCount": 122,
+      "totalRating": 66.62458748677184,
+      "totalRatingCount": 123,
       "gameEngines": [
         {
           "id": 0,
@@ -96145,7 +96327,7 @@
           "name": "Bird view / Isometric"
         }
       ],
-      "totalRating": 74.74925338803975,
+      "totalRating": 74.74925338803979,
       "totalRatingCount": 153,
       "collection": {
         "id": 116753,
@@ -96229,8 +96411,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 96.260148640279,
-      "totalRatingCount": 447,
+      "totalRating": 96.25758465429055,
+      "totalRatingCount": 452,
       "collection": {
         "id": 119133,
         "name": "Elden Ring"
@@ -96517,7 +96699,7 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.92891736211615,
+      "totalRating": 81.93059181429174,
       "totalRatingCount": 241,
       "collection": {
         "id": 119277,
@@ -96624,7 +96806,7 @@
         }
       ],
       "totalRating": 76.2756502783104,
-      "totalRatingCount": 316,
+      "totalRatingCount": 317,
       "collection": {
         "id": 119313,
         "name": "Fall Guys"
@@ -96850,8 +97032,8 @@
           "name": "Side view"
         }
       ],
-      "totalRating": 82.11338629429744,
-      "totalRatingCount": 143,
+      "totalRating": 82.3426669735672,
+      "totalRatingCount": 145,
       "releaseYear": 2021
     },
     "126459": {
@@ -96901,8 +97083,8 @@
           "name": "First person"
         }
       ],
-      "totalRating": 75.68300395698054,
-      "totalRatingCount": 209,
+      "totalRating": 75.68260384918075,
+      "totalRatingCount": 210,
       "collection": {
         "id": 126459,
         "name": "Valorant"
@@ -97154,8 +97336,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 73.12979782255076,
-      "totalRatingCount": 108,
+      "totalRating": 73.16755226841764,
+      "totalRatingCount": 109,
       "collection": {
         "id": 133308,
         "name": "The Medium"
@@ -97224,8 +97406,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 84.71563931927905,
-      "totalRatingCount": 215,
+      "totalRating": 84.71606672392761,
+      "totalRatingCount": 217,
       "gameEngines": [
         {
           "id": 0,
@@ -97290,8 +97472,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 91.18282050032434,
-      "totalRatingCount": 106,
+      "totalRating": 91.1828249658021,
+      "totalRatingCount": 107,
       "gameEngines": [
         {
           "id": 0,
@@ -97348,8 +97530,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 82.90477294181716,
-      "totalRatingCount": 126,
+      "totalRating": 82.9047729418172,
+      "totalRatingCount": 127,
       "collection": {
         "id": 134597,
         "name": "Astro's Playroom"
@@ -97453,8 +97635,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.57033016810225,
-      "totalRatingCount": 268,
+      "totalRating": 89.56840571202054,
+      "totalRatingCount": 271,
       "collection": {
         "id": 135243,
         "name": "It Takes Two"
@@ -97554,8 +97736,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 83.64860180913391,
-      "totalRatingCount": 121,
+      "totalRating": 83.6763925017201,
+      "totalRatingCount": 125,
       "collection": {
         "id": 136625,
         "name": "Hogwarts Legacy"
@@ -97754,8 +97936,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 89.7800806649855,
-      "totalRatingCount": 142,
+      "totalRating": 89.77923773998695,
+      "totalRatingCount": 143,
       "releaseYear": 2021
     },
     "144765": {
@@ -97836,8 +98018,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.86183962352484,
-      "totalRatingCount": 103,
+      "totalRating": 81.86000611621026,
+      "totalRatingCount": 104,
       "gameEngines": [
         {
           "id": 0,
@@ -97924,8 +98106,8 @@
           "name": "Third person"
         }
       ],
-      "totalRating": 81.2684409662395,
-      "totalRatingCount": 182,
+      "totalRating": 81.26840736255184,
+      "totalRatingCount": 183,
       "collection": {
         "id": 152249,
         "name": "Marvel's Guardians of the Galaxy"
@@ -97933,5 +98115,5 @@
       "releaseYear": 2021
     }
   },
-  "count": 1079
+  "count": 1083
 }

@@ -8,6 +8,7 @@
   "source": "src/index.html",
   "type": "module",
   "scripts": {
+    "import": "node scripts/import.js",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "format": "prettier .",
     "prepare": "test -f .git/hooks/pre-commit || cp scripts/pre-commit .git/hooks/pre-commit",
