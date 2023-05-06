@@ -6,7 +6,7 @@ Game information is provided by [Twitch's IGDB](https://www.igdb.com).
 
 ## Development
 
-The **Daily Game Trivia** is a React application bundled via [Vite](https://vitejs.dev).
+The **Daily Game Trivia** is a React application built using [Parcel](https://parceljs.org/).
 
 To start clone the repository and run:
 
@@ -15,6 +15,15 @@ npm start
 ```
 
 This will install dependencies, copy the `pre-commit` hook and spin up a development server.
+
+### Static analysis
+
+We use ESLint, Prettier and TypeScript to maintain code quality.
+
+```sh
+npm run format -- --write
+npm run lint -- --fix
+```
 
 ### Deployment
 
