@@ -8,13 +8,13 @@
   "source": "src/index.html",
   "type": "module",
   "scripts": {
-    "import": "node scripts/import.js",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier .",
     "prepare": "test -f .git/hooks/pre-commit || cp scripts/pre-commit .git/hooks/pre-commit",
+    "import": "node scripts/import.js",
+    "format": "prettier .",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "prestart": "test -d node_modules || npm ci",
     "start": "parcel",
-    "prebuild": "npm run format -- --check --loglevel error && npm run lint -- --quiet",
+    "prebuild": "npm run format -- --check --loglevel error && npm run lint -- --quiet && tsc --noEmit",
     "build": "parcel build"
   },
   "dependencies": {
@@ -33,7 +33,6 @@
     "@types/react-dom": "^18.2.3",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "eslint": "^8.39.0",
-    "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
