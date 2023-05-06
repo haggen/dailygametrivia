@@ -4,7 +4,8 @@ import * as classes from "./style.module.css";
 
 import { ClassList } from "~/src/lib/classList";
 import { useForwardRef } from "~/src/lib/useForwardRef";
-import { useScheduledEffect } from "~/src/lib/useScheduledEffect";
+import { useScheduledLayoutEffect } from "~/src/lib/useScheduledLayoutEffect";
+import { getPreviousIndex, getNextIndex } from "~/src/lib/listIndex";
 
 export type Option<T = unknown> = {
   key: string;
@@ -34,7 +35,7 @@ function DataList<T>(
 ) {
   const listRef = useForwardRef(ref);
 
-  const scrollToSelectedOption = useScheduledEffect(() => {
+  const scrollToSelectedOption = useScheduledLayoutEffect(() => {
     listRef.current
       ?.querySelector('li[aria-selected="true"]')
       ?.scrollIntoView({ block: "nearest" });
@@ -43,13 +44,11 @@ function DataList<T>(
   const handleKeyDown = (event: KeyboardEvent<HTMLUListElement>) => {
     switch (event.key) {
       case "ArrowUp":
-        // onSelect((selectedIndex - 1 + options.length) % options.length);
-        onSelect(Math.max(selectedIndex - 1, 0));
+        onSelect(getPreviousIndex(selectedIndex));
         scrollToSelectedOption();
         break;
       case "ArrowDown":
-        // onSelect((selectedIndex + 1) % options.length);
-        onSelect(Math.min(selectedIndex + 1, options.length - 1));
+        onSelect(getNextIndex(selectedIndex, options.length));
         scrollToSelectedOption();
         break;
       case "Enter":

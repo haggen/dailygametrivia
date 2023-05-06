@@ -17,6 +17,7 @@ import { useSimpleState } from "~/src/lib/useSimpleState";
 import { useFocusTrap } from "~/src/lib/useFocusTrap";
 import { Flex } from "~/src/components/Flex";
 import { Game, load, search } from "~/src/lib/data";
+import { getPreviousIndex, getNextIndex } from "~/src/lib/listIndex";
 
 type Props = {
   inputRef: RefObject<HTMLInputElement>;
@@ -100,12 +101,10 @@ export function Form({ inputRef, onSubmit }: Props) {
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     switch (event.key) {
       case "ArrowUp":
-        // handleSelect((candidateIndex - 1 + options.length) % options.length);
-        handleSelect(Math.max(candidateIndex - 1, 0));
+        handleSelect(getPreviousIndex(candidateIndex));
         break;
       case "ArrowDown":
-        // handleSelect((candidateIndex + 1) % options.length);
-        handleSelect(Math.min(candidateIndex + 1, options.length - 1));
+        handleSelect(getNextIndex(candidateIndex, options.length));
         break;
       case "Enter":
         if (!isExpanded) {

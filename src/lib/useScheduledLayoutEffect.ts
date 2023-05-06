@@ -1,14 +1,16 @@
 import { useLayoutEffect, useRef } from "react";
 
+type Effect = () => void;
+
 /**
  * Schedule a one time effect for the next render.
  */
-export function useScheduledEffect(): (effect: () => void) => void;
-export function useScheduledEffect(
-  defaultEffect: () => void
-): (effect?: () => void) => void;
-export function useScheduledEffect(defaultEffect?: () => void) {
-  const scheduleRef = useRef<(() => void)[]>([]);
+export function useScheduledLayoutEffect(): (effect: Effect) => void;
+export function useScheduledLayoutEffect(
+  defaultEffect: Effect
+): (effect?: Effect) => void;
+export function useScheduledLayoutEffect(defaultEffect?: Effect) {
+  const scheduleRef = useRef<Effect[]>([]);
 
   useLayoutEffect(() => {
     scheduleRef.current.forEach((effect) => effect());
