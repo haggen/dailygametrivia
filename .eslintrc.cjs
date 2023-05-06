@@ -2,11 +2,10 @@ module.exports = {
   env: { browser: true, node: true, es2020: true },
   extends: [
     "eslint:recommended",
+    "plugin:import/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "prettier",
   ],
   plugins: ["react-refresh"],
   parserOptions: {
@@ -18,11 +17,11 @@ module.exports = {
     },
   },
   rules: {
-    // ?
+    // Make sure we don't break React refresh.
     "react-refresh/only-export-components": "warn",
 
     // Warn about console leftovers.
-    "no-console": "error",
+    "no-console": "warn",
 
     // Unecessary.
     "react/no-unescaped-entities": "off",
@@ -30,7 +29,7 @@ module.exports = {
     // Wrong dependencies cause errors, so it should be an error.
     "react-hooks/exhaustive-deps": "error",
 
-    // Insert blank lines between import groups and categorize ~/* paths.
+    // Insert blank lines between import groups and categorize aliased paths.
     "import/order": [
       "error",
       {
@@ -53,7 +52,7 @@ module.exports = {
       ],
       parser: "@typescript-eslint/parser",
       parserOptions: {
-        project: "./tsconfig.json",
+        project: true,
       },
       settings: {
         "import/resolver": {
