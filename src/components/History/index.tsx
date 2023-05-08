@@ -21,8 +21,8 @@ export function History({ history, secretGame }: Props) {
   return (
     <ol className={classes.history}>
       {reversed.map((game, index) => (
-        <li key={index}>
-          <span className={classes.attempt}>{history.length - index}</span>
+        <li key={index} className={classes.item}>
+          <div className={classes.attempt}>{history.length - index}</div>
           <Guess guess={game} comparison={compareGames(secretGame, game)} />
         </li>
       ))}

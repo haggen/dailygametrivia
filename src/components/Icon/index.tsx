@@ -2,6 +2,8 @@ import { CSSProperties, ReactElement, cloneElement } from "react";
 
 import * as classes from "./style.module.css";
 
+import { ClassList } from "~/src/lib/classList";
+
 const icons: Record<string, ReactElement> = {
   exact: (
     <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -122,14 +124,19 @@ const icons: Record<string, ReactElement> = {
 
 type Props = {
   name: keyof typeof icons;
+  className?: string;
   size?: string;
   color?: string;
   style?: CSSProperties;
 };
 
-export function Icon({ name, style, size, color }: Props) {
+export function Icon({ name, className, style, size, color }: Props) {
+  const classList = new ClassList(classes.icon);
+  if (className) {
+    classList.add(className);
+  }
   return cloneElement(icons[name], {
-    className: classes.icon,
+    className: String(classList),
     style: { fontSize: size, color, ...style },
   });
 }

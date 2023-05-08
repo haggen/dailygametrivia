@@ -1,0 +1,32 @@
+.hint {
+  align-items: start;
+  border-radius: 0.25rem;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.125rem 0.25rem;
+  position: relative;
+}
+
+.hint:hover,
+.hint:focus-visible {
+  background-color: var(--color-background-bright);
+}
+
+.hint.exact {
+  color: var(--color-green);
+}
+
+.hint.partial {
+  color: var(--color-yellow);
+}
+
+.hint.lower,
+.hint.higher,
+.hint.mismatch {
+  color: var(--color-red);
+}
+
+.icon {
+  margin-block-start: 0.25rem;
+  font-size: 1.125rem;
+}

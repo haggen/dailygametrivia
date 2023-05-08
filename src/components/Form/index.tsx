@@ -158,7 +158,7 @@ export function Form({ inputRef, onSubmit }: Props) {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      {isExpanded ? (
+      {isExpanded && queryValue ? (
         <div className={classes.popover}>
           <DataList
             id={dataListId}
@@ -167,13 +167,7 @@ export function Form({ inputRef, onSubmit }: Props) {
             options={options}
             onSelect={handleSelect}
             onCommit={handleCommit}
-            message={
-              options.length > 0
-                ? undefined
-                : queryValue
-                ? "No results."
-                : undefined
-            }
+            message={options.length > 0 ? undefined : "No results."}
           />
         </div>
       ) : null}

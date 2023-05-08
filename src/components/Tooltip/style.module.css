@@ -1,0 +1,51 @@
+.tooltip {
+  background-color: var(--color-background-bright);
+  border-radius: 0 0.25rem 0.25rem;
+  box-shadow: var(--outset-shade);
+  color: hsla(0, 0%, 100%, 0.75);
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  z-index: 10;
+}
+
+.tooltip strong {
+  color: white;
+}
+
+.tooltip.green {
+  background-color: var(--color-background-green);
+}
+
+.tooltip.yellow {
+  background-color: var(--color-background-yellow);
+}
+
+.tooltip.red {
+  background-color: var(--color-background-red);
+}
+
+.tooltip.green .pointer {
+  color: var(--color-background-green);
+}
+
+.tooltip.yellow .pointer {
+  color: var(--color-background-yellow);
+}
+
+.tooltip.red .pointer {
+  color: var(--color-background-red);
+}
+
+.tooltip:not(.active) {
+  display: none;
+}
+
+.pointer {
+  bottom: 100%;
+  color: var(--color-background-bright);
+  font-size: 0.75rem;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  width: 1em;
+}

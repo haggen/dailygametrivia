@@ -14,24 +14,4 @@
 .guess ul {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-}
-
-.guess li {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.exact {
-  color: var(--color-green);
-}
-
-.partial {
-  color: var(--color-yellow);
-}
-
-.lower,
-.higher,
-.mismatch {
-  color: var(--color-red);
 }

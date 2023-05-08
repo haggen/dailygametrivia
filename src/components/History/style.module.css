@@ -8,10 +8,14 @@
   width: 100%;
 }
 
-.history > li {
+.item {
   align-items: start;
   display: flex;
   gap: 0.5rem;
+}
+
+.item > * {
+  flex: 0 1 100%;
 }
 
 .attempt {

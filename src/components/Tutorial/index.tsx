@@ -11,7 +11,7 @@ type Props = {
   onChange?: (page: number, total: number) => void;
 };
 
-export function Help({
+export function Tutorial({
   children,
   page: initialPage = 0,
   style,
@@ -36,7 +36,6 @@ export function Help({
   };
 
   const isLastPage = page === total - 1;
-  // const isSecondToLastPage = page === total - 2;
 
   return (
     <article className={classes.help} style={style}>

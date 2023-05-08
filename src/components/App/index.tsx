@@ -6,8 +6,8 @@ import * as classes from "./style.module.css";
 import { Game, getCount, getGame, getId, load } from "~/src/lib/data";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { getTodaysOffset } from "~/src/lib/seededOffset";
-import { compareGames } from "~/src/lib/compareGames";
-import { Help } from "~/src/components/Help";
+import { Outcome, compareGames } from "~/src/lib/compareGames";
+import { Tutorial } from "~/src/components/Tutorial";
 import { Form } from "~/src/components/Form";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
@@ -117,7 +117,7 @@ export function App() {
     }
     const comparison = compareGames(secretGame, game);
 
-    if (comparison.id === "exact") {
+    if (comparison.id === Outcome.Exact) {
       handleVictory(game);
     } else if (remainingAttempts > 1) {
       dispatch({
@@ -162,7 +162,7 @@ export function App() {
         {history.length > 0 ? (
           <History history={history} secretGame={secretGame} />
         ) : (
-          <Help onChange={handleHelp}>
+          <Tutorial onChange={handleHelp}>
             <p>
               <Balancer>You have 10 guesses to find the secret game.</Balancer>
             </p>
@@ -185,7 +185,7 @@ export function App() {
             <p>
               <Balancer>Take your first guess to start and good luck!</Balancer>
             </p>
-          </Help>
+          </Tutorial>
         )}
       </main>
 
