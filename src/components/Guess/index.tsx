@@ -25,7 +25,9 @@ type Props = {
 export function Guess({ guess, comparison }: Props) {
   return (
     <div className={classes.guess}>
-      <Balancer as="h1">{guess.name}</Balancer>
+      <a href={guess.url} target="_blank" rel="noreferrer">
+        <Balancer as="h1">{guess.name}</Balancer>
+      </a>
 
       <ul>
         {availableInformation.map((key) => (

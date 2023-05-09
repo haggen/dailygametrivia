@@ -1,18 +1,17 @@
 .button {
   align-items: center;
-  color: #fff;
   background-color: var(--color-text-placeholder);
-  box-shadow: var(--outset-shade), var(--outset-light);
   border-radius: 0.25rem;
+  box-shadow: var(--outset-shade), var(--outset-light);
+  color: #fff;
   cursor: pointer;
   display: inline flex;
   font-weight: bolder;
   gap: 0.25rem;
   height: 3rem;
   justify-content: center;
+  line-height: 1.25;
   padding-inline: 1.5rem;
-  font-size: 0.875rem;
-  line-height: 1;
 }
 
 .button:not(:disabled):active {

@@ -46,7 +46,7 @@ const criteria = `
   player_perspectives != null & involved_companies != null & game_modes != null`;
 
 const fields = `
-  name, first_release_date, genres.name, player_perspectives.name,
+  name, url, first_release_date, genres.name, player_perspectives.name,
   involved_companies.company.name, platforms.name, platforms.abbreviation,
   game_engines.name, game_modes.name, collection.name, total_rating, total_rating_count`;
 

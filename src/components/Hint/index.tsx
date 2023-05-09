@@ -1,5 +1,6 @@
 import Balancer from "react-wrap-balancer";
-import { useRef, useState } from "react";
+import { useState } from "react";
+import { createPortal } from "react-dom";
 
 import classes from "./style.module.css";
 
@@ -7,8 +8,6 @@ import { Icon } from "~/src/components/Icon";
 import { Outcome } from "~/src/lib/compareGames";
 import { Game } from "~/src/lib/data";
 import { Tooltip } from "~/src/components/Tooltip";
-import { useFocusTrap } from "~/src/lib/useFocusTrap";
-// import { useMountedRef } from "~/src/lib/useMountedRef";
 import { ClassList } from "~/src/lib/classList";
 
 function getIcon(outcome: Outcome) {
@@ -68,8 +67,7 @@ function getPartialTooltip(name: string, outcome: Outcome) {
   if (outcome === Outcome.Partial) {
     return (
       <>
-        The game has <strong>one or more</strong> of these{" "}
-        <strong>{name}</strong>.
+        The game has one or more of these <strong>{name}</strong>.
       </>
     );
   }
@@ -86,20 +84,20 @@ function getTooltip(attribute: keyof Game, outcome: Outcome) {
       if (outcome === Outcome.Higher) {
         return (
           <>
-            The game was <strong>released later</strong> than this year.
+            The game was <strong>released</strong> later than this year.
           </>
         );
       }
       if (outcome === Outcome.Lower) {
         return (
           <>
-            The game was <strong>released earlier</strong> than this year.
+            The game was <strong>released</strong> earlier than this year.
           </>
         );
       }
       return (
         <>
-          The game was <strong>released in this year</strong>.
+          The game was <strong>released</strong> in this year.
         </>
       );
     case "genres":
@@ -107,7 +105,7 @@ function getTooltip(attribute: keyof Game, outcome: Outcome) {
     case "platforms":
       return getPartialTooltip("platforms", outcome);
     case "playerPerspectives":
-      return getPartialTooltip("player perspectives", outcome);
+      return getPartialTooltip("perspectives", outcome);
     case "gameEngines":
       return getPartialTooltip("engines", outcome);
     case "gameModes":
@@ -147,36 +145,18 @@ type Props = {
 };
 
 export function Hint({ game, attribute, outcome }: Props) {
-  // const mountedRef = useMountedRef();
-  const timeoutRef = useRef(0);
+  const [element, setElement] = useState<HTMLElement | null>(null);
   const [tooltip, setTooltip] = useState(false);
-  const trapRef = useRef<HTMLDivElement>(null);
 
-  useFocusTrap([trapRef], (focused) => {
-    setTooltip(focused);
-  });
+  const handleClick = () => {
+    setTooltip(true);
+  };
 
   const handleMouseEnter = () => {
-    clearTimeout(timeoutRef.current);
     setTooltip(true);
   };
 
   const handleMouseLeave = () => {
-    // timeoutRef.current = setTimeout(() => {
-    //   if (!mountedRef.current) {
-    //     return;
-    //   }
-    //   if (trapRef.current?.contains(document.activeElement)) {
-    //     return;
-    //   }
-
-    //   setTooltip(false);
-    // }, 100);
-
-    if (trapRef.current?.contains(document.activeElement)) {
-      return;
-    }
-
     setTooltip(false);
   };
 
@@ -195,22 +175,26 @@ export function Hint({ game, attribute, outcome }: Props) {
 
   return (
     <div
-      ref={trapRef}
+      ref={setElement}
       className={String(classList)}
+      onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      tabIndex={0}
     >
       {getIcon(outcome)}
       <Balancer>{getDescription(attribute, game)}</Balancer>
 
-      <Tooltip
-        active={tooltip}
-        color={tooltipColors[outcome]}
-        style={{ top: "100%", left: "1rem" }}
-      >
-        <p>{getTooltip(attribute, outcome)}</p>
-      </Tooltip>
+      {createPortal(
+        <Tooltip
+          reference={element}
+          active={tooltip}
+          color={tooltipColors[outcome]}
+          offset={{ mainAxis: -6, crossAxis: 14 }}
+        >
+          <p>{getTooltip(attribute, outcome)}</p>
+        </Tooltip>,
+        document.body
+      )}
     </div>
   );
 }
