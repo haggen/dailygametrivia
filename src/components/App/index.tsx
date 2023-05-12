@@ -15,6 +15,7 @@ import { Button } from "~/src/components/Button";
 import * as Storage from "~/src/lib/storage";
 import { History } from "~/src/components/History";
 import { MoreInfo } from "~/src/components/MoreInfo";
+import { Summary } from "~/src/components/Summary";
 
 type State = {
   stage: "playing" | "victory" | "gameover";
@@ -160,7 +161,10 @@ export function App() {
 
       <main className={classes.content}>
         {history.length > 0 ? (
-          <History history={history} secretGame={secretGame} />
+          <>
+            <Summary history={history} secretGame={secretGame}></Summary>
+            <History history={history} secretGame={secretGame} />
+          </>
         ) : (
           <Tutorial onChange={handleHelp}>
             <p>
