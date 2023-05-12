@@ -1,0 +1,6 @@
+.summary {
+  padding-inline: 1rem;
+  max-width: 40em;
+  width: 100%;
+  color: var(--color-green);
+}
