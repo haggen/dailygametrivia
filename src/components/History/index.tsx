@@ -8,10 +8,10 @@ import { Game } from "~/src/lib/data";
 
 type Props = {
   history: Game[];
-  secretGame: Game;
+  mysteryGame: Game;
 };
 
-export function History({ history, secretGame }: Props) {
+export function History({ history, mysteryGame }: Props) {
   useEffect(() => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   });
@@ -23,7 +23,7 @@ export function History({ history, secretGame }: Props) {
       {reversed.map((game, index) => (
         <li key={index} className={classes.item}>
           <div className={classes.attempt}>{history.length - index}</div>
-          <Guess guess={game} comparison={compareGames(secretGame, game)} />
+          <Guess guess={game} comparison={compareGames(mysteryGame, game)} />
         </li>
       ))}
     </ol>

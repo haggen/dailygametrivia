@@ -1,13 +1,12 @@
 import Balancer from "react-wrap-balancer";
-import { useState } from "react";
-import { createPortal } from "react-dom";
+import { useRef } from "react";
 
 import classes from "./style.module.css";
 
 import { Icon } from "~/src/components/Icon";
 import { Outcome } from "~/src/lib/compareGames";
 import { Game } from "~/src/lib/data";
-import { Tooltip } from "~/src/components/Tooltip";
+import { useTooltip } from "~/src/components/Tooltip";
 import { ClassList } from "~/src/lib/classList";
 
 function getIcon(outcome: Outcome) {
@@ -23,120 +22,337 @@ function getIcon(outcome: Outcome) {
     case Outcome.Lower:
       return <Icon name="lower" className={classes.icon} />;
     default:
-      throw new Error(`Unknown outcome: ${outcome}`);
+      throw new Error(`Unknown outcome "${outcome}"`);
   }
 }
 
-function getDescription<T extends keyof Game>(key: T, game: Game) {
-  switch (key) {
-    case "releaseYear":
-      return game.releaseYear;
-    case "genres":
-      return game.genres.map((genre) => genre.name).join(", ");
-    case "platforms":
-      return game.platforms
-        .map((platform) => platform.abbreviation ?? platform.name)
-        .join(", ");
-    case "playerPerspectives":
-      return game.playerPerspectives
-        .map((platform) => platform.name)
-        .join(", ");
-    case "gameEngines":
-      return game.gameEngines.map((engine) => engine.name).join(", ");
-    case "gameModes":
-      return game.gameModes.map((mode) => mode.name).join(", ");
-    case "collection":
-      return game.collection.name;
-    case "involvedCompanies":
-      return game.involvedCompanies
-        .map((involvement) => involvement.company.name)
-        .join(", ");
-    default:
-      return `(${key}) ${JSON.stringify(game[key])}`;
-  }
+function getReleaseYearLabel(game: Game) {
+  return game.releaseYear;
 }
 
-function getPartialTooltip(name: string, outcome: Outcome) {
-  if (outcome === Outcome.Exact) {
-    return (
-      <>
-        The game has exactly these <strong>{name}</strong>.
-      </>
-    );
-  }
-  if (outcome === Outcome.Partial) {
-    return (
-      <>
-        The game has one or more of these <strong>{name}</strong>.
-      </>
-    );
-  }
-  return (
-    <>
-      The game doesn't have any of these <strong>{name}</strong>.
-    </>
-  );
+function getGenresLabel(game: Game) {
+  return game.genres.map((genre) => genre.name).join(", ");
 }
 
-function getTooltip(attribute: keyof Game, outcome: Outcome) {
+function getThemesLabel(game: Game) {
+  return game.themes.map((theme) => theme.name).join(", ");
+}
+
+function getPlatformsLabel(game: Game) {
+  return game.platforms
+    .map((platform) => platform.abbreviation ?? platform.name)
+    .join(", ");
+}
+
+function getPlayerPerspectivesLabel(game: Game) {
+  return game.playerPerspectives.map((platform) => platform.name).join(", ");
+}
+
+function getEnginesLabel(game: Game) {
+  return game.gameEngines.map((engine) => engine.name).join(", ");
+}
+
+function getModesLabel(game: Game) {
+  return game.gameModes.map((mode) => mode.name).join(", ");
+}
+
+function getCollectionLabel(game: Game) {
+  return game.collection.name;
+}
+
+function getCompaniesLabel(game: Game) {
+  return game.involvedCompanies
+    .map((involvement) => involvement.company.name)
+    .join(", ");
+}
+
+function getLabel(attribute: keyof Game, game: Game) {
   switch (attribute) {
+    case "collection":
+      return getCollectionLabel(game);
     case "releaseYear":
-      if (outcome === Outcome.Higher) {
-        return (
-          <>
-            The game was <strong>released</strong> later than this year.
-          </>
-        );
-      }
-      if (outcome === Outcome.Lower) {
-        return (
-          <>
-            The game was <strong>released</strong> earlier than this year.
-          </>
-        );
-      }
+      return getReleaseYearLabel(game);
+    case "platforms":
+      return getPlatformsLabel(game);
+    case "genres":
+      return getGenresLabel(game);
+    case "themes":
+      return getThemesLabel(game);
+    case "playerPerspectives":
+      return getPlayerPerspectivesLabel(game);
+    case "gameModes":
+      return getModesLabel(game);
+    case "gameEngines":
+      return getEnginesLabel(game);
+    case "involvedCompanies":
+      return getCompaniesLabel(game);
+    default:
+      throw new Error(`Missing label for "${attribute}"`);
+  }
+}
+
+function getReleaseYearTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Higher:
       return (
         <>
-          The game was <strong>released</strong> in this year.
+          The game's <strong>release year</strong> is higher.
         </>
       );
-    case "genres":
-      return getPartialTooltip("genres", outcome);
-    case "platforms":
-      return getPartialTooltip("platforms", outcome);
-    case "playerPerspectives":
-      return getPartialTooltip("perspectives", outcome);
-    case "gameEngines":
-      return getPartialTooltip("engines", outcome);
-    case "gameModes":
-      return getPartialTooltip("modes", outcome);
-    case "collection":
-      if (outcome === Outcome.Exact) {
-        return (
-          <>
-            The game belongs to this <strong>series</strong>.
-          </>
-        );
-      }
+
+    case Outcome.Lower:
+      return (
+        <>
+          The game's <strong>release year</strong> is lower.
+        </>
+      );
+
+    case Outcome.Exact:
+      return (
+        <>
+          The game's <strong>release year</strong> is exact.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome} for release year"`);
+  }
+}
+
+function getGenresTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game has exactly these <strong>genres</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game has one or more of these <strong>genres</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't have any of these <strong>genres</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome}" for genres`);
+  }
+}
+
+function getThemesTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game has exactly these <strong>themes</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game has one or more of these <strong>themes</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't have any of these <strong>themes</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome}" for themes`);
+  }
+}
+
+function getPlatformsTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game has exactly these <strong>platforms</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game has one or more of these <strong>platforms</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't have any of these <strong>platforms</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome}" for platforms`);
+  }
+}
+
+function getPerspectivesTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game has exactly these <strong>perspectives</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game has one or more of these <strong>perspectives</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't have any of these <strong>perspectives</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome}" for perspectives`);
+  }
+}
+
+function getEnginesTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game uses exactly these <strong>engines</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game uses one or more of these <strong>engines</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't use any of these <strong>engines</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome}" for engines`);
+  }
+}
+
+function getModesTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game has exactly these <strong>modes</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game has one or more of these <strong>modes</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't have any of these <strong>modes</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome}" for modes`);
+  }
+}
+
+function getCollectionTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game belongs to this <strong>series</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
       return (
         <>
           The game doesn't belong to this <strong>series</strong>.
         </>
       );
-    case "involvedCompanies":
-      return getPartialTooltip("companies", outcome);
     default:
-      return `(${attribute}) ${outcome}`;
+      throw new Error(`Invalid outcome "${outcome} for collection"`);
   }
 }
 
-const tooltipColors = {
-  [Outcome.Exact]: "green",
-  [Outcome.Partial]: "yellow",
-  [Outcome.Mismatch]: "red",
-  [Outcome.Higher]: "red",
-  [Outcome.Lower]: "red",
-};
+function getCompaniesTooltip(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return (
+        <>
+          The game involves exactly these <strong>companies</strong>.
+        </>
+      );
+    case Outcome.Partial:
+      return (
+        <>
+          The game involves one or more of these <strong>companies</strong>.
+        </>
+      );
+    case Outcome.Mismatch:
+      return (
+        <>
+          The game doesn't involve any of these <strong>companies</strong>.
+        </>
+      );
+    default:
+      throw new Error(`Invalid outcome "${outcome} for involved companies"`);
+  }
+}
+
+function getTooltip(attribute: keyof Game, outcome: Outcome) {
+  switch (attribute) {
+    case "collection":
+      return getCollectionTooltip(outcome);
+    case "releaseYear":
+      return getReleaseYearTooltip(outcome);
+    case "genres":
+      return getGenresTooltip(outcome);
+    case "themes":
+      return getThemesTooltip(outcome);
+    case "platforms":
+      return getPlatformsTooltip(outcome);
+    case "playerPerspectives":
+      return getPerspectivesTooltip(outcome);
+    case "gameModes":
+      return getModesTooltip(outcome);
+    case "gameEngines":
+      return getEnginesTooltip(outcome);
+    case "involvedCompanies":
+      return getCompaniesTooltip(outcome);
+    default:
+      throw new Error(`Missing tooltip for "${attribute}"`);
+  }
+}
+
+function getTooltipColor(outcome: Outcome) {
+  switch (outcome) {
+    case Outcome.Exact:
+      return "green";
+    case Outcome.Partial:
+      return "yellow";
+    case Outcome.Mismatch:
+      return "red";
+    case Outcome.Higher:
+      return "red";
+    case Outcome.Lower:
+      return "red";
+    default:
+      throw new Error(`Unknown color for "${outcome}"`);
+  }
+}
 
 type Props = {
   game: Game;
@@ -145,19 +361,28 @@ type Props = {
 };
 
 export function Hint({ game, attribute, outcome }: Props) {
-  const [element, setElement] = useState<HTMLElement | null>(null);
-  const [tooltip, setTooltip] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+  const tooltip = useTooltip();
+
+  const showTooltip = () => {
+    tooltip.set({
+      reference: elementRef.current,
+      children: getTooltip(attribute, outcome),
+      color: getTooltipColor(outcome),
+      offset: { crossAxis: 0, mainAxis: 0 },
+    });
+  };
 
   const handleClick = () => {
-    setTooltip(true);
+    showTooltip();
   };
 
   const handleMouseEnter = () => {
-    setTooltip(true);
+    showTooltip();
   };
 
   const handleMouseLeave = () => {
-    setTooltip(false);
+    tooltip.clear();
   };
 
   const classList = new ClassList(classes.hint);
@@ -175,26 +400,14 @@ export function Hint({ game, attribute, outcome }: Props) {
 
   return (
     <div
-      ref={setElement}
+      ref={elementRef}
       className={String(classList)}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {getIcon(outcome)}
-      <Balancer>{getDescription(attribute, game)}</Balancer>
-
-      {createPortal(
-        <Tooltip
-          reference={element}
-          active={tooltip}
-          color={tooltipColors[outcome]}
-          offset={{ mainAxis: -6, crossAxis: 14 }}
-        >
-          <p>{getTooltip(attribute, outcome)}</p>
-        </Tooltip>,
-        document.body
-      )}
+      <Balancer>{getLabel(attribute, game)}</Balancer>
     </div>
   );
 }

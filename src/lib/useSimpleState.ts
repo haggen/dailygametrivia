@@ -1,7 +1,11 @@
 import { useReducer } from "react";
 
 function isEquivalent(a: unknown, b: unknown) {
-  return JSON.stringify(a) === JSON.stringify(b);
+  try {
+    return JSON.stringify(a) === JSON.stringify(b);
+  } catch (error) {
+    return false;
+  }
 }
 
 function createReducer<T extends Record<string, unknown>>(defaultValue: T) {

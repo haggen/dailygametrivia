@@ -7,14 +7,20 @@
   padding: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .content {
-  display: flex;
+  display: grid;
   flex: 1 0 auto;
-  justify-content: center;
   padding-block-end: 1rem;
+}
+
+.tutorial {
+  place-self: center;
+  color: var(--color-background-gray);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .footer {
@@ -30,7 +36,7 @@
 .copy {
   color: var(--color-text-dimmed);
   font-size: 0.75rem;
-  padding-block: 1rem;
+  padding-block: 0.5rem;
   text-align: center;
 }
 

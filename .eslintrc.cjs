@@ -1,3 +1,4 @@
+/** @type {import("eslint").ESLint.ConfigData} */
 module.exports = {
   env: { browser: true, node: true, es2020: true },
   extends: [
@@ -6,6 +7,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "prettier",
   ],
   plugins: ["react-refresh"],
   parserOptions: {

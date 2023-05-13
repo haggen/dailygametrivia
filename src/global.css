@@ -12,14 +12,14 @@ html {
   --color-yellow: hsl(29, 100%, 58%);
   --color-shade: rgba(0, 0, 0, 0.3);
   --color-light: rgba(255, 255, 255, 0.5);
-  --color-background: hsl(228, 5%, 15%);
-  --color-background-bright: hsl(228, 5%, 25%);
-  --color-background-gray: hsl(228, 5%, 35%);
-  --color-background-red: hsl(0, 46%, 37%);
-  --color-background-green: hsl(132, 42%, 30%);
-  --color-background-yellow: hsl(30, 56%, 36%);
+  --color-background: hsl(208, 20%, 15%);
+  --color-background-bright: hsl(208, 20%, 25%);
+  --color-background-gray: hsl(208, 20%, 35%);
+  --color-background-red: hsl(358, 45%, 37%);
+  --color-background-green: hsl(136, 43%, 30%);
+  --color-background-yellow: hsl(30, 53%, 37%);
   --color-text: hsl(0, 0%, 100%);
-  --color-text-dimmed: hsl(228, 5%, 55%);
+  --color-text-dimmed: hsl(208, 20%, 55%);
 
   --outset-light: inset 0.125rem 0.125rem rgba(255, 255, 255, 0.3);
   --outset-shade: 0.125rem 0.125rem rgba(0, 0, 0, 0.3);
@@ -28,6 +28,7 @@ html {
   background-color: var(--color-background);
   color: var(--color-text);
   color-scheme: dark;
+  font-family: "Exo 2", sans-serif;
   overscroll-behavior: contain;
 }
 

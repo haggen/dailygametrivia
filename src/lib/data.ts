@@ -10,6 +10,7 @@ export type Game = {
   releaseYear: number;
   platforms: { id: number; name: string; abbreviation?: string }[];
   genres: { id: number; name: string }[];
+  themes: { id: number; name: string }[];
   externalGames?: { category: number; url?: string }[];
   playerPerspectives: { id: number; name: string }[];
   gameEngines: { id: number; name: string }[];

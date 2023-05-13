@@ -7,7 +7,6 @@ import { Game, getCount, getGame, getId, load } from "~/src/lib/data";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { getTodaysOffset } from "~/src/lib/seededOffset";
 import { Outcome, compareGames } from "~/src/lib/compareGames";
-import { Tutorial } from "~/src/components/Tutorial";
 import { Form } from "~/src/components/Form";
 import { Score } from "~/src/components/Score";
 import { Toast } from "~/src/components/Toast";
@@ -15,6 +14,7 @@ import { Button } from "~/src/components/Button";
 import * as Storage from "~/src/lib/storage";
 import { History } from "~/src/components/History";
 import { MoreInfo } from "~/src/components/MoreInfo";
+import { Provider as TooltipProvider } from "~/src/components/Tooltip";
 
 type State = {
   stage: "playing" | "victory" | "gameover";
@@ -77,7 +77,7 @@ export function App() {
     });
   }, [remainingAttempts, history, level, stage, dailyKey]);
 
-  const [secretGame, setSecretGame] = useState<Game>();
+  const [mysteryGame, setMysteryGame] = useState<Game>();
 
   useEffect(() => {
     load()
@@ -87,7 +87,7 @@ export function App() {
         const id = getId(offset);
         const game = getGame(id);
 
-        setSecretGame(game);
+        setMysteryGame(game);
       })
       .catch((error) => {
         throw new Error("Failed to load the database.", { cause: error });
@@ -112,10 +112,10 @@ export function App() {
   };
 
   const handleGuess = (game: Game) => {
-    if (!secretGame) {
+    if (!mysteryGame) {
       return;
     }
-    const comparison = compareGames(secretGame, game);
+    const comparison = compareGames(mysteryGame, game);
 
     if (comparison.id === Outcome.Exact) {
       handleVictory(game);
@@ -138,18 +138,12 @@ export function App() {
     });
   };
 
-  const handleHelp = (page: number, total: number) => {
-    if (page === total - 1) {
-      inputRef.current?.focus();
-    }
-  };
-
-  if (!secretGame) {
+  if (!mysteryGame) {
     return null;
   }
 
   return (
-    <>
+    <TooltipProvider>
       <div className={classes.header}>
         <Score
           remaining={remainingAttempts}
@@ -160,32 +154,11 @@ export function App() {
 
       <main className={classes.content}>
         {history.length > 0 ? (
-          <History history={history} secretGame={secretGame} />
+          <History history={history} mysteryGame={mysteryGame} />
         ) : (
-          <Tutorial onChange={handleHelp}>
-            <p>
-              <Balancer>You have 10 guesses to find the secret game.</Balancer>
-            </p>
-            <p>
-              <Balancer>
-                For each guess you'll get hints about the secret game.
-              </Balancer>
-            </p>
-            <p>
-              <Balancer>
-                If you guess correctly you'll get to keep playing with a new
-                game.
-              </Balancer>
-            </p>
-            <p>
-              <Balancer>
-                If you lose you'll have to wait until tomorrow to play again.
-              </Balancer>
-            </p>
-            <p>
-              <Balancer>Take your first guess to start and good luck!</Balancer>
-            </p>
-          </Tutorial>
+          <Balancer as="p" className={classes.tutorial}>
+            Find out the mystery game.
+          </Balancer>
         )}
       </main>
 
@@ -212,8 +185,8 @@ export function App() {
               title="Bummer."
               message={
                 <>
-                  The game was <MoreInfo game={secretGame} />. You can try again
-                  tomorrow.
+                  The game was <MoreInfo game={mysteryGame} />. You can try
+                  again tomorrow.
                 </>
               }
             />
@@ -222,6 +195,6 @@ export function App() {
 
         <Copy />
       </footer>
-    </>
+    </TooltipProvider>
   );
 }

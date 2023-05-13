@@ -45,6 +45,10 @@ function comparePlatforms(a: Game, b: Game): Outcome {
   return compareLists(a.platforms, b.platforms);
 }
 
+function compareThemes(a: Game, b: Game): Outcome {
+  return compareLists(a.themes, b.themes);
+}
+
 function compareGenres(a: Game, b: Game): Outcome {
   return compareLists(a.genres, b.genres);
 }
@@ -89,6 +93,7 @@ export function compareGames(a: Game, b: Game) {
     name: compareName(a, b),
     releaseYear: compareReleaseYear(a, b),
     platforms: comparePlatforms(a, b),
+    themes: compareThemes(a, b),
     genres: compareGenres(a, b),
     playerPerspectives: comparePlayerPerspectives(a, b),
     involvedCompanies: compareInvolvedCompanies(a, b),

@@ -28,6 +28,7 @@
 }
 
 .icon {
+  flex: 0 0 auto;
   margin-block-start: 0.3rem;
   font-size: 1rem;
 }
