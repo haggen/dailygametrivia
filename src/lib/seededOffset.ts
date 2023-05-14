@@ -1,31 +1,28 @@
-const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
-
 /**
- * Create seed based off date and score.
+ * Create seed based off date and level.
  */
-function getSeed(level = 0) {
-  const today = new Date();
-  const y = today.getFullYear();
-  const m = today.getMonth();
-  const d = today.getDate();
+function createSeed(date: Date, level: number) {
+  const y = date.getFullYear();
+  const m = date.getMonth();
+  const d = date.getDate();
   return [y, m, d, level].join("");
 }
 
 /**
- * Get random offset based off a seed.
+ * Get a number from a seed.
  */
-function getSeededOffset(seed: string, count: number) {
-  const product = seed
-    .split("")
-    .map((n) => primes[parseInt(n, 10)])
-    .reduce((a, b) => a * b);
-  return product % count;
+function getSeededNumber(seed: string) {
+  return Array<undefined>(seed.length)
+    .fill(undefined)
+    .reduce(
+      (result, _, index) => result + Math.pow(seed.charCodeAt(index), index),
+      1
+    );
 }
 
 /**
- * ...
+ * Get offset based today's date and given level.
  */
 export function getTodaysOffset(level: number, count: number) {
-  const seed = getSeed(level);
-  return getSeededOffset(seed, count);
+  return getSeededNumber(createSeed(new Date(), level)) % count;
 }
