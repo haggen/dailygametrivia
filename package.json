@@ -12,9 +12,10 @@
     "import": "node scripts/import.js",
     "format": "prettier . --cache",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0 --cache",
+    "typecheck": "tsc --noEmit",
     "prestart": "test -d node_modules || npm ci",
     "start": "parcel",
-    "prebuild": "npm run format -- --check --loglevel error && npm run lint -- --quiet && tsc --noEmit",
+    "prebuild": "npm run format -- --check --loglevel error && npm run lint -- --quiet && npm run typecheck",
     "build": "parcel build"
   },
   "dependencies": {

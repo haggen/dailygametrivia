@@ -101,7 +101,7 @@ export function Form({ inputRef, onSubmit }: Props) {
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     switch (event.key) {
       case "ArrowUp":
-        handleSelect(getPreviousIndex(candidateIndex));
+        handleSelect(getPreviousIndex(candidateIndex, options.length));
         break;
       case "ArrowDown":
         handleSelect(getNextIndex(candidateIndex, options.length));

@@ -44,7 +44,7 @@ function DataList<T>(
   const handleKeyDown = (event: KeyboardEvent<HTMLUListElement>) => {
     switch (event.key) {
       case "ArrowUp":
-        onSelect(getPreviousIndex(selectedIndex));
+        onSelect(getPreviousIndex(selectedIndex, options.length));
         scrollToSelectedOption();
         break;
       case "ArrowDown":
