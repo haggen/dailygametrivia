@@ -185,7 +185,12 @@ export function App() {
               message={
                 <>
                   The game was{" "}
-                  <a href={mysteryGame.url} target="_blank" rel="noreferrer">
+                  <a
+                    href={mysteryGame.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ fontWeight: "bold" }}
+                  >
                     {mysteryGame.name}
                   </a>
                   . You may try again tomorrow.
