@@ -13,7 +13,6 @@ import { Toast } from "~/src/components/Toast";
 import { Button } from "~/src/components/Button";
 import * as Storage from "~/src/lib/storage";
 import { History } from "~/src/components/History";
-import { MoreInfo } from "~/src/components/MoreInfo";
 import { Provider as TooltipProvider } from "~/src/components/Tooltip";
 
 type State = {
@@ -185,8 +184,11 @@ export function App() {
               title="Bummer."
               message={
                 <>
-                  The game was <MoreInfo game={mysteryGame} />. You can try
-                  again tomorrow.
+                  The game was{" "}
+                  <a href={mysteryGame.url} target="_blank" rel="noreferrer">
+                    {mysteryGame.name}
+                  </a>
+                  . You may try again tomorrow.
                 </>
               }
             />

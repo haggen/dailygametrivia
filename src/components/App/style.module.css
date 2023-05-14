@@ -17,10 +17,11 @@
 }
 
 .tutorial {
-  place-self: center;
   color: var(--color-background-gray);
   font-size: 2rem;
   font-weight: bold;
+  place-self: center;
+  text-align: center;
 }
 
 .footer {

@@ -6,12 +6,11 @@
   color: #fff;
   cursor: pointer;
   display: inline flex;
-  font-weight: bolder;
   gap: 0.25rem;
   height: 3rem;
   justify-content: center;
   line-height: 1.25;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
 }
 
 .button:not(:disabled):active {

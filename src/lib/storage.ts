@@ -1,4 +1,4 @@
-const version = "1";
+const version = "2";
 
 export function getDailyKey() {
   const today = new Date();
