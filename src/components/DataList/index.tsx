@@ -1,10 +1,15 @@
-import { ComponentProps, ForwardedRef, KeyboardEvent, forwardRef } from "react";
+import {
+  ComponentProps,
+  ForwardedRef,
+  KeyboardEvent,
+  forwardRef,
+  useLayoutEffect,
+} from "react";
 
 import * as classes from "./style.module.css";
 
 import { ClassList } from "~/src/lib/classList";
 import { useForwardRef } from "~/src/lib/useForwardRef";
-import { useScheduledLayoutEffect } from "~/src/lib/useScheduledLayoutEffect";
 import { getPreviousIndex, getNextIndex } from "~/src/lib/listIndex";
 
 export type Option<T = unknown> = {
@@ -35,7 +40,7 @@ function DataList<T>(
 ) {
   const listRef = useForwardRef(ref);
 
-  const scrollToSelectedOption = useScheduledLayoutEffect(() => {
+  useLayoutEffect(() => {
     listRef.current
       ?.querySelector('li[aria-selected="true"]')
       ?.scrollIntoView({ block: "nearest" });
@@ -45,11 +50,9 @@ function DataList<T>(
     switch (event.key) {
       case "ArrowUp":
         onSelect(getPreviousIndex(selectedIndex, options.length));
-        scrollToSelectedOption();
         break;
       case "ArrowDown":
         onSelect(getNextIndex(selectedIndex, options.length));
-        scrollToSelectedOption();
         break;
       case "Enter":
         onCommit(selectedIndex);
@@ -60,8 +63,7 @@ function DataList<T>(
     event.preventDefault();
   };
 
-  const classList = new ClassList();
-  classList.add(classes.options);
+  const classList = new ClassList(classes.options);
   if (className) {
     classList.add(className);
   }
