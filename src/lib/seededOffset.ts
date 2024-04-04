@@ -16,7 +16,7 @@ function getSeededNumber(seed: string) {
     .fill(undefined)
     .reduce(
       (result, _, index) => result + Math.pow(seed.charCodeAt(index), index),
-      1
+      1,
     );
 }
 

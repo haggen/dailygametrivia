@@ -13,7 +13,7 @@ function isTrapped(elementRefs: RefObject<HTMLElement>[]) {
  */
 export function useFocusTrap(
   elementRefs: RefObject<HTMLElement>[],
-  callback: (focused: boolean) => void
+  callback: (focused: boolean) => void,
 ) {
   useEffect(() => {
     const handleFocusIn = () => {

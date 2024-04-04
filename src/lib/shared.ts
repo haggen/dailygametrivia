@@ -9,7 +9,7 @@ import {
  */
 export type PolymorphicPropsWithoutRef<
   E extends ElementType,
-  P extends object
+  P extends object,
 > = {
   as?: E;
 } & Omit<P, "as"> &

@@ -31,7 +31,7 @@ function DataList<T>(
     className,
     ...props
   }: Props<T>,
-  ref: ForwardedRef<HTMLUListElement>
+  ref: ForwardedRef<HTMLUListElement>,
 ) {
   const listRef = useForwardRef(ref);
 

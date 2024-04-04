@@ -29,7 +29,7 @@ function compareReleaseYear(a: Game, b: Game): Outcome {
 function compareLists<T extends { id: number }>(
   a: T[],
   b: T[],
-  compare = (a: T, b: T) => a.id === b.id
+  compare = (a: T, b: T) => a.id === b.id,
 ): Outcome {
   const intersection = a.filter((a) => b.some((b) => compare(a, b)));
   if (intersection.length === a.length && intersection.length === b.length) {
@@ -76,7 +76,7 @@ function compareInvolvedCompanies(a: Game, b: Game): Outcome {
   return compareLists(
     a.involvedCompanies,
     b.involvedCompanies,
-    (a, b) => a.company.id === b.company.id
+    (a, b) => a.company.id === b.company.id,
   );
 }
 

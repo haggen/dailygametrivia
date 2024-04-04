@@ -16,7 +16,7 @@ export function Score({ remaining, initial, level }: Props) {
         aria-label={pluralize(
           remaining,
           "1 attempt left",
-          `${remaining} attempts left`
+          `${remaining} attempts left`,
         )}
       >
         {Array(initial)
@@ -26,7 +26,7 @@ export function Score({ remaining, initial, level }: Props) {
               <Icon key={i} name="heart" color="var(--color-red)" />
             ) : (
               <Icon key={i} name="heart" color="var(--color-text-dimmed)" />
-            )
+            ),
           )}
       </figure>
 

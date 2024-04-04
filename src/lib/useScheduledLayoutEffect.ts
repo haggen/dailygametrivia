@@ -7,7 +7,7 @@ type Effect = () => void;
  */
 export function useScheduledLayoutEffect(): (effect: Effect) => void;
 export function useScheduledLayoutEffect(
-  defaultEffect: Effect
+  defaultEffect: Effect,
 ): (effect?: Effect) => void;
 export function useScheduledLayoutEffect(defaultEffect?: Effect) {
   const scheduleRef = useRef<Effect[]>([]);

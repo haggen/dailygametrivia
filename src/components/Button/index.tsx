@@ -15,7 +15,7 @@ type Props = {
  */
 function Button<E extends AcceptableElements = "button">(
   { as, color = "blue", ...props }: PolymorphicPropsWithRef<E, Props>,
-  ref: PolymorphicRef<E>
+  ref: PolymorphicRef<E>,
 ) {
   const Component = as ?? ("button" as ElementType);
   const classList = new ClassList();

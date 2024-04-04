@@ -56,7 +56,7 @@ export function Provider({ children }: ProviderProps) {
 
 type TooltipProps = {
   reference: HTMLElement | null;
-  color?: "red" | "green" | "yellow" | string;
+  color?: "red" | "green" | "yellow";
   style?: CSSProperties;
   placement?: Placement;
   offset?: OffsetOptions;

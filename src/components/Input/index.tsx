@@ -8,7 +8,7 @@ type Props = ComponentProps<"input">;
 
 function Input(
   { className, ...props }: Props,
-  ref: ForwardedRef<HTMLInputElement>
+  ref: ForwardedRef<HTMLInputElement>,
 ) {
   const classList = new ClassList();
   classList.add(classes.input);
