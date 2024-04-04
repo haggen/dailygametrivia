@@ -50,22 +50,46 @@ const fields = `
   involved_companies.company.name, platforms.name, platforms.abbreviation,
   game_engines.name, game_modes.name, collection.name, total_rating, total_rating_count`;
 
-const headers = {
-  "Client-ID": process.env.CLIENT_ID,
-  Authorization: `Bearer ${process.env.TOKEN}`,
-};
+let cachedHeaders = null;
 
-async function getCount({ headers, criteria }) {
+async function getHeaders() {
+  if (cachedHeaders) {
+    return cachedHeaders;
+  }
+
+  if (!process.env.CLIENT_ID || !process.env.CLIENT_SECRET) {
+    throw new Error(
+      "Missing environment variables CLIENT_ID and CLIENT_SECRET, see ",
+    );
+  }
+
+  const url = new URL("https://id.twitch.tv/oauth2/token");
+  url.searchParams.set("client_id", process.env.CLIENT_ID);
+  url.searchParams.set("client_secret", process.env.CLIENT_SECRET);
+  url.searchParams.set("grant_type", "client_credentials");
+
+  const resp = await fetch(url, { method: "post" });
+  const data = await resp.json();
+
+  cachedHeaders = {
+    "Client-ID": process.env.CLIENT_ID,
+    Authorization: `Bearer ${data.access_token}`,
+  };
+
+  return cachedHeaders;
+}
+
+async function getCount({ criteria }) {
   const response = await fetch("https://api.igdb.com/v4/games/count", {
     method: "POST",
-    headers,
+    headers: await getHeaders(),
     body: `where ${criteria};`,
   });
   const data = await response.json();
   return data.count;
 }
 
-async function getMultiQuery({ headers, count, fields, criteria }) {
+async function getMultiQuery({ count, fields, criteria }) {
   const body = [];
   const pages = Math.ceil(count / 500);
 
@@ -87,7 +111,7 @@ async function getMultiQuery({ headers, count, fields, criteria }) {
 
   const response = await fetch(`https://api.igdb.com/v4/multiquery`, {
     method: "POST",
-    headers,
+    headers: await getHeaders(),
     body: body.join("\n"),
   });
 
@@ -112,13 +136,13 @@ function mapToCamelCaseKeys(object) {
     Object.keys(object).map((key) => [
       toCamelCase(key),
       mapToCamelCaseKeys(object[key]),
-    ])
+    ]),
   );
 }
 
 async function getGames() {
-  const count = await getCount({ headers, criteria });
-  const data = await getMultiQuery({ headers, count, fields, criteria });
+  const count = await getCount({ criteria });
+  const data = await getMultiQuery({ count, fields, criteria });
   const games = {};
 
   for (const { result } of data) {
@@ -142,7 +166,7 @@ async function getGames() {
           }
           companyIds.push(id);
           return true;
-        }
+        },
       );
 
       // Remove uninteresting platforms.
@@ -177,7 +201,7 @@ const data = await getGames();
 await fs.writeFile(
   "./src/database.json",
   JSON.stringify(data, null, 2),
-  "utf-8"
+  "utf-8",
 );
 
 console.log(`${data.count} games imported`);
