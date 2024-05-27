@@ -62,7 +62,7 @@ export function getGame(id: string) {
 /**
  * Get ID by offset.
  */
-export function getId(offset: number) {
+export function getIdByOffset(offset: number) {
   if (!database) {
     throw new Error("Database hasn't been loaded");
   }

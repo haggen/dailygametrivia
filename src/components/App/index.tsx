@@ -3,7 +3,7 @@ import Balancer from "react-wrap-balancer";
 
 import * as classes from "./style.module.css";
 
-import { Game, getCount, getGame, getId, load } from "~/src/lib/data";
+import { Game, getCount, getGame, getIdByOffset, load } from "~/src/lib/data";
 import { useSimpleState } from "~/src/lib/useSimpleState";
 import { getTodaysOffset } from "~/src/lib/seededOffset";
 import { Outcome, compareGames } from "~/src/lib/compareGames";
@@ -83,7 +83,7 @@ export function App() {
       .then(() => {
         const count = getCount();
         const offset = getTodaysOffset(level, count);
-        const id = getId(offset);
+        const id = getIdByOffset(offset);
         const game = getGame(id);
 
         setMysteryGame(game);
