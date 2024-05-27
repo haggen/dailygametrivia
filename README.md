@@ -1,6 +1,6 @@
 # Daily Game Trivia
 
-The **Daily Game Trivia** is an open-source and public browser game where you have to find out the secret game based on hints such as year of release, genre, player's perspective and more. Inspired by [gamedle.wtf](https://gamedle.wtf).
+The **Daily Game Trivia** is an open-source and free to play browser game where you have to figure out the secret games of the day based on given hints such as year of release, genre, player's perspective, and more. Inspired by [gamedle.wtf](https://gamedle.wtf).
 
 Game information is imported from [Twitch's IGDB](https://www.igdb.com).
 
@@ -28,10 +28,19 @@ CLIENT_ID=... CLIENT_SECRET=... npm run import
 
 We use ESLint, Prettier and TypeScript to maintain code quality.
 
+You can apply fixes with:
+
 ```sh
-npm run format -- --write
-npm run lint -- --fix
+npm run fix
 ```
+
+And run tpye checking with:
+
+```sh
+npm run typecheck
+```
+
+It'll also run automatically before commits with the `scripts/pre-commit` hook.
 
 ### Deployment
 

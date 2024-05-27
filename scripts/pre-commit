@@ -2,16 +2,16 @@
 
 set -ue
 
-md5sum $(git diff --diff-filter=ACMR --cached --name-only | xargs) > /tmp/pre-commit-summary
+diff="git diff --diff-filter=ACMR --cached --name-only"
 
-echo "🔎 Checking code…"
+files="$($diff -- *.html *.css *.ts *.tsx *.js *.jsx *.json | xargs)"
+if test -n "$files"; then
+	# shellcheck disable=SC2086
+	npm run --silent format -- --log-level warn --check $files
+fi
 
-npm run-script --silent format -- --write --loglevel silent
-npm run-script --silent lint -- --fix --quiet
-
-if md5sum --status --check /tmp/pre-commit-summary; then
-	echo "✅ All good."
-else
-	echo "🚫 The pre-commit hook changed some of the files being commited."
-	exit 1
+files="$($diff -- *.ts *.tsx *.js *.jsx | xargs)"
+if test -n "$files"; then
+	# shellcheck disable=SC2086
+	npm run --silent lint -- $files
 fi

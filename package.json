@@ -10,12 +10,13 @@
   "scripts": {
     "prepare": "test -f .git/hooks/pre-commit || cp scripts/pre-commit .git/hooks/pre-commit",
     "import": "node scripts/import.js",
-    "format": "prettier . --cache",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0 --cache",
+    "format": "prettier --cache",
+    "lint": "eslint --report-unused-disable-directives --max-warnings 0 --cache",
+    "fix": "npm run format -- --write . && npm run lint -- --fix .",
     "typecheck": "tsc --noEmit",
     "prestart": "test -d node_modules || npm ci",
     "start": "parcel",
-    "prebuild": "npm run format -- --check --loglevel error && npm run lint -- --quiet && npm run typecheck",
+    "prebuild": "npm run format -- --check --loglevel warn . && npm run lint -- --quiet . && npm run typecheck",
     "build": "parcel build"
   },
   "dependencies": {
