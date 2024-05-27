@@ -19,31 +19,31 @@
     "build": "parcel build"
   },
   "dependencies": {
-    "@floating-ui/react-dom": "^2.0.8",
+    "@floating-ui/react-dom": "^2.1.0",
     "fastest-levenshtein": "^1.0.16",
     "lodash.debounce": "^4.0.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-wrap-balancer": "^1.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-wrap-balancer": "^1.1.1",
     "resetize": "^31.2.0"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.12.0",
     "@parcel/transformer-webmanifest": "^2.12.0",
     "@types/lodash.debounce": "^4.0.9",
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.24",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
     "parcel": "^2.12.0",
     "prettier": "^3.2.5",
     "process": "^0.11.10",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   }
 }
